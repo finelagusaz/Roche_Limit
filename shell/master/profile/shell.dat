@@ -6,7 +6,7 @@ Char4.balloon.isleft,1
 communicatebox.left,960
 communicate.top,522
 balloon0.offset,7.-40
-Char0.centery,1040
+Char0.centery,1032
 Char2.centery,742
 Char4.centery,738
 balloon1.offset,-27.-59
@@ -22,8 +22,8 @@ Char4.center,594
 Char2.center,964
 Char0.center,1759
 Char10.balloon.isleft,1
-Char1.centery,1040
-Char1.center,1203
+Char1.centery,1032
+Char1.center,1368
 Char2.balloon.isleft,1
 Char5.balloon.isleft,1
 Char10.centery,738

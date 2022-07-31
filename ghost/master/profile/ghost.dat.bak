@@ -4,6 +4,7 @@ balloon,C:\toolbox\SSP\balloon\Roche Limit\
 communicatebox.left,960
 Talk.DeActivate,0
 communicate.top,309
+shiori.debugnotify,0
 communicate.left,631
 Char.VirtualDesktop,3984676b-d7ec-49b7-84ae-f1d475538232
 Char2.center,205
@@ -11,7 +12,7 @@ Update.TestMode,0
 Char0.center,1759
 FirstBoot,booted
 shell,shell\master\
-Char1.center,1203
+Char1.center,1368
 shell.ischanged.2,1
 update.lastexec,581004851
 communicatebox.top,520
