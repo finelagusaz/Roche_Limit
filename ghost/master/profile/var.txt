@@ -1,0 +1,10 @@
+Charset,UTF-8
+install,446565872
+homeurl_found,1
+surfacecount,35
+homeurl,https://blankrune.sakura.ne.jp/named/roche_limit_plus/update/
+update_result,OK(1)
+firstboot,446565872
+update_time,706922652
+commitmemorysize,2310772
+lastboot,686418412

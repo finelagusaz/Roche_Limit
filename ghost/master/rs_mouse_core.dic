@@ -1,0 +1,112 @@
+///////// マウス入力関連辞書（コア）
+//ぽなぱるとさん、浮子屋さんに感謝。
+
+EMMouseHitExec
+{
+	_name = _argv[0]
+	if ISFUNC(_name) {
+		_text = EVAL(_name)
+		if STRLEN(_text) != 0 {
+			_text
+			return
+		}
+	}
+
+	if RE_MATCH(_name,"(.+)[0-9]+") != 0 {
+		_name = RE_GETSTR[1]
+		if ISFUNC(_name) {
+			_text = EVAL(_name)
+			if STRLEN(_text) != 0 {
+				_text
+				return
+			}
+		}
+	}
+}
+
+EMGetPrefix
+{
+	if sender == 'The Hand' {
+		'MouseTH'
+	}
+	else {
+		'Mouse'
+	}
+}
+
+//---- OnMouseMoveイベント --------------------------------------------------------------
+OnMouseMove
+{
+	OnMouseMoveWheel(0,64)
+}
+
+OnMouseWheel
+{
+	OnMouseMoveWheel(1,4)
+}
+
+OnMouseMoveWheel
+{
+	_side = TOINT(reference[3])
+	if _argv[0] {
+		_side += 10
+	}
+	
+	_specialsuffix = GetSpecialSuffix
+	
+	if STRLEN(reference[4]) != 0
+	{
+		if (GETTICKCOUNT - TOINT(stroketimer[_side])) > 1500 {
+			stroke[_side] = 0
+		}
+		stroketimer[_side] = GETTICKCOUNT
+		
+		//----どこかが撫でられている
+		_stroke = TOINT(stroke[_side])
+		_stroke += 1
+		stroke[_side] = _stroke
+		
+		//---- 撫でられた量が一定量に達したら「なでられている」と判断
+		if _stroke >= _argv[1]
+		{
+			//---- 撫でられた。撫でられた部位を見てトークする
+			_name = ""
+			_prefix = EMGetPrefix
+			if _argv[0] {
+				_name = "%(_prefix)_Wheel%(reference[3])%(reference[4])"
+			}
+			else {
+				_name = "%(_prefix)_Nade%(reference[3])%(reference[4])"
+			}
+			EMMouseHitExec(_name)
+			stroke[_side] = 0
+		}
+	}
+	else
+	{
+		// 定義された部位はどこも撫でられていない
+		stroke[_side] = 0
+	}
+}
+
+//---- OnMouseDoubleClickイベント -------------------------------------------------------
+OnMouseDoubleClick
+{
+	_prefix = EMGetPrefix
+	_name = "%(_prefix)_DoubleClick%(reference[3])%(reference[4])"
+	if mouse_double_click_name != _name {
+		mouse_double_click_name = _name
+		mouse_double_click_counter = 0
+	}
+	else {
+		mouse_double_click_counter += 1
+	}
+	
+	_script = EMMouseHitExec(_name)
+	if STRLEN(_script) != 0 {
+		_script
+		return
+	}
+	
+	EVAL("%(_prefix)_DoubleClick%(reference[3])")
+}

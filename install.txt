@@ -1,0 +1,5 @@
+charset, Shift_JIS
+type,ghost
+name,ƒƒbƒVƒ…‚ÌŒÀŠE
+directory,Roche_Limit+
+balloon.directory,Roche Limit

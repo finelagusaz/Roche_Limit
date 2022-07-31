@@ -1,0 +1,2017 @@
+charset,Shift_JIS
+
+descript
+{
+	version,1
+}
+
+surface0
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision2,49,105,85,119,Skirt
+	collision3,56,39,70,48,Lip
+	collision4,83,117,88,129,Hand
+	collision5,41,109,49,125,Hand
+	collision6,51,119,82,131,thigh
+	collision7,91,30,100,60,Ribbon
+	collision8,87,0,102,12,Ribbon
+	collision9,50,62,79,78,Bust
+	collision10,48,130,83,162,Leg
+	collision11,42,159,89,202,Boots
+
+	animation0.interval,rarely
+	animation0.pattern0,alternativestart,(1,2)
+
+	animation1.interval,never
+	animation1.pattern0,overlay,100,60,0,0
+	animation1.pattern1,overlay,6,60,0,0
+	animation1.pattern2,overlay,100,60,0,0
+	animation1.pattern3,overlay,-1,5,0,0
+
+	animation2.interval,never
+	animation2.pattern0,overlay,6,50,0,0
+	animation2.pattern1,overlay,100,50,0,0
+	animation2.pattern2,overlay,-1,50,0,0
+	animation2.pattern3,overlay,6,30,0,0
+	animation2.pattern4,overlay,100,50,0,0
+	animation2.pattern5,overlay,-1,30,0,0
+
+}
+
+surface1
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision2,49,105,85,119,Skirt
+	collision3,56,39,70,48,Lip
+	collision4,83,117,88,129,Hand
+	collision5,41,109,49,125,Hand
+	collision6,51,119,82,131,thigh
+	collision7,91,30,100,60,Ribbon
+	collision8,87,0,102,12,Ribbon
+	collision9,50,62,79,78,Bust
+	collision10,48,130,83,162,Leg
+	collision11,42,159,89,202,Boots
+
+}
+
+surface2
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision2,49,105,85,119,Skirt
+	collision3,56,39,70,48,Lip
+	collision4,83,117,88,129,Hand
+	collision5,41,109,49,125,Hand
+	collision6,51,119,82,131,thigh
+	collision7,91,30,100,60,Ribbon
+	collision8,87,0,102,12,Ribbon
+	collision9,50,62,79,78,Bust
+	collision10,48,130,83,162,Leg
+	collision11,42,159,89,202,Boots
+
+}
+
+surface3
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision2,49,105,85,119,Skirt
+	collision3,56,39,70,48,Lip
+	collision4,83,117,88,129,Hand
+	collision5,41,109,49,125,Hand
+	collision6,51,119,82,131,thigh
+	collision7,91,30,100,60,Ribbon
+	collision8,87,0,102,12,Ribbon
+	collision9,50,62,79,78,Bust
+	collision10,48,130,83,162,Leg
+	collision11,42,159,89,202,Boots
+
+}
+
+surface4
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision2,49,105,85,119,Skirt
+	collision3,56,39,70,48,Lip
+	collision4,83,117,88,129,Hand
+	collision5,41,109,49,125,Hand
+	collision6,51,119,82,131,thigh
+	collision7,91,30,100,60,Ribbon
+	collision8,87,0,102,12,Ribbon
+	collision9,50,62,79,78,Bust
+	collision10,48,130,83,162,Leg
+	collision11,42,159,89,202,Boots
+
+}
+
+surface5
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision2,49,105,85,119,Skirt
+	collision3,56,39,70,48,Lip
+	collision4,83,117,88,129,Hand
+	collision5,41,109,49,125,Hand
+	collision6,51,119,82,131,thigh
+	collision7,91,30,100,60,Ribbon
+	collision8,87,0,102,12,Ribbon
+	collision9,50,62,79,78,Bust
+	collision10,48,130,83,162,Leg
+	collision11,42,159,89,202,Boots
+
+}
+
+surface6
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision2,49,105,85,119,Skirt
+	collision3,56,39,70,48,Lip
+	collision4,83,117,88,129,Hand
+	collision5,41,109,49,125,Hand
+	collision6,51,119,82,131,thigh
+	collision7,91,30,100,60,Ribbon
+	collision8,87,0,102,12,Ribbon
+	collision9,50,62,79,78,Bust
+	collision10,48,130,83,162,Leg
+	collision11,42,159,89,202,Boots
+
+}
+
+surface7
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision2,49,105,85,119,Skirt
+	collision3,56,39,70,48,Lip
+	collision4,83,117,88,129,Hand
+	collision5,41,109,49,125,Hand
+	collision6,51,119,82,131,thigh
+	collision7,91,30,100,60,Ribbon
+	collision8,87,0,102,12,Ribbon
+	collision9,50,62,79,78,Bust
+	collision10,48,130,83,162,Leg
+	collision11,42,159,89,202,Boots
+
+}
+
+surface8
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision2,49,105,85,119,Skirt
+	collision3,56,39,70,48,Lip
+	collision4,83,117,88,129,Hand
+	collision5,41,109,49,125,Hand
+	collision6,51,119,82,131,thigh
+	collision7,91,30,100,60,Ribbon
+	collision8,87,0,102,12,Ribbon
+	collision9,50,62,79,78,Bust
+	collision10,48,130,83,162,Leg
+	collision11,42,159,89,202,Boots
+
+}
+
+surface9
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision2,49,105,85,119,Skirt
+	collision3,56,39,70,48,Lip
+	collision4,83,117,88,129,Hand
+	collision5,41,109,49,125,Hand
+	collision6,51,119,82,131,thigh
+	collision7,91,30,100,60,Ribbon
+	collision8,87,0,102,12,Ribbon
+	collision9,50,62,79,78,Bust
+	collision10,48,130,83,162,Leg
+	collision11,42,159,89,202,Boots
+
+}
+
+surface10
+{
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+	animation0.interval,rarely
+	animation0.pattern0,alternativestart,(1,2)
+
+	animation1.interval,never
+	animation1.pattern0,overlay,300,80,0,0
+	animation1.pattern1,overlay,301,80,0,0
+	animation1.pattern2,overlay,300,80,0,0
+	animation1.pattern3,overlay,-1,80,0,0
+
+	animation2.interval,never
+	animation2.pattern0,overlay,300,80,0,0
+	animation2.pattern1,overlay,301,80,0,0
+	animation2.pattern2,overlay,-1,80,0,0
+	animation2.pattern3,overlay,300,80,0,0
+	animation2.pattern4,overlay,301,80,0,0
+	animation2.pattern5,overlay,-1,80,0,0
+
+}
+
+surface11
+{
+	collision0,2,3,54,31,Head
+	collision1,15,32,50,41,aFace
+	collision2,54,15,77,116,Hair
+	collision3,26,44,44,58,Hand
+	collision4,15,133,52,212,Leg
+	collision5,16,90,48,103,abdomen
+	collision6,16,210,52,225,Boots
+
+}
+
+surface12
+{
+	collision0,1,0,56,25,Head
+	collision1,18,23,49,38,aFace
+	collision2,29,37,38,42,Lip
+	collision3,55,8,80,118,Hair
+	collision4,24,60,46,74,Hand
+	collision5,15,135,52,211,Leg
+	collision6,28,91,38,104,abdomen
+	collision7,14,209,53,225,Boots
+
+}
+
+surface13
+{
+	collision0,1,0,54,27,Head
+	collision1,17,26,50,38,Face
+	collision2,31,39,36,44,Lip
+	collision3,56,3,78,124,Hair
+	collision4,30,62,44,76,Hand
+	collision5,23,112,39,131,Hand
+	collision6,13,133,52,211,Leg
+	collision7,29,94,34,100,abdomen
+	collision8,11,209,53,225,Boots
+}
+
+surface14
+{
+	element0,overlay,surface12.png,0,0
+	element1,overlay,surface2001.png,0,0
+
+	collision0,1,0,54,24,Head
+	collision1,19,24,48,37,Face
+	collision2,29,37,38,42,Lip
+	collision3,55,5,79,118,Hair
+	collision4,24,59,46,73,Hand
+	collision5,12,136,53,211,Leg
+	collision6,30,90,37,101,abdomen
+	collision7,13,209,52,225,Boots
+}
+
+surface15
+{
+	element0,overlay,surface13.png,0,0
+	element1,overlay,surface3001.png,0,0
+
+	collision0,1,0,54,27,Head
+	collision1,17,26,50,38,Face
+	collision2,31,39,36,44,Lip
+	collision3,56,3,78,124,Hair
+	collision4,30,62,44,76,Hand
+	collision5,23,112,39,131,Hand
+	collision6,13,133,52,211,Leg
+	collision7,29,94,34,100,abdomen
+	collision8,11,209,53,225,Boots
+
+}
+
+surface16
+{
+	element0,overlay,surface13.png,0,0
+	element1,overlay,surface3004.png,0,0
+
+	collision0,1,0,54,27,Head
+	collision1,17,26,50,38,Face
+	collision2,30,39,38,45,Lip
+	collision3,56,3,78,124,Hair
+	collision4,30,62,44,76,Hand
+	collision5,23,112,39,131,Hand
+	collision6,13,133,52,211,Leg
+	collision7,29,94,34,100,abdomen
+	collision8,11,209,53,225,Boots
+
+}
+
+surface17
+{
+	element0,overlay,surface13.png,0,0
+	element1,overlay,surface3002.png,0,0
+
+	collision0,1,0,54,27,Head
+	collision1,17,26,50,38,Face
+	collision2,31,39,36,44,Lip
+	collision3,56,3,78,124,Hair
+	collision4,30,62,44,76,Hand
+	collision5,23,112,39,131,Hand
+	collision6,13,133,52,211,Leg
+	collision7,29,94,34,100,abdomen
+	collision8,11,209,53,225,Boots
+
+}
+
+surface18
+{
+	element0,overlay,surface13.png,0,0
+	element1,overlay,surface3003.png,0,0
+
+	collision0,1,0,54,27,Head
+	collision1,17,26,50,38,Face
+	collision2,31,39,36,44,Lip
+	collision3,56,3,78,124,Hair
+	collision4,30,62,44,76,Hand
+	collision5,23,112,39,131,Hand
+	collision6,13,133,52,211,Leg
+	collision7,29,94,34,100,abdomen
+	collision8,11,209,53,225,Boots
+
+}
+
+surface19
+{
+	element0,overlay,surface13.png,0,0
+	element1,overlay,surface3005.png,0,0
+
+	collision0,1,0,54,27,Head
+	collision1,17,26,50,38,Face
+	collision2,30,39,38,45,Lip
+	collision3,56,3,78,124,Hair
+	collision4,30,62,44,76,Hand
+	collision5,23,112,39,131,Hand
+	collision6,13,133,52,211,Leg
+	collision7,29,94,34,100,abdomen
+	collision8,11,209,53,225,Boots
+
+}
+
+surface20
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0201.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+}
+
+surface21
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0202.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+}
+
+surface22
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0203.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+}
+
+surface23
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0204.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+}
+
+surface24
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0205.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+}
+
+surface25
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0206.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+}
+
+surface26
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0207.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+}
+
+surface27
+{
+	collision0,1,0,54,24,Head
+	collision1,19,24,48,37,Face
+	collision2,29,37,38,43,Lip
+	collision3,55,5,79,118,Hair
+	collision4,24,59,46,73,Hand
+	collision5,12,136,53,211,Leg
+	collision6,30,90,37,101,abdomen
+	collision7,13,209,52,225,Boots
+
+}
+
+surface28
+{
+	collision0,1,0,54,24,Head
+	collision1,19,24,48,37,Face
+	collision2,29,37,38,43,Lip
+	collision3,55,5,79,118,Hair
+	collision4,24,59,46,73,Hand
+	collision5,12,136,53,211,Leg
+	collision6,30,90,37,101,abdomen
+	collision7,13,209,52,225,Boots
+
+}
+
+surface29
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0301.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+}
+
+surface40
+{
+	collision0,21,57,78,74,eHead
+	collision1,34,73,67,88,eFace
+
+}
+
+surface41
+{
+	collision0,21,57,78,74,eHead
+	collision1,34,73,67,88,eFace
+
+}
+
+surface42
+{
+	collision0,21,57,78,74,eHead
+	collision1,34,73,67,88,eFace
+
+}
+
+surface5000
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision2,29,105,103,145,Skirt
+	collision3,56,39,70,48,Lip
+	collision4,49,141,83,156,thigh
+	collision5,50,62,79,78,Bust
+	collision6,49,153,85,184,Leg
+	collision7,45,182,86,200,Boots
+
+	animation0.interval,rarely
+	animation0.pattern0,alternativestart,(1,2)
+
+	animation1.interval,never
+	animation1.pattern0,overlay,6000,60,0,0
+	animation1.pattern1,overlay,5006,60,0,0
+	animation1.pattern2,overlay,6000,60,0,0
+	animation1.pattern3,overlay,-1,5,0,0
+
+	animation2.interval,never
+	animation2.pattern0,overlay,5006,50,0,0
+	animation2.pattern1,overlay,6000,50,0,0
+	animation2.pattern2,overlay,-1,50,0,0
+	animation2.pattern3,overlay,5006,30,0,0
+	animation2.pattern4,overlay,6000,50,0,0
+	animation2.pattern5,overlay,-1,30,0,0
+
+}
+
+surface5001
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision2,29,105,103,145,Skirt
+	collision3,56,39,70,48,Lip
+	collision4,49,141,83,156,thigh
+	collision5,50,62,79,78,Bust
+	collision6,49,153,85,184,Leg
+	collision7,45,182,86,200,Boots
+}
+
+surface5002
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision2,29,105,103,145,Skirt
+	collision3,56,39,70,48,Lip
+	collision4,49,141,83,156,thigh
+	collision5,50,62,79,78,Bust
+	collision6,49,153,85,184,Leg
+	collision7,45,182,86,200,Boots
+}
+
+surface5003
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision2,29,105,103,145,Skirt
+	collision3,56,39,70,48,Lip
+	collision4,49,141,83,156,thigh
+	collision5,50,62,79,78,Bust
+	collision6,49,153,85,184,Leg
+	collision7,45,182,86,200,Boots
+}
+
+surface5004
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision2,29,105,103,145,Skirt
+	collision3,56,39,70,48,Lip
+	collision4,49,141,83,156,thigh
+	collision5,50,62,79,78,Bust
+	collision6,49,153,85,184,Leg
+	collision7,45,182,86,200,Boots
+}
+
+surface5005
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision2,29,105,103,145,Skirt
+	collision3,56,39,70,48,Lip
+	collision4,49,141,83,156,thigh
+	collision5,50,62,79,78,Bust
+	collision6,49,153,85,184,Leg
+	collision7,45,182,86,200,Boots
+}
+
+surface5006
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision2,29,105,103,145,Skirt
+	collision3,56,39,70,48,Lip
+	collision4,49,141,83,156,thigh
+	collision5,50,62,79,78,Bust
+	collision6,49,153,85,184,Leg
+	collision7,45,182,86,200,Boots
+}
+
+surface5007
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision2,29,105,103,145,Skirt
+	collision3,56,39,70,48,Lip
+	collision4,49,141,83,156,thigh
+	collision5,50,62,79,78,Bust
+	collision6,49,153,85,184,Leg
+	collision7,45,182,86,200,Boots
+}
+
+surface5008
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision2,29,105,103,145,Skirt
+	collision3,56,39,70,48,Lip
+	collision4,49,141,83,156,thigh
+	collision5,50,62,79,78,Bust
+	collision6,49,153,85,184,Leg
+	collision7,45,182,86,200,Boots
+}
+
+surface5009
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision2,29,105,103,145,Skirt
+	collision3,56,39,70,48,Lip
+	collision4,49,141,83,156,thigh
+	collision5,50,62,79,78,Bust
+	collision6,49,153,85,184,Leg
+	collision7,45,182,86,200,Boots
+}
+
+surface5010
+{
+	element0,overlay,surface10.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+	animation0.interval,rarely
+	animation0.pattern0,alternativestart,(1,2)
+
+	animation1.interval,never
+	animation1.pattern0,overlay,300,80,0,0
+	animation1.pattern1,overlay,301,80,0,0
+	animation1.pattern2,overlay,300,80,0,0
+	animation1.pattern3,overlay,-1,80,0,0
+
+	animation2.interval,never
+	animation2.pattern0,overlay,300,80,0,0
+	animation2.pattern1,overlay,301,80,0,0
+	animation2.pattern2,overlay,-1,80,0,0
+	animation2.pattern3,overlay,300,80,0,0
+	animation2.pattern4,overlay,301,80,0,0
+	animation2.pattern5,overlay,-1,80,0,0
+
+}
+
+surface5011
+{
+	element0,overlay,surface11.png,0,0
+	collision0,2,3,54,31,Head
+	collision1,15,32,50,41,aFace
+	collision2,54,15,77,116,Hair
+	collision3,26,44,44,58,Hand
+	collision4,15,133,52,212,Leg
+	collision5,16,90,48,103,abdomen
+	collision6,16,210,52,225,Boots
+
+}
+
+surface5012
+{
+	element0,overlay,surface12.png,0,0
+	collision0,1,0,56,25,Head
+	collision1,18,23,49,38,aFace
+	collision2,29,37,38,42,Lip
+	collision3,55,8,80,118,Hair
+	collision4,24,60,46,74,Hand
+	collision5,15,135,52,211,Leg
+	collision6,28,91,38,104,abdomen
+	collision7,14,209,53,225,Boots
+
+}
+
+surface5013
+{
+	element0,overlay,surface13.png,0,0
+	collision0,1,0,54,27,Head
+	collision1,17,26,50,38,Face
+	collision2,31,39,36,44,Lip
+	collision3,56,3,78,124,Hair
+	collision4,30,62,44,76,Hand
+	collision5,23,112,39,131,Hand
+	collision6,13,133,52,211,Leg
+	collision7,29,94,34,100,abdomen
+	collision8,11,209,53,225,Boots
+}
+
+surface5014
+{
+	element0,overlay,surface12.png,0,0
+	element1,overlay,surface2001.png,0,0
+
+	collision0,1,0,54,24,Head
+	collision1,19,24,48,37,Face
+	collision2,29,37,38,42,Lip
+	collision3,55,5,79,118,Hair
+	collision4,24,59,46,73,Hand
+	collision5,12,136,53,211,Leg
+	collision6,30,90,37,101,abdomen
+	collision7,13,209,52,225,Boots
+}
+
+surface5015
+{
+	element0,overlay,surface13.png,0,0
+	element1,overlay,surface3001.png,0,0
+
+	collision0,1,0,54,27,Head
+	collision1,17,26,50,38,Face
+	collision2,31,39,36,44,Lip
+	collision3,56,3,78,124,Hair
+	collision4,30,62,44,76,Hand
+	collision5,23,112,39,131,Hand
+	collision6,13,133,52,211,Leg
+	collision7,29,94,34,100,abdomen
+	collision8,11,209,53,225,Boots
+}
+
+surface5016
+{
+	element0,overlay,surface13.png,0,0
+	element1,overlay,surface3004.png,0,0
+
+	collision0,1,0,54,27,Head
+	collision1,17,26,50,38,Face
+	collision2,30,39,38,45,Lip
+	collision3,56,3,78,124,Hair
+	collision4,30,62,44,76,Hand
+	collision5,23,112,39,131,Hand
+	collision6,13,133,52,211,Leg
+	collision7,29,94,34,100,abdomen
+	collision8,11,209,53,225,Boots
+
+}
+
+surface5017
+{
+	element0,overlay,surface13.png,0,0
+	element1,overlay,surface3002.png,0,0
+
+	collision0,1,0,54,27,Head
+	collision1,17,26,50,38,Face
+	collision2,31,39,36,44,Lip
+	collision3,56,3,78,124,Hair
+	collision4,30,62,44,76,Hand
+	collision5,23,112,39,131,Hand
+	collision6,13,133,52,211,Leg
+	collision7,29,94,34,100,abdomen
+	collision8,11,209,53,225,Boots
+
+}
+
+surface5018
+{
+	element0,overlay,surface13.png,0,0
+	element1,overlay,surface3003.png,0,0
+
+	collision0,1,0,54,27,Head
+	collision1,17,26,50,38,Face
+	collision2,31,39,36,44,Lip
+	collision3,56,3,78,124,Hair
+	collision4,30,62,44,76,Hand
+	collision5,23,112,39,131,Hand
+	collision6,13,133,52,211,Leg
+	collision7,29,94,34,100,abdomen
+	collision8,11,209,53,225,Boots
+
+}
+
+surface5019
+{
+	element0,overlay,surface13.png,0,0
+	element1,overlay,surface3005.png,0,0
+
+	collision0,1,0,54,27,Head
+	collision1,17,26,50,38,Face
+	collision2,30,39,38,45,Lip
+	collision3,56,3,78,124,Hair
+	collision4,30,62,44,76,Hand
+	collision5,23,112,39,131,Hand
+	collision6,13,133,52,211,Leg
+	collision7,29,94,34,100,abdomen
+	collision8,11,209,53,225,Boots
+
+}
+
+surface5020
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0201.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+}
+
+surface5021
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0202.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+}
+
+surface5022
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0203.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+}
+
+surface5023
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0204.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+}
+
+surface5024
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0205.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+}
+
+surface5025
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0206.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+}
+
+surface5026
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0207.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+}
+
+surface5027
+{
+	element0,overlay,surface27.png,0,0
+	collision0,1,0,54,24,Head
+	collision1,19,24,48,37,Face
+	collision2,29,37,38,43,Lip
+	collision3,55,5,79,118,Hair
+	collision4,24,59,46,73,Hand
+	collision5,12,136,53,211,Leg
+	collision6,30,90,37,101,abdomen
+	collision7,13,209,52,225,Boots
+
+}
+
+surface5028
+{
+	element0,overlay,surface28.png,0,0
+	collision0,1,0,54,24,Head
+	collision1,19,24,48,37,Face
+	collision2,29,37,38,43,Lip
+	collision3,55,5,79,118,Hair
+	collision4,24,59,46,73,Hand
+	collision5,12,136,53,211,Leg
+	collision6,30,90,37,101,abdomen
+	collision7,13,209,52,225,Boots
+
+}
+
+surface5029
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0301.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+}
+
+surface5040
+{
+	element0,overlay,surface40.png,0,0
+	collision0,21,57,78,74,eHead
+	collision1,34,73,67,88,eFace
+
+}
+
+surface5041
+{
+	element0,overlay,surface41.png,0,0
+	collision0,21,57,78,74,eHead
+	collision1,34,73,67,88,eFace
+
+}
+
+surface5042
+{
+	element0,overlay,surface42.png,0,0
+	collision0,21,57,78,74,eHead
+	collision1,34,73,67,88,eFace
+
+}
+
+surface7000
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision2,29,105,103,145,Skirt
+	collision3,56,39,70,48,Lip
+	collision4,49,141,83,156,thigh
+	collision5,50,62,79,78,Bust
+	collision6,49,153,85,184,Leg
+	collision7,45,182,86,200,Boots
+
+	animation0.interval,rarely
+	animation0.pattern0,alternativestart,(1,2)
+
+	animation1.interval,never
+	animation1.pattern0,overlay,8000,60,0,0
+	animation1.pattern1,overlay,7006,60,0,0
+	animation1.pattern2,overlay,8000,60,0,0
+	animation1.pattern3,overlay,-1,5,0,0
+
+	animation2.interval,never
+	animation2.pattern0,overlay,7006,50,0,0
+	animation2.pattern1,overlay,8000,50,0,0
+	animation2.pattern2,overlay,-1,50,0,0
+	animation2.pattern3,overlay,7006,30,0,0
+	animation2.pattern4,overlay,8000,50,0,0
+	animation2.pattern5,overlay,-1,30,0,0
+
+}
+
+surface7001
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision2,29,105,103,145,Skirt
+	collision3,56,39,70,48,Lip
+	collision4,49,141,83,156,thigh
+	collision5,50,62,79,78,Bust
+	collision6,49,153,85,184,Leg
+	collision7,45,182,86,200,Boots
+}
+
+surface7002
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision2,29,105,103,145,Skirt
+	collision3,56,39,70,48,Lip
+	collision4,49,141,83,156,thigh
+	collision5,50,62,79,78,Bust
+	collision6,49,153,85,184,Leg
+	collision7,45,182,86,200,Boots
+}
+
+surface7003
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision2,29,105,103,145,Skirt
+	collision3,56,39,70,48,Lip
+	collision4,49,141,83,156,thigh
+	collision5,50,62,79,78,Bust
+	collision6,49,153,85,184,Leg
+	collision7,45,182,86,200,Boots
+}
+
+surface7004
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision2,29,105,103,145,Skirt
+	collision3,56,39,70,48,Lip
+	collision4,49,141,83,156,thigh
+	collision5,50,62,79,78,Bust
+	collision6,49,153,85,184,Leg
+	collision7,45,182,86,200,Boots
+}
+
+surface7005
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision2,29,105,103,145,Skirt
+	collision3,56,39,70,48,Lip
+	collision4,49,141,83,156,thigh
+	collision5,50,62,79,78,Bust
+	collision6,49,153,85,184,Leg
+	collision7,45,182,86,200,Boots
+}
+
+surface7006
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision2,29,105,103,145,Skirt
+	collision3,56,39,70,48,Lip
+	collision4,49,141,83,156,thigh
+	collision5,50,62,79,78,Bust
+	collision6,49,153,85,184,Leg
+	collision7,45,182,86,200,Boots
+}
+
+surface7007
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision2,29,105,103,145,Skirt
+	collision3,56,39,70,48,Lip
+	collision4,49,141,83,156,thigh
+	collision5,50,62,79,78,Bust
+	collision6,49,153,85,184,Leg
+	collision7,45,182,86,200,Boots
+}
+
+surface7008
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision2,29,105,103,145,Skirt
+	collision3,56,39,70,48,Lip
+	collision4,49,141,83,156,thigh
+	collision5,50,62,79,78,Bust
+	collision6,49,153,85,184,Leg
+	collision7,45,182,86,200,Boots
+}
+
+surface7009
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision2,29,105,103,145,Skirt
+	collision3,56,39,70,48,Lip
+	collision4,49,141,83,156,thigh
+	collision5,50,62,79,78,Bust
+	collision6,49,153,85,184,Leg
+	collision7,45,182,86,200,Boots
+}
+
+surface7010
+{
+	element0,overlay,surface10.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+	animation0.interval,rarely
+	animation0.pattern0,alternativestart,(1,2)
+
+	animation1.interval,never
+	animation1.pattern0,overlay,300,80,0,0
+	animation1.pattern1,overlay,301,80,0,0
+	animation1.pattern2,overlay,300,80,0,0
+	animation1.pattern3,overlay,-1,80,0,0
+
+	animation2.interval,never
+	animation2.pattern0,overlay,300,80,0,0
+	animation2.pattern1,overlay,301,80,0,0
+	animation2.pattern2,overlay,-1,80,0,0
+	animation2.pattern3,overlay,300,80,0,0
+	animation2.pattern4,overlay,301,80,0,0
+	animation2.pattern5,overlay,-1,80,0,0
+
+}
+
+surface7011
+{
+	element0,overlay,surface11.png,0,0
+	collision0,2,3,54,31,Head
+	collision1,15,32,50,41,aFace
+	collision2,54,15,77,116,Hair
+	collision3,26,44,44,58,Hand
+	collision4,15,133,52,212,Leg
+	collision5,16,90,48,103,abdomen
+	collision6,16,210,52,225,Boots
+
+}
+
+surface7012
+{
+	element0,overlay,surface12.png,0,0
+	collision0,1,0,56,25,Head
+	collision1,18,23,49,38,aFace
+	collision2,29,37,38,42,Lip
+	collision3,55,8,80,118,Hair
+	collision4,24,60,46,74,Hand
+	collision5,15,135,52,211,Leg
+	collision6,28,91,38,104,abdomen
+	collision7,14,209,53,225,Boots
+
+}
+
+surface7013
+{
+	element0,overlay,surface13.png,0,0
+	collision0,1,0,54,27,Head
+	collision1,17,26,50,38,Face
+	collision2,31,39,36,44,Lip
+	collision3,56,3,78,124,Hair
+	collision4,30,62,44,76,Hand
+	collision5,23,112,39,131,Hand
+	collision6,13,133,52,211,Leg
+	collision7,29,94,34,100,abdomen
+	collision8,11,209,53,225,Boots
+}
+
+surface7014
+{
+	element0,overlay,surface12.png,0,0
+	element1,overlay,surface2001.png,0,0
+
+	collision0,1,0,54,24,Head
+	collision1,19,24,48,37,Face
+	collision2,29,37,38,42,Lip
+	collision3,55,5,79,118,Hair
+	collision4,24,59,46,73,Hand
+	collision5,12,136,53,211,Leg
+	collision6,30,90,37,101,abdomen
+	collision7,13,209,52,225,Boots
+}
+
+surface7015
+{
+	element0,overlay,surface13.png,0,0
+	element1,overlay,surface3001.png,0,0
+
+	collision0,1,0,54,27,Head
+	collision1,17,26,50,38,Face
+	collision2,31,39,36,44,Lip
+	collision3,56,3,78,124,Hair
+	collision4,30,62,44,76,Hand
+	collision5,23,112,39,131,Hand
+	collision6,13,133,52,211,Leg
+	collision7,29,94,34,100,abdomen
+	collision8,11,209,53,225,Boots
+}
+
+surface7016
+{
+	element0,overlay,surface13.png,0,0
+	element1,overlay,surface3004.png,0,0
+
+	collision0,1,0,54,27,Head
+	collision1,17,26,50,38,Face
+	collision2,30,39,38,45,Lip
+	collision3,56,3,78,124,Hair
+	collision4,30,62,44,76,Hand
+	collision5,23,112,39,131,Hand
+	collision6,13,133,52,211,Leg
+	collision7,29,94,34,100,abdomen
+	collision8,11,209,53,225,Boots
+
+}
+
+surface7017
+{
+	element0,overlay,surface13.png,0,0
+	element1,overlay,surface3002.png,0,0
+
+	collision0,1,0,54,27,Head
+	collision1,17,26,50,38,Face
+	collision2,31,39,36,44,Lip
+	collision3,56,3,78,124,Hair
+	collision4,30,62,44,76,Hand
+	collision5,23,112,39,131,Hand
+	collision6,13,133,52,211,Leg
+	collision7,29,94,34,100,abdomen
+	collision8,11,209,53,225,Boots
+
+}
+
+surface7018
+{
+	element0,overlay,surface13.png,0,0
+	element1,overlay,surface3003.png,0,0
+
+	collision0,1,0,54,27,Head
+	collision1,17,26,50,38,Face
+	collision2,31,39,36,44,Lip
+	collision3,56,3,78,124,Hair
+	collision4,30,62,44,76,Hand
+	collision5,23,112,39,131,Hand
+	collision6,13,133,52,211,Leg
+	collision7,29,94,34,100,abdomen
+	collision8,11,209,53,225,Boots
+
+}
+
+surface7019
+{
+	element0,overlay,surface13.png,0,0
+	element1,overlay,surface3005.png,0,0
+
+	collision0,1,0,54,27,Head
+	collision1,17,26,50,38,Face
+	collision2,30,39,38,45,Lip
+	collision3,56,3,78,124,Hair
+	collision4,30,62,44,76,Hand
+	collision5,23,112,39,131,Hand
+	collision6,13,133,52,211,Leg
+	collision7,29,94,34,100,abdomen
+	collision8,11,209,53,225,Boots
+
+}
+
+surface7020
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0201.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+}
+
+surface7021
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0202.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+}
+
+surface7022
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0203.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+}
+
+surface7023
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0204.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+}
+
+surface7024
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0205.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+}
+
+surface7025
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0206.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+}
+
+surface7026
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0207.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+}
+
+surface7027
+{
+	element0,overlay,surface27.png,0,0
+	collision0,1,0,54,24,Head
+	collision1,19,24,48,37,Face
+	collision2,29,37,38,43,Lip
+	collision3,55,5,79,118,Hair
+	collision4,24,59,46,73,Hand
+	collision5,12,136,53,211,Leg
+	collision6,30,90,37,101,abdomen
+	collision7,13,209,52,225,Boots
+
+}
+
+surface7028
+{
+	element0,overlay,surface28.png,0,0
+	collision0,1,0,54,24,Head
+	collision1,19,24,48,37,Face
+	collision2,29,37,38,43,Lip
+	collision3,55,5,79,118,Hair
+	collision4,24,59,46,73,Hand
+	collision5,12,136,53,211,Leg
+	collision6,30,90,37,101,abdomen
+	collision7,13,209,52,225,Boots
+
+}
+
+surface7029
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0301.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+}
+
+surface7040
+{
+	element0,overlay,surface40.png,0,0
+	collision0,21,57,78,74,eHead
+	collision1,34,73,67,88,eFace
+
+}
+
+surface7041
+{
+	element0,overlay,surface41.png,0,0
+	collision0,21,57,78,74,eHead
+	collision1,34,73,67,88,eFace
+
+}
+
+surface7042
+{
+	element0,overlay,surface42.png,0,0
+	collision0,21,57,78,74,eHead
+	collision1,34,73,67,88,eFace
+
+}
+
+surface9000
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision3,56,39,70,48,Lip
+	collision4,50,62,79,78,Bust
+	collision5,50,103,83,188,Leg
+	collision6,45,182,86,200,Boots
+
+	animation0.interval,rarely
+	animation0.pattern0,alternativestart,(1,2)
+
+	animation1.interval,never
+	animation1.pattern0,overlay,10000,60,0,0
+	animation1.pattern1,overlay,9006,60,0,0
+	animation1.pattern2,overlay,10000,60,0,0
+	animation1.pattern3,overlay,-1,5,0,0
+
+	animation2.interval,never
+	animation2.pattern0,overlay,9006,50,0,0
+	animation2.pattern1,overlay,10000,50,0,0
+	animation2.pattern2,overlay,-1,50,0,0
+	animation2.pattern3,overlay,9006,30,0,0
+	animation2.pattern4,overlay,10000,50,0,0
+	animation2.pattern5,overlay,-1,30,0,0
+}
+
+surface9001
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision3,56,39,70,48,Lip
+	collision4,50,62,79,78,Bust
+	collision5,50,103,83,188,Leg
+	collision6,45,182,86,200,Boots
+}
+
+surface9002
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision3,56,39,70,48,Lip
+	collision4,50,62,79,78,Bust
+	collision5,50,103,83,188,Leg
+	collision6,45,182,86,200,Boots
+}
+
+surface9003
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision3,56,39,70,48,Lip
+	collision4,50,62,79,78,Bust
+	collision5,50,103,83,188,Leg
+	collision6,45,182,86,200,Boots
+}
+
+surface9004
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision3,56,39,70,48,Lip
+	collision4,50,62,79,78,Bust
+	collision5,50,103,83,188,Leg
+	collision6,45,182,86,200,Boots
+}
+
+surface9005
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision3,56,39,70,48,Lip
+	collision4,50,62,79,78,Bust
+	collision5,50,103,83,188,Leg
+	collision6,45,182,86,200,Boots
+}
+
+surface9006
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision3,56,39,70,48,Lip
+	collision4,50,62,79,78,Bust
+	collision5,50,103,83,188,Leg
+	collision6,45,182,86,200,Boots
+}
+
+surface9007
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision3,56,39,70,48,Lip
+	collision4,50,62,79,78,Bust
+	collision5,50,103,83,188,Leg
+	collision6,45,182,86,200,Boots
+}
+
+surface9008
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision3,56,39,70,48,Lip
+	collision4,50,62,79,78,Bust
+	collision5,50,103,83,188,Leg
+	collision6,45,182,86,200,Boots
+}
+
+surface9009
+{
+	collision0,42,3,80,21,Head
+	collision1,41,23,83,37,Face
+	collision3,56,39,70,48,Lip
+	collision4,50,62,79,78,Bust
+	collision5,50,103,83,188,Leg
+	collision6,45,182,86,200,Boots
+}
+
+surface9010
+{
+	element0,overlay,surface10.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+	animation0.interval,rarely
+	animation0.pattern0,alternativestart,(1,2)
+
+	animation1.interval,never
+	animation1.pattern0,overlay,300,80,0,0
+	animation1.pattern1,overlay,301,80,0,0
+	animation1.pattern2,overlay,300,80,0,0
+	animation1.pattern3,overlay,-1,80,0,0
+
+	animation2.interval,never
+	animation2.pattern0,overlay,300,80,0,0
+	animation2.pattern1,overlay,301,80,0,0
+	animation2.pattern2,overlay,-1,80,0,0
+	animation2.pattern3,overlay,300,80,0,0
+	animation2.pattern4,overlay,301,80,0,0
+	animation2.pattern5,overlay,-1,80,0,0
+
+}
+
+surface9011
+{
+	element0,overlay,surface11.png,0,0
+	collision0,2,3,54,31,Head
+	collision1,15,32,50,41,aFace
+	collision2,54,15,77,116,Hair
+	collision3,26,44,44,58,Hand
+	collision4,15,133,52,212,Leg
+	collision5,16,90,48,103,abdomen
+	collision6,16,210,52,225,Boots
+
+}
+
+surface9012
+{
+	element0,overlay,surface12.png,0,0
+	collision0,1,0,56,25,Head
+	collision1,18,23,49,38,aFace
+	collision2,29,37,38,42,Lip
+	collision3,55,8,80,118,Hair
+	collision4,24,60,46,74,Hand
+	collision5,15,135,52,211,Leg
+	collision6,28,91,38,104,abdomen
+	collision7,14,209,53,225,Boots
+
+}
+
+surface9013
+{
+	element0,overlay,surface13.png,0,0
+	collision0,1,0,54,27,Head
+	collision1,17,26,50,38,Face
+	collision2,31,39,36,44,Lip
+	collision3,56,3,78,124,Hair
+	collision4,30,62,44,76,Hand
+	collision5,23,112,39,131,Hand
+	collision6,13,133,52,211,Leg
+	collision7,29,94,34,100,abdomen
+	collision8,11,209,53,225,Boots
+}
+
+surface9014
+{
+	element0,overlay,surface12.png,0,0
+	element1,overlay,surface2001.png,0,0
+
+	collision0,1,0,54,24,Head
+	collision1,19,24,48,37,Face
+	collision2,29,37,38,42,Lip
+	collision3,55,5,79,118,Hair
+	collision4,24,59,46,73,Hand
+	collision5,12,136,53,211,Leg
+	collision6,30,90,37,101,abdomen
+	collision7,13,209,52,225,Boots
+}
+
+surface9015
+{
+	element0,overlay,surface13.png,0,0
+	element1,overlay,surface3001.png,0,0
+
+	collision0,1,0,54,27,Head
+	collision1,17,26,50,38,Face
+	collision2,31,39,36,44,Lip
+	collision3,56,3,78,124,Hair
+	collision4,30,62,44,76,Hand
+	collision5,23,112,39,131,Hand
+	collision6,13,133,52,211,Leg
+	collision7,29,94,34,100,abdomen
+	collision8,11,209,53,225,Boots
+}
+
+surface9016
+{
+	element0,overlay,surface13.png,0,0
+	element1,overlay,surface3004.png,0,0
+
+	collision0,1,0,54,27,Head
+	collision1,17,26,50,38,Face
+	collision2,30,39,38,45,Lip
+	collision3,56,3,78,124,Hair
+	collision4,30,62,44,76,Hand
+	collision5,23,112,39,131,Hand
+	collision6,13,133,52,211,Leg
+	collision7,29,94,34,100,abdomen
+	collision8,11,209,53,225,Boots
+
+}
+
+surface9017
+{
+	element0,overlay,surface13.png,0,0
+	element1,overlay,surface3002.png,0,0
+
+	collision0,1,0,54,27,Head
+	collision1,17,26,50,38,Face
+	collision2,31,39,36,44,Lip
+	collision3,56,3,78,124,Hair
+	collision4,30,62,44,76,Hand
+	collision5,23,112,39,131,Hand
+	collision6,13,133,52,211,Leg
+	collision7,29,94,34,100,abdomen
+	collision8,11,209,53,225,Boots
+
+}
+
+surface9018
+{
+	element0,overlay,surface13.png,0,0
+	element1,overlay,surface3003.png,0,0
+
+	collision0,1,0,54,27,Head
+	collision1,17,26,50,38,Face
+	collision2,31,39,36,44,Lip
+	collision3,56,3,78,124,Hair
+	collision4,30,62,44,76,Hand
+	collision5,23,112,39,131,Hand
+	collision6,13,133,52,211,Leg
+	collision7,29,94,34,100,abdomen
+	collision8,11,209,53,225,Boots
+
+}
+
+surface9019
+{
+	element0,overlay,surface13.png,0,0
+	element1,overlay,surface3005.png,0,0
+
+	collision0,1,0,54,27,Head
+	collision1,17,26,50,38,Face
+	collision2,30,39,38,45,Lip
+	collision3,56,3,78,124,Hair
+	collision4,30,62,44,76,Hand
+	collision5,23,112,39,131,Hand
+	collision6,13,133,52,211,Leg
+	collision7,29,94,34,100,abdomen
+	collision8,11,209,53,225,Boots
+
+}
+
+surface9020
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0201.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+}
+
+surface9021
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0202.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+}
+
+surface9022
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0203.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+}
+
+surface9023
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0204.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+}
+
+surface9024
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0205.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+}
+
+surface9025
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0206.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+}
+
+surface9026
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0207.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+}
+
+surface9027
+{
+	element0,overlay,surface27.png,0,0
+	collision0,1,0,54,24,Head
+	collision1,19,24,48,37,Face
+	collision2,29,37,38,43,Lip
+	collision3,55,5,79,118,Hair
+	collision4,24,59,46,73,Hand
+	collision5,12,136,53,211,Leg
+	collision6,30,90,37,101,abdomen
+	collision7,13,209,52,225,Boots
+
+}
+
+surface9028
+{
+	element0,overlay,surface28.png,0,0
+	collision0,1,0,54,24,Head
+	collision1,19,24,48,37,Face
+	collision2,29,37,38,43,Lip
+	collision3,55,5,79,118,Hair
+	collision4,24,59,46,73,Hand
+	collision5,12,136,53,211,Leg
+	collision6,30,90,37,101,abdomen
+	collision7,13,209,52,225,Boots
+
+}
+
+surface9029
+{
+	element0,overlay,surface10.png,0,0
+	element1,overlay,surface0301.png,0,0
+
+	collision0,3,0,55,20,Head
+	collision1,19,22,49,36,Face
+	collision2,31,37,36,41,Lip
+	collision3,58,11,83,121,Hair
+	collision4,20,58,44,78,Chest
+	collision5,25,108,37,128,Hand
+	collision6,15,133,52,212,Leg
+	collision7,27,91,35,100,abdomen
+	collision8,16,210,52,225,Boots
+
+}
+
+surface9040
+{
+	element0,overlay,surface40.png,0,0
+	collision0,21,57,78,74,eHead
+	collision1,34,73,67,88,eFace
+
+}
+
+surface9041
+{
+	element0,overlay,surface41.png,0,0
+	collision0,21,57,78,74,eHead
+	collision1,34,73,67,88,eFace
+
+}
+
+surface9042
+{
+	element0,overlay,surface42.png,0,0
+	collision0,21,57,78,74,eHead
+	collision1,34,73,67,88,eFace
+
+}

@@ -1,0 +1,298 @@
+///////// マウス入力関連辞書（特殊）
+//ぽなぱるとさん、浮子屋さんに感謝。
+
+//********** The Hand ************************************************************
+
+//Activate
+OnHandActivate
+{
+	_fname = "HandActivate_%(reference[0])_%(reference[1])"
+	if ISFUNC(_fname) {
+		EVAL(_fname)
+	}
+}
+
+//共通の返事
+TheHandResponseMeesageStart
+{
+	''
+	"\0\s[0]来ないで、\w4ください。\w9\n"
+	"\0\s[0]…\w4…。\w4\s[3]\w9\n"
+	"\0\s[0]実害が無いとは言え、\w4落ち着きません。\w9\n\1\s[10]その状況下で落ち着いてられる方が不思議だと思うよ。\w9\n"
+}
+
+//Hand行動開始時の台詞
+HandActivate_NormalStart_Head
+{
+	"\0\s[0]ユニットに被害が出なければいいのですが\w4…\w4…。\w9\n"
+	--
+	TheHandResponseMeesageStart
+}
+
+HandActivate_NormalStart_Face
+{
+	"\0\s[0]顔狙いですか\w4…\w4…。\w9\n\1\s[10]随分と冷静だね。\w9\n\0\s[3]抵抗しても無駄でしょうしね。\w9\n"
+	--
+	TheHandResponseMeesageStart
+}
+
+HandActivate_NormalStart_Bust
+{
+	"\0\s[0]誰も彼も狙う部位ですね…\w4…。\w9\n"
+	--
+	TheHandResponseMeesageStart
+}
+
+HandActivate_NormalStart_Skirt
+{
+	"\0\s[3]こういうときにスカートであることを後悔します。\w9\n"
+	--
+	TheHandResponseMeesageStart
+}
+
+HandActivate_NormalStart_Pants
+{
+	"\0\s[3]ベルトしておけば良かったです…\w4…。\w9\n"
+	--
+	TheHandResponseMeesageStart
+}
+
+HandActivate_NormalStart_Leg
+{
+	"\0\s[0]…\w4…。\w9\n"
+	--
+	TheHandResponseMeesageStart
+}
+
+HandActivate_NormalStart_Lip
+{
+	"\0\s[3]あまり、\w4触って欲しくないです。\w9\n"
+	--
+	TheHandResponseMeesageStart
+}
+
+HandActivate_NormalStart_Hand
+{
+	"\0\s[0]はぁ…\w4…。\w9\n"
+	"\0\s[0]手、\w4握ってみますか?\w9\n呪いをかけるという意味で、\w4ですが。\w9\n"
+	--
+	TheHandResponseMeesageStart
+}
+
+HandActivate_NormalStart_thigh
+{
+	"\0\s[0]また、\w4際どい所を…\w4…。\w9\n"
+	--
+	TheHandResponseMeesageStart
+}
+
+HandActivate_NormalStart_navel
+{
+	"\0\s[0]…\w4…。\w9\n"
+	--
+	TheHandResponseMeesageStart
+}
+
+//Hand必殺技1
+HandActivate_SuperStart_1
+{
+	"\0\s[6]\c"
+}
+
+HandActivate_SuperContinue_1 : nonoverlap
+{
+	'\C'
+	--
+	'くっ '
+	'んっ '
+	'あっ '
+	'やっ '
+	'うっ '
+}
+
+HandActivate_SuperEnd_1
+{
+	"\1\s[10]準備は出来たよ、\w4オフィーリア。\w9\n\0\s[0]遊びは此処までにしましょう。\w9\n\s[6]凍結領域指定、\w4凍結実行…\w4…。\w9"
+	res_reference[0] = "Hand"
+}
+
+//Hand必殺技2
+HandActivate_SuperStart_2
+{
+	"\0\s[4]\c"
+}
+
+HandActivate_SuperContinue_2 : nonoverlap
+{
+	'\1\s[10]\0\s[4]'
+	--
+	'っ'
+	'く'
+	'ん'
+	'!'
+}
+
+HandActivate_SuperEnd_2
+{
+	"\0\s[0]…\w4…。\w9\n\1\s[10]準備完了、\w4いけるっ\w9\0\s[7]凍れっ\w9"
+	res_reference[0] = "Hand"
+}
+
+HandActivate_SuperStart_4
+{
+	"\0\s[6]シールド展開、\w4アブソーバ最大。\w9"
+}
+
+//HandActivate_SuperContinue_4 : nonoverlap
+//{
+//	'\C'
+//	--
+//	'…'
+//	'…'
+//	'…'
+//	'…'
+//	'…'
+//}
+
+HandActivate_SuperEnd_4
+{
+	"\0\s[6]…\w4…。\w9\n\1\s[10]準備完了、\w4いけるっ\w9\0\s[7]凍れっ\w9"
+	res_reference[0] = "Hand"
+}
+
+
+//Response
+TheHandResponseMessage
+{
+	'' //ひとつはからっぽ
+	"\w9\w9\0\s[3]触れないでください。\w9"
+	"\w9\w9\0\s[0]せめて、\w4シールドが通用すれば\w4…\w4…。\w9"
+	"\w9\w9\0\s[0]こう動きが早いと狙いがつけにくいですね。\w9\n\1\s[10]こればかりは止めない。\w9"
+
+}
+
+//MouseSpecial
+//たたかれる
+MouseTH_DoubleClick0Head
+{
+	"\0\s[4]叩かないでください。\w9\n"
+	--
+	TheHandResponseMessage
+}
+
+MouseTH_DoubleClick0Face
+{
+	"\0\s[0]顔なんか叩いてどうするんですか\w4…\w4…。\w9\n"
+	--
+	TheHandResponseMessage
+}
+
+MouseTH_DoubleClick0Bust
+{
+	"\0\s[0]…\w4…。\w4\n"
+	--
+	TheHandResponseMessage
+}
+
+MouseTH_DoubleClick0Skirt
+{
+	TheHandResponseMessage
+}
+
+MouseTH_DoubleClick0Pants
+{
+	TheHandResponseMessage
+}
+
+MouseTH_DoubleClick0Leg
+{
+	TheHandResponseMessage
+}
+
+MouseTH_DoubleClick0Lip
+{
+	"\0\s[6]ん…\w4…\w4\n\s[4]けほ、けほっ\n"
+	--
+	TheHandResponseMessage
+}
+
+MouseTH_DoubleClick0Hand
+{
+	TheHandResponseMessage
+}
+
+MouseTH_DoubleClick0thigh
+{
+	"\0\s[0]くすぐったいです\w4…\w4…。\w9\n"
+	--
+	TheHandResponseMessage
+}
+
+//なでられる
+MouseTH_Nade0Head
+{
+	"\0\s[0]撫でることも出来たんですね。\w9\nそれでもセクハラに該当しますが。\w9\n"
+	--
+	TheHandResponseMessage
+}
+
+MouseTH_Nade0Face
+{
+	"\0\s[0]光学どころか他のセンサーも使えないなんて\w4…\w4…。\w9\n"
+	--
+	TheHandResponseMessage
+}
+
+MouseTH_Nade0Bust
+{
+	"\0\s[0]これだから男の人は\w4…\w4…\w9\n\1\s[10]この手は果たして男だろうか。\w9\n"
+	--
+	TheHandResponseMessage
+}
+
+MouseTH_Nade0Skirt
+{
+	TheHandResponseMessage
+}
+
+MouseTH_Nade0Pants
+{
+	"\0\s[2]ひゃん\w9\s[1]\n"
+	--
+	TheHandResponseMessage
+}
+
+MouseTH_Nade0Leg
+{
+	TheHandResponseMessage
+}
+
+MouseTH_Nade0Lip
+{
+	"\0\s[0]食いちぎりましょうか。\w9\n\1\s[10]それはキャラが違うし、\w4伝染しそうだからやめてくれ。\w9\n"
+	--
+	TheHandResponseMessage
+}
+
+MouseTH_Nade0Hand
+{
+	TheHandResponseMessage
+}
+
+MouseTH_Nade0thigh
+{
+	"\0\s[8]くすぐったいです。\w9\n"
+	--
+	TheHandResponseMessage
+}
+
+//めくられる
+MouseTH_Wheel0Skirt
+{
+	"\0\s[0]めくれませんし、\w4そんなことお断りです。\w9\n"
+}
+
+MouseTH_Wheel0Bust
+{
+	"\0\s[6]…\w4…\w4脱がそうなんて100年早いです。\w9\n"
+}

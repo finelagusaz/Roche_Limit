@@ -1,0 +1,29 @@
+charset,Shift_JIS
+
+craftman,Fine Lagusaz
+craftmanurl,https://blankrune.sakura.ne.jp/
+craftmanw,Fine Lagusaz
+id,roche_limit_plus_master
+kero.balloon.offsetx,45
+kero.balloon.offsety,200
+kero.name,エプシロン
+menu.background.alignment,righttop
+menu.background.bitmap.filename,menu_background.png
+menu.background.font.color.b,0
+menu.background.font.color.g,0
+menu.background.font.color.r,0
+menu.foreground.alignment,righttop
+menu.foreground.bitmap.filename,menu_foreground.png
+menu.foreground.font.color.b,0
+menu.foreground.font.color.g,0
+menu.foreground.font.color.r,0
+menu.separator.color.b,0
+menu.separator.color.g,0
+menu.separator.color.r,0
+menu.sidebar.alignment,bottom
+menu.sidebar.bitmap.filename,menu_sidebar.png
+name,master
+sakura.balloon.offsetx,14
+sakura.balloon.offsety,65
+sakura.name,オフィーリア
+type,shell

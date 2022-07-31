@@ -1,0 +1,11 @@
+ghost/master/aya5.dll
+ghost/master/aya5.txt
+ghost/master/aya_compatible.dic
+ghost/master/aya_shiori3.dic
+ghost/master/messagetxt/classical-chinese.txt
+ghost/master/messagetxt/english.txt
+ghost/master/messagetxt/japanese.txt
+ghost/master/messagetxt/simplified-chinese.txt
+ghost/master/messagetxt/traditional-chinese.txt
+ghost/master/messagetxt
+roche_limit_sodate

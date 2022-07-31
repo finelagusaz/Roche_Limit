@@ -1,0 +1,272 @@
+///////// 文　ゴーストテンプレート
+///////// 文字列リソース辞書
+///////// written by umeici.
+
+//**** 文字列リソース *******************************************************************
+
+//---- ユーザー名 -----------------------------------------------------------------------
+On_username
+{
+	username
+}
+
+//---- ネットワーク更新の基準位置となるURL ----------------------------------------------
+On_homeurl
+{
+	"https://blankrune.sakura.ne.jp/named/roche_limit_plus/update/"
+}
+
+//---- ポータルサイトのボタンキャプション -----------------------------------------------
+On_portalrootbutton.caption
+{
+	"ポータル"
+}
+
+//---- ポータルサイトのリスト -----------------------------------------------------------
+On_sakura.portalsites
+{
+	LinkMenuConvert(On_sakura.portalsites_EX)
+}
+
+On_sakura.portalsites_EX : array
+{
+	'SSP BUGTRQ	|	http://ssp.shillest.net/'
+	'うさださくら	|	http://usada.sakura.vg/'
+	'C.R.O.W.	|	http://crow.aqrs.jp/'
+	'-		|	'
+	'Disc-2		|	http://disc2.s56.xrea.com/'
+	'Encyclopedia of 伺か	|	http://dic.sstp.jp/'
+	'GHOST TOWN	|	http://ghosttown.mikage.jp/'
+	'BALOON TOWN	|	http://ghosttown.mikage.jp/balloontown.html'
+	'-		| '
+	'YAYA	|	http://ms.shillest.net/yaya.xhtml'
+	'里々/整備班カスタム	|	http://ms.shillest.net/satoriya.xhtml'
+	'灯	|	http://le.silk.to/'
+	'美坂	|	http://lovelove.rabi-en-rose.net/index_misaka.php'
+	'梨野	|	http://www.junkyard.jp/nasino/index.shtml'
+	'華和梨	|	http://kawari.sourceforge.net/'
+}
+
+//---- 本体側おすすめサイトのボタンキャプション -----------------------------------------
+On_recommendrootbutton.caption
+{
+	"おすすめ"
+}
+
+//---- 本体側おすすめサイトのリスト -----------------------------------------------------
+On_sakura.recommendsites
+{
+	LinkMenuConvert(On_sakura.recommendsites_EX)
+}
+
+On_sakura.recommendsites_EX : array
+{
+	'Taromati	|	 http://unvollendet.web.fc2.com/'
+	'イクサイス"ゼロ"	|	http://altenotiz.sakura.ne.jp/'
+	'量産型イクサイス：綾	|	'
+	'壊れた魂の欠片		|	http://bangdoll.sakura.ne.jp/'
+	'黒海			|	http://www.kuromi.jp/'
+	'フランチェスカ		|	http://tricross.sitemix.jp/Francesca_Z/index.html'
+	'月夜のおとぎばなし	|	'
+	'ヒトラ氏＆兵うにゅう	|	http://wunderkammer.vs.land.to/ghost/index.html'
+	'1st innnerport		|	'
+	'千郷＆魚匠＆御子神一家	|	'
+	'orbital		|	'
+	'安子さん		|	'
+	'Dolly Devil		|	'
+	'NAGISA the Seraphic Wing	|	'
+	'ＲＯＡＭＩＮＧ＊ＫＩＤ ～二匹の子やぎ～	|	http://yagimudsuki.no.land.to/'
+	'蒼空の風詩		|	'
+	'ＰＢＭ－０２Ｅｘ－ＩＣＥ：Ｃｏｄｅ“Ｅｘｉｙ”	|	'
+	'機械の王	|	http://nonamefactory.shillest.net/'
+	'The world wide of words	|	'
+	'人体視願／ヴィイ	|	http://project.hacca.jp/'
+	'The Hand		|	http://ukiya.sakura.ne.jp/'
+	'ティミス＆ノルネ	|	'
+	'繋がれた風		|	https://nekotuki.skr.jp/'
+	'ちびすけとねこと	|	http://yamagashi.me.land.to/'
+	'MOEKAプロジェクト	|	http://highkaru.pa.land.to/'
+	'マロンとブラン～Early Type～	|	http://descriptus.nobody.jp/'
+	'あったかいヒカリ	|	http://colorbox.saloon.jp'
+	'希望の光	|	http://colorbox.saloon.jp'
+	'der narr		|	'
+	'カレカノ	|	'
+	'隙間の世界/リーライナ	|	http://risna.sakura.ne.jp/sukima/sukima01.html'
+	'にこらとてすら	|	http://home.384.jp/evidence/'
+	'7		|	'
+	'Un Known		|	'
+	'想像書架	|	https://712.shillest.net/'
+	'Scar of Doll	|	http://colorbox.oh.land.to/'
+	'隙間の世界/泡影	|	http://risna.sakura.ne.jp/sukima/sukima01.html'
+	'図書館バイト		|	'
+	'侵されざる黒	|	http://nonamefactory.shillest.net/'
+	'54	|	'
+	'白夜の月	|	'
+	'obsidian	|	http://rakudaya.sakura.tv/htc.html'
+	'ゲッシーズの空費	|	'
+	'実梅と弥涼	|	'
+	'隙間の世界/ウィンディア	|	http://risna.sakura.ne.jp/sukima/sukima01.html'
+	'血と肉	|	http://fonshitu.fc2web.com/mikan/'
+	'燃える稲穂	|	http://nonamefactory.shillest.net/'
+	'自然科学―民俗学境界	|	http://nonamefactory.shillest.net/'
+	'-	|'
+	'Project Roche Limit	|	https://blankrune.sakura.ne.jp/pukiwiki/'
+}	
+
+
+//---- kero側おすすめサイトのボタンキャプション -----------------------------------------
+On_kero.recommendbuttoncaption
+{
+	"エプシロンのおすすめ"
+}
+
+//---- kero側おすすめサイトのリスト -----------------------------------------------------
+On_kero.recommendsites
+{
+	LinkMenuConvert(On_kero.recommendsites_EX)
+}
+
+On_kero.recommendsites_EX : array
+{
+	'窓の杜		|	http://www.forest.impress.co.jp/'
+	'ソフトアンテナ	|	https://www.softantenna.com/'
+	'-		|	'
+	'JPCERT/CC	|		https://www.jpcert.or.jp/'
+	'-		|	'
+	'Windy	|	https://www.windy.com/'
+	'-		|	'
+	'INDIEGOGO	|	https://www.indiegogo.com/'
+}
+
+
+//---- ネットワーク更新ボタンのキャプション ---------------------------------------------
+On_updatebutton.caption
+{
+	"ネットワーク更新"
+	"イクサイスユニットドライバ更新"
+	"ドライバ更新"
+	"Ex-ICE Update"
+}
+
+//---- readmeボタンのキャプション -------------------------------------------------------
+On_readmebutton.caption
+{
+	"read me..."
+	"ReadMe"
+	"参考にならない紙片"
+}
+
+//---- 消滅指示ボタンのキャプション -----------------------------------------------------
+On_vanishbutton.caption
+{
+	"さよなら"
+	"別れの日"
+	"テスター終了"
+	"グッドラック・オフィーリア"
+}
+
+//---- 消滅指示ボタン表示切り替え -------------------------------------------------------
+On_vanishbutton.visible
+{
+	//---- "0"で非表示、それ以外で表示
+	"1"
+}
+
+//---- 起動中の他のゴースト名取得 -------------------------------------------------------
+On_otherghostname
+{
+	// 現在起動中のゴーストのリストを作成する
+	ghostexlist = ""
+	_i = 0
+	while _i >= 0 {
+//		_ghostname = EVAL("reference%(_i)")
+		_ghostname = SPLIT(reference[_i],CHR(1),2)[0]
+		if _ghostname != "" {
+			if _i > 0; ghostexlist += ","
+			ghostexlist += _ghostname[0]
+			_i++
+		}
+		else; _i = -1
+	}
+	ghostexcount = ARRAYSIZE(ghostexlist)
+}
+
+//---- SHIORI 関連情報 ------------------------------------------------------------------
+On_version
+{
+	GETSETTING(AYAINFO_VERSION)
+}
+
+On_craftman
+{
+	"umeici"
+}
+
+On_craftmanw
+{
+	"梅市"
+}
+
+On_name
+{
+	"AYA"
+}
+
+//---- Owned SSTP 用 uniqueid 取得 ------------------------------------------------------
+On_uniqueid
+{
+	uniqueid = reference[0]
+}
+
+//---- hwnd 取得 ------------------------------------------------------------------------
+On_hwnd
+{
+	sakurahwnd    = reference[0][0]
+	kerohwnd      = reference[0][1]
+	sakurablnhwnd = reference[1][0]
+	keroblnhwnd   = reference[1][1]
+}
+
+//---- お気に入りを書きやすくするために
+LinkMenuConvert
+{
+    _text = ''
+    _data = IARRAY
+    for _i = 0 ; _i < _argc ; _i++ {
+        _data = (RE_SPLIT(_argv[_i],'[ \t]*\|[ \t]*'),'','') //ダミー
+        _text += "%(_data[0])%(CHR(1))%(_data[1])%(CHR(1))%(_data[2])%(CHR(1))%(CHR(2))"
+    }
+    _text;
+}
+
+//---- 右クリックメニューのキャプション -------------------------------------------------------
+On_menu.foreground.bitmap.filename
+{
+	if SurfaceMode == "0"
+	{
+		"menu_foreground.png"
+	}
+	elseif SurfaceMode == "5"
+	{
+		"menu_foreground001.png"
+	}
+	elseif SurfaceMode == "9"
+	{
+		"menu_foreground002.png"
+	}
+}
+On_menu.background.bitmap.filename
+{
+	if SurfaceMode == "0"
+	{
+		"menu_background.png"
+	}
+	elseif SurfaceMode == "5"
+	{
+		"menu_background001.png"
+	}
+	elseif SurfaceMode == "9"
+	{
+		"menu_background002.png"
+	}
+}

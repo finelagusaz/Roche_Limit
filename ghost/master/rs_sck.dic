@@ -1,0 +1,15 @@
+OnKeyPress
+{
+	if reference[0] == "t"
+	{
+		OnAiTalk
+	}
+	elseif reference[0] == "m"
+	{
+		OpenMenu
+	}
+	elseif reference[0] == "c"
+	{
+		StartCommunicate
+	}
+}

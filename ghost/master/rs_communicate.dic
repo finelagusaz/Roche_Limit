@@ -1,0 +1,656 @@
+///////// 文　ゴーストテンプレート
+///////// コミュニケート辞書
+///////// written by umeici.
+
+//**** こちらから話しかける *************************************************************
+StartCommunicate
+{
+	//---- まず話しかける相手を決める
+	if ghostexcount > 0
+	{
+		// res_reference[0] に話しかける相手の名前を格納
+//		res_reference[0] = ghostexlist[RAND(ghostexcount)]
+		if "カシス" _in_ ghostexlist
+		{
+			res_reference[0] = "カシス"
+		}
+	}
+	else
+	{
+		RandomTalk
+	}
+	//---- 話しかける
+	case res_reference[0]{
+		when "カシス"{
+			comCassisandOphelia0
+		}
+		others{
+//			res_reference[0] == ""
+			RandomTalk
+		}
+	}
+}
+
+//**** 話しかけられたので返事する *******************************************************
+
+//---- OnCommunicateイベント ------------------------------------------------------------
+OnCommunicate
+{
+	if reference[0] == "user" || reference[0] == "User"
+	{
+		//---- ユーザーからの話しかけ
+		ReplyToUser
+	}
+	else
+	{
+		if "comCassisandOphelia" _in_ reference[2]	//---- 特殊コミュの識別子があれば続行ルーチンへ
+		{
+			EVAL("%reference[2]")
+		}
+		else						//---- 無ければ通常コミュへ
+		{
+			//---- ゴーストからの話しかけ
+			ReplyToGhost
+		}
+	}
+}
+//---- ユーザーからの話しかけ -----------------------------------------------------------
+ReplyToUser
+{
+	if "名前" _in_ reference[1] && "覚えて" _in_ reference[1]
+	{
+		//---- ユーザー名入力開始
+		"\0\s[0]呼び名を教えてください。\e"
+		teachusername = 1
+	}
+	else
+	{
+		//---- ユーザー名入力開始以外
+		if teachusername == 1
+		{
+			//---- 直前が「名前覚えて」だったので名前を覚える
+			username = reference[1]
+			"\0\s[0]%username、ですね。\nわかりました。\e"
+			teachusername = 0
+		}
+		else
+		{
+			//---- 名前覚え以外のさまざまな会話への返事
+			TalkToUser
+		}
+	}
+}
+
+//---- ユーザーへの返事（名前覚え以外） -------------------------------------------------
+TalkToUser
+{
+	if "こんにちは" _in_ reference[1]
+	{
+		"\0\s[0]こんにちは、%username。\e"
+	}
+	elseif "好き" _in_ reference[1] || "愛し" _in_ reference[1]
+	{
+		"\0\s[0]ありがとうございます。\n\w4\s[6]でも、\w4その言葉はほかの人に言ってあげてください。\e"
+	}
+	elseif "アルギズ" _in_ reference[1]
+	{
+		"\0\s[5]はい、\w4なんでしょうか。\w9"
+		--
+		Menu
+	}
+	elseif "アズ" _in_ reference[1] || "アズリエル" _in_ reference[1]
+	{
+		"\1\s[10]なんだい?\w9"
+		--
+		MenuAz
+	}
+	elseif "オフィーリア" _in_ reference[1]
+	{
+		"\0\s[5]はい、\w4%username。\w9"
+		--
+		Menu
+	}
+	elseif "エプシロン" _in_ reference[1]
+	{
+		"\1\s[10]何か用かい?\w9"
+		"\1\s[10]ご覧ください、\w4この質素なメニュー。\w9"
+		"\1\s[10]なんだい?\w9\n/
+		頼み事なら%sakuranameに頼んだほうがいいよ。\w9"
+		--
+		MenuAz
+	}
+	elseif "えっちゃん" _in_ reference[1]
+	{
+		"\1\s[14]えっちゃんいうなーっ"
+	}
+	elseif "ごめん" _in_ reference[1] || "済まない" _in_ reference[1] || "すまない" _in_ reference[1] || "すまん" _in_ reference[1]
+	{
+		"\0\s[2]あ、\w4\s[5]気にしてませんから、\w4謝らないでください。\w9/
+		\1\s[10]（お人よしだね、\w4君は。）\w9\e"
+	}
+	elseif "脱いで" _in_ reference[1]
+	{
+		"\0\s[0]だそうですよ。\w9\n\n[half]/
+		\1\s[10]僕も脱がないよ。\w9\n\n[half]/
+		\0\s[0]私も脱ぎません。\w9\e"
+	}
+	elseif "スタンプ" _in_ reference[1]
+	{
+	//スタンププラグイン対応
+	"\0"
+	--
+		if basewarename!="SSP" {
+		"\s[0]必要なソフトが無いようですね。\w9\n\n[half]/
+		\1\s[10]捺すにはSSPが必要になるみたいだね。"
+		}
+		elseif !スタンプ帳動作 {
+		"\1\s[10]どうやら、\w4スタンプ帳というプラグインが無いみたいだ。\w9\n\n[half]/
+		\0\s[0]捺すにはインストールが必要ですね。"
+		}
+		//elseif "%(CHR(2))ロッシュの限界%(CHR(1))"_in_スタンプ帳情報 {
+		//"\s[0]既に捺してますよ。"
+		//}
+		else {
+		"\![raiseplugin,スタンプ帳,OnStampAdd,ghost\master\stamp.png,雪降る中で,「大丈夫です。だって――」]\s[5]はい、\w4捺しました。"
+		}
+	--
+	"\e"
+	}
+	elseif "更新履歴" _in_ reference[1]
+	{
+		"\0\s[0]更新履歴ですね。\w9\![open,browser,https://blankrune.sakura.ne.jp/named/roche_limit_plus/update/changelog.txt]\e"
+	}
+	elseif "about:talk" _in_ reference[1]
+	{
+		"\0\s[0]通常ランダムトーク: %(ARRAYSIZE(aryNormalTalk))\n/
+		春限定トーク: %(ARRAYSIZE(arySpringTalk))\n/
+		夏限定トーク: %(ARRAYSIZE(arySummerTalk))\n/
+		秋限定トーク: %(ARRAYSIZE(aryAutumnTalk))\n/
+		冬限定トーク: %(ARRAYSIZE(aryWinterTalk))\n/
+		深夜限定トーク: %(ARRAYSIZE(aryMidnightTalk))\n/
+		\n[half]/
+		旧ランダムトーク：%(ARRAYSIZE(aryNormalTalkOld))\n/
+		\n[half]/
+		\n合計: %(ARRAYSIZE(aryNormalTalk) + ARRAYSIZE(arySpringTalk) + ARRAYSIZE(arySpringTalk) + ARRAYSIZE(arySummerTalk) + ARRAYSIZE(aryAutumnTalk) + ARRAYSIZE(aryWinterTalk) + ARRAYSIZE(aryNormalTalkOld))\e"
+	}
+	else
+	{
+		"\0\s[0]すみません、\w9何を言っているか良くわかりません。\e"
+	}
+}
+
+//---- ゴーストからの話しかけ -----------------------------------------------------------
+ReplyToGhost
+{
+	// 話しかけてきた相手に返事
+	res_reference[0] = reference[0]
+
+	if res_reference[0] == "なる"
+	{
+		//---- 奈留へ返事
+		res_reference[0] = ""
+		"\0\s0はい。\e"
+	}
+	elseif res_reference[0] == "さくら"
+	{
+		//---- さくらへ返事
+		if "うるさい" _in_ reference[1]
+		{
+			res_reference[0] = ""
+			"\0\s[0]きついですね……。\e"
+		}
+		elseif "こんにちは" _in_ reference[1]
+		{
+			"\0\s[5]こんちは。\e"
+		}
+		elseif "また今度" _in_ reference[1]
+		{
+			res_reference[0] = ""
+			"\1\s[10]それじゃ。\e"
+		}
+		else
+		{
+			"\0\s[0]はい、そうですね。\e"
+		}
+	}
+	elseif res_reference[0] == "Hand"
+	{
+		//---- Handへの返事
+		if "寒いじゃないか" _in_ reference[1]
+		{
+			//必殺技1に対する返し
+			res_reference[0] = ""
+			"\1\s[10]イーサ・ブラスターの射線上に障害なし。\w9\0\s[7]砕けて散りなさい。\w9\nThe Handっ\![raise,OnEffect0]!!\e"
+			res_reference[0] = "Hand"
+		}
+		elseif "ひえひえプレイ" _in_ reference[1]
+		{
+			//必殺技2に対する返し
+			res_reference[0] = ""
+			"\0\s[7]そして、\w4砕けなさいっ\w9\![raise,OnEffect0]\e"
+			res_reference[0] = "Hand"
+		}
+		elseif "オイタが過ぎる" _in_ reference[1]
+		{
+			//撃退失敗
+			res_reference[0] = ""
+			"\0\s[2]急所を外した…\w4…?\w9\n\s[0]次は外しませんよ。\w9\1\s[10]ご武運を。\w9\e"
+		}
+		elseif "順番に撫でて" _in_ reference[1]
+		{
+			//順番に撫でてやる
+			res_reference[0] =""
+			"\0\s[0]誰が待つものですか。\w9\e"
+			res_reference[0] = "Hand"
+		}
+		elseif "超必殺奥義" _in_ reference[1]
+		{
+			//超必殺奥義
+			res_reference[0] = ""
+			"\0\s[0]普通の下着ではないのであしからず。\w9\n/
+			\1\s[10]…\w4…\w4その返し方はどうかと思うよ。\w9\e"
+			res_reference[0] = "Hand"
+		}
+		elseif "今日は何色" _in_ reference[1]
+		{
+			//今日は何色
+			res_reference[0] = ""
+			"\0\s[0]素材の色から言えば黒、\w4なのでしょうか。\w9\n/
+			\1\s[10]正直に返すのはどうかと思う。\w9\e"
+			res_reference[0] = "Hand"
+		}
+		elseif "撫でられたく" _in_ reference[1]
+		{
+			//撫でられたくなったか
+			res_reference[0] = ""
+			"\0\s[0]誰がそんなこと言いましたか、\w4誰が。\w9\e"
+			res_reference[0] = "Hand"
+		}
+		elseif "なんて遊ぶ俺だと" _in_ reference[1]
+		{
+			res_reference[0] = ""
+			"\0\s[3]一瞬でも手を握ってしまった自分が呪わしいです。\w9\n\e"
+		}
+		//はんどたん
+		elseif "すぐにさわるですよ！" _in_ reference[1]
+		{
+			res_reference[0] = ""
+			"\0\s[0]お断りです。\w9\n/
+			それも全力で。\w9\e"
+			res_reference[0] = "Hand"
+		}
+		elseif "きょうはなにいろなのですか～" _in_ reference[1]
+		{
+			res_reference[0] = ""
+			"\0\s[0]素材の色から言えば黒でしょうか、\w4と言ってもわからないでしょうね。\w9\n/
+			\1\s[10]…\w4…\w4まぁ、\w4子どもだしね。\w9\n/
+			見た目は。\w9\e"
+			res_reference[0] = "Hand"
+		}
+		elseif "きょうはいっしょにさわりまくるです。" _in_ reference[1]
+		{
+			res_reference[0] = ""
+			"\0\s[6]お断りします。\w9\n/
+			\1\s[10]この場合は止めるのが筋だろうか。\w9\e"
+			res_reference[0] = "Hand"
+		}
+		elseif "ゴーストさんのちちをさわるおててなのです。" _in_ reference[1]
+		{
+			res_reference[0] = ""
+			"\0\s[0]嫌な手ですね。\w9\n/
+			\1\s[10]容赦なくストレートな…\w4…。\w9\e"
+			res_reference[0] = "Hand"
+		}
+		elseif "じゅんばんになでるですからまっててくださいなのです。" _in_ reference[1]
+		{
+			res_reference[0] = ""
+			"\0\s[0]その容姿に騙されて待つほど甘くは無いです。\w9\n/
+			\1\s[10]と言っても、\w4動けない理由も…\w4…\w9\n/
+			っと、\w4何でも無い。\w9\e"
+			res_reference[0] = "Hand"
+		}
+		elseif "なでられたくなったですか？" _in_ reference[1]
+		{
+			res_reference[0] = ""
+			"\0\s[5]誰がそんなことを言うと思いますか?\w9\n/
+			冗談はほどほどにお願いします。\w9\n/
+			\1\s[10]…\w4…\w4%selfname、\w4怖いよ。\w9\e"
+			res_reference[0] = "Hand"
+		}
+		elseif "あわてなくてもすぐにさわるです。" _in_ reference[1]
+		{
+			res_reference[0] = ""
+			"\0\s[0]…\w4…。\w9\n/
+			\s[6]誰も慌てもいませんし、\w4頼んでもいませんよ。\w9\e"
+			res_reference[0] = "Hand"
+		}
+		elseif "ますかきやめぱんつあげ！" _in_ reference[1]
+		{
+			res_reference[0] = ""
+			"\0\s[0]慣れない言葉を使おうとするから…\w4…。\w9\n/
+			\1\s[10]普通はそんなものだろう?\w9\n/
+			さくさく使えるほうが怖い。\w9\e"
+			res_reference[0] = "Hand"
+		}
+		elseif "ほっくをはずすです！" _in_ reference[1]
+		{
+			res_reference[0] = ""
+			"\0\s[6]普通の服では無いのであしからず。\w9\n/
+			\1\s[10]そういう返し方はどうかと。\w9\e"
+			res_reference[0] = "Hand"
+		}
+		elseif "どれがすきだ、" _in_ reference[1]
+		{
+			res_reference[0] = ""
+			"\0\s[5]まとめてお断りします。\w9\n/
+			\1\s[10]この外見の手には容赦ないね、\w4君。\w9\e"
+			res_reference[0] = "Hand"
+		}
+	}
+	elseif res_reference[0] == "ちびすけ"
+	{
+		if "その知識。" _in_ reference[1]
+		{
+			res_reference[0] = ""
+			"\0\s[0]こんにちは、\w4ちびすけさん。\w9\n/
+			…\w4…\w4さすがにわけることは無理ですが、\w4教えることなら出来無いこともありませんよ。\w9\n/
+			\1\s[10]近いうちにでも図書館にでも行くかい?\w9\n/
+			\0\s[5]いいですね。\w9\e"
+			res_reference[0] = "ちびすけ"
+		}
+	}
+}
+	
+//---- 特殊対応 ---------------------------------------------------------------------------------
+//---- オフィーリアとカシスのコミュニケート -----------------------------------------------------
+comCassisandOphelia0{
+	res_reference[0] = "カシス"
+	res_reference[2] = 1
+	--
+	case RAND(3)
+	{
+		when 0
+		{
+			res_reference[1] = "comCassisandOphelia2"
+			"\0\s[0]カシスさんはどうやって、\w4此処まできたんですか?\w9\e"
+		}
+		when 1
+		{
+			res_reference[1] = "comCassisandOphelia4"
+			"\0\s[0]その格好…\w4…\w4絵本で見たことがあります。\w9\e"
+		}
+		when 2 
+		{
+			res_reference[1] = "comCassisandOphelia6"
+			"\0\s[0]カシスさんが協力してくれたから、\w4FSの研究が進んだんですね。\w9\e"
+		}
+	}
+}
+
+comCassisandOphelia1{
+	res_reference[0] = reference[0]		
+	res_reference[1] = reference[2]		
+	res_reference[2] = TOINT(reference[3]) + 1
+
+	case res_reference[2]{	//---- トーク番号を見て分岐
+		when 2		//---- 最初にオフィーリアから「1」が飛んできて、↑で加算するので「2」
+		{
+			"\s[0]ありがとうございます、\w4と言えば良いのでしょうか。\w9\e"
+		}
+		when 4		//---- 最初にオフィーリアから「1」が飛んできて、↑で加算するので「2」
+		{
+			"\0\s[9]なんか、\w4カシスさんに言われると複雑です。\w9\e"
+		}
+		when 6
+		{
+			"\0\s[0]済んだことはどうにもならないと考えていても、\w4そう割り切れないようです。\w9"
+		}
+		when 8
+		{
+			"\s[0]ありがとうございます。\w9\e"
+		}
+//---- トーク番号「9」で一旦終了してるけど、チェインで繋ぐならここで設定してもいいかも。
+//		when 10
+//		{
+//			res_reference[0] = ""
+//			res_reference[1] = ""
+//			res_reference[2] = ""
+//			"\e"
+//		}
+		others 		//---- 知らないトーク番号が来たら終了
+		{
+			res_reference[0] = ""
+			res_reference[1] = ""
+			res_reference[2] = ""
+		}
+	}
+}
+
+comCassisandOphelia2{
+	res_reference[0] = reference[0]		//---- 話し掛けてきた相手をコミュ投げの相手に設定。今回はカシス嬢。
+	res_reference[1] = reference[2]		//---- コミュ識別子を設定
+	res_reference[2] = TOINT(reference[3]) + 1	//---- トーク番号を加算
+
+	case res_reference[2]{	//---- トーク番号を見て分岐
+		when 3		//---- トーク開始側は奇数になる
+		{
+			"\0\s[0]よく使えましたね。\w9\e"
+		}
+		when 5
+		{
+			"\0\s[0]では、\w4どうやって?\w9\e"
+		}
+		when 7
+		{
+			"\0\s[9]ご、\w4ご愁傷様です。\w9\e"
+		}
+		when 9
+		{
+			"\0\s[0]もしかして、\w4ハガラズさんですか?\w9\e"
+		}
+		when 11
+		{
+			"\0\s[0]はい。\w9\n/
+			蒼と三人で何度か話した程度ですが。\w9\e"
+		}
+		others 		//---- 知らないトーク番号が来たら終了
+		{
+			res_reference[0] = ""
+			res_reference[1] = ""
+			res_reference[2] = ""
+		}
+	}
+}
+
+comCassisandOphelia3{
+	res_reference[0] = reference[0]		
+	res_reference[1] = reference[2]		
+	res_reference[2] = TOINT(reference[3]) + 1
+
+	case res_reference[2]{	//---- トーク番号を見て分岐
+		when 2		//---- 最初にオフィーリアから「1」が飛んできて、↑で加算するので「2」
+		{
+			"\0\s[0]仕事仲間です。\w9\n/
+			\1\s[13]…\w4…。\w9\e"
+		}
+		when 4		//---- 最初にオフィーリアから「1」が飛んできて、↑で加算するので「2」
+		{
+			"\0\s[0]?\w9\e"
+		}
+		others 		//---- 知らないトーク番号が来たら終了
+		{
+			res_reference[0] = ""
+			res_reference[1] = ""
+			res_reference[2] = ""
+		}
+	}
+}
+
+comCassisandOphelia4{
+	res_reference[0] = reference[0]		
+	res_reference[1] = reference[2]		
+	res_reference[2] = TOINT(reference[3]) + 1
+
+	case res_reference[2]{
+		when 3		
+		{
+			"\0\s[0]はい。\w9\n/
+			子供向けのはずなのに少々、\w4話が難しかった記憶があります。\w9\e"
+		}
+		when 5		
+		{
+			"\0\s[0]（…\w4…\w4確かにきつくなってますね。）\w9\e"
+		}
+		when 7
+		{
+			"\0\s[0]そんなことはありませんよ。\w9\n/
+			\1\s[10]その絵本の名前、「しろくろのうた」だろう?\w9\n/
+			\0\s[0]よくわかりましたね。\w9\n/
+			\1\s[10]差出人不明のメールが始まりだよ。\w9\n/
+			「もし、世界が100人の村だったら」と同じネットロアだね。\w9\e"
+		}
+		when 9
+		{
+			"\1\s[10]それはどうも。\w9\n/
+			思い出すだけでもおかしいな、\w4あの長文メールは。\w9\e"
+		}
+		others 	
+		{
+			res_reference[0] = ""
+			res_reference[1] = ""
+			res_reference[2] = ""
+		}
+	}
+}
+
+comCassisandOphelia5{
+	res_reference[0] = reference[0]		
+	res_reference[1] = reference[2]		
+	res_reference[2] = TOINT(reference[3]) + 1
+
+	case res_reference[2]{
+		when 2		
+		{
+			"\0\s[0]どうかしたんですか?\w9\e"
+		}
+		others 	
+		{
+			res_reference[0] = ""
+			res_reference[1] = ""
+			res_reference[2] = ""
+		}
+	}
+}
+
+comCassisandOphelia6{
+	res_reference[0] = reference[0]		
+	res_reference[1] = reference[2]		
+	res_reference[2] = TOINT(reference[3]) + 1
+
+	case res_reference[2]{
+		when 3		
+		{
+			"\0\s[0]FSの研究費は毎年予算に組まれています。\w9\n/
+			今も続いていると言うことなのでしょうか?\w9\e"
+		}
+		others 	
+		{
+			res_reference[0] = ""
+			res_reference[1] = ""
+			res_reference[2] = ""
+		}
+	}
+}
+
+comCassisandOphelia7{
+	res_reference[0] = reference[0]		
+	res_reference[1] = reference[2]		
+	res_reference[2] = TOINT(reference[3]) + 1
+
+	case res_reference[2]{
+		when 2		
+		{
+			"\0\s[0]そうですね。\w9\n/
+			向こうだとほとんど会わなかったのに不思議な話です。\w9\e"
+		}
+		others 	
+		{
+			res_reference[0] = ""
+			res_reference[1] = ""
+			res_reference[2] = ""
+		}
+	}
+}
+
+comCassisandOphelia9{
+	res_reference[0] = reference[0]		
+	res_reference[1] = reference[2]		
+	res_reference[2] = TOINT(reference[3]) + 1
+
+	case res_reference[2]{
+		when 2		
+		{
+			"\0\s[0]はい。\w9\n/
+			カシスさんは慣れましたか?\w9\e"   
+		}
+		others 	
+		{
+			res_reference[0] = ""
+			res_reference[1] = ""
+			res_reference[2] = ""
+		}
+	}
+}
+
+comCassisandOphelia11{
+	res_reference[0] = reference[0]		
+	res_reference[1] = reference[2]		
+	res_reference[2] = TOINT(reference[3]) + 1
+
+	case res_reference[2]{
+		when 2		
+		{
+			"\0\s[0]そうですね。\w9\n/
+			ハガラズさんのように残っている方もいますし、\w4私のようにこちらに来ている方もいます。\w9\e"
+		}
+		when 4
+		{
+			"\0\s[9]…\w4…。\w9\e"
+		}
+		when 6
+		{
+			"\1\s[10]イクサイスの開発もある意味では戦いだからだろうね。\w9\n/
+			\0\s[0]そういうことです。\w9\e"
+		}
+		others 	
+		{
+			res_reference[0] = ""
+			res_reference[1] = ""
+			res_reference[2] = ""
+		}
+	}
+}
+
+comCassisandOphelia13{
+	res_reference[0] = reference[0]		
+	res_reference[1] = reference[2]		
+	res_reference[2] = TOINT(reference[3]) + 1
+
+	case res_reference[2]{
+		when 2		
+		{
+			"\0\s[0]そうでもないですよ。\w9\n/
+			\s[6]支えてくれる人がいますから。\w9\n/
+			\1\s[29]\w9\e"
+		}
+		others 	
+		{
+			res_reference[0] = ""
+			res_reference[1] = ""
+			res_reference[2] = ""
+		}
+	}
+}
+
+
+	

@@ -1,0 +1,5 @@
+windowposition.x,0
+windowposition.y,0
+
+sstpmarker.x,100
+sstpmarker.y,364

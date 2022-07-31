@@ -1,0 +1,17 @@
+name,ロッシュの限界
+type,ghost
+
+sakura.name,オフィーリア
+kero.name,エプシロン
+
+sstp.allowunspecifiedsend,0
+
+icon,roche_limit.ico
+
+shiori,yaya.dll
+
+craftman,Fine Lagusaz
+craftmanw,Fine Lagusaz
+craftmanurl,https://blankrune.sakura.ne.jp/
+
+useorigin1

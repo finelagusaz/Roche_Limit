@@ -1,0 +1,318 @@
+///////// 文　ゴーストテンプレート
+///////// メニュー処理辞書
+///////// written by umeici.
+
+//**** メインメニューの展開 *************************************************************
+
+//---- メインメニュー展開 ---------------------------------------------------------------
+OpenMenu
+{
+	"\0\s[0]"
+	--
+	"メニューを開きます。"
+	"%username、\w4なんでしょうか？"
+	--
+	Menu
+}
+
+// アルギズ
+Menu
+{
+	"\n\n/
+	\q[雑談開始,AITALK]\n/
+	\q[雑談設定,TALKCONFIG]\n/
+	\q[コミュニケート,COMMUNICATEOPEN]\n/
+	\q[用語解説,TERMGUIDE]\n"
+	--
+	if "カシス" _in_ ghostexlist {
+		"\q[話しかける,CHAT]\n"
+	}
+	--
+	"\q[開発チームにコメントを送る,WEBCLAP]\n"
+	--
+	if shellname == "ミクロの決死圏" {
+		"\q[特殊設定,CONFIG]\n"
+	}
+	--
+	"\q[キャンセル,CANCEL]\e"
+}
+
+// アズ
+MenuAz
+{
+	"\n\n/
+	\q[雑談開始,AITALK]\n"
+	--
+	"\q[キャンセル,CANCEL_AZ]\e"
+}
+
+//**** メニュー項目選択 *****************************************************************
+
+//---- OnChoiceSelectイベント -----------------------------------------------------------
+OnChoiceSelect
+{
+	//---- メインメニュー
+	if reference[0] == "AITALK"
+	{
+		//---- 明示的にAIトーク開始を指示
+		OnAiTalk
+	}
+	elseif reference[0] == "TALKCONFIG"
+	{
+		"\0\s[0]\q[雑談頻度,TALKINTERVAL]\n/
+		\q[雑談速度,WCC]\n/
+		\q[旧ランダムトーク,TALKOLD]\n/
+		\n\q[キャンセル,CANCEL]\e"
+	}
+	elseif reference[0] == "CONFIG"
+	{
+		if shellname == "ミクロの決死圏"
+		{
+			"\q[イクサイスユニットに着替える,CHANGEEXICE]\n/
+			\q[夏の私服に着替える,CHANGEALGIZ]\n/
+			\q[冬の私服に着替える,CHANGEWINTER]\n/
+			\q[複合装甲に変更,CHANGECA]\n/
+			\n[half]/
+			\q[キャンセル,CANCEL]\n/
+			\q[メインメニューに戻る,OpenMenu]\e"
+		}
+		else
+		{
+			"\0\s[0]（特殊設定はシェル「ミクロの決死圏」でのみ有効です。\n/
+			切り替えますか?\n/
+			■\q[はい,MICRO]\n/
+			■\q[いいえ,CANCEL]）\e"
+		}
+	}
+	//シェル変更
+	elseif reference[0] == "MICRO"
+	{
+		"\0\s[5]着替えて来ますね。\w9\w9\![change,shell,ミクロの決死圏]\e"
+	}
+	//イクサイスに戻る
+	elseif reference[0] == "CHANGEEXICE"
+	{
+		SurfaceMode=0
+		"\0\w9\w9\s[-1]\s[0]戻りました。\w9\e"
+	}
+	//私服になる
+	elseif reference[0] == "CHANGEALGIZ"
+	{
+		SurfaceMode=5
+		"\0\s[-1]\w9\w9\s[5]お待たせしました。\w9\e"
+	}
+	//冬服になる
+	elseif reference[0] == "CHANGEWINTER"
+	{
+		SurfaceMode=7
+		"\0\s[-1]\w9\w9\s[5]お待たせしました。\w9\e"
+	}
+	//CAになる
+	elseif reference[0] == "CHANGECA"
+	{
+		SurfaceMode=9
+		"\0\s[-1]\w9\w9\s[5]お待たせしました。\w9\e"
+	}
+	//トーク頻度設定
+	elseif reference[0] == "TALKINTERVAL"
+	{
+		//---- トーク頻度の調整
+		"\0\s[0]どのぐらいの頻度にしますか？\n\n/
+		\q[とにかく喋る,TALKMAX]\n/
+		\q[適当に喋る,TALKNORMAL]\n/
+		\q[少し静かに,TALKPOOR]\n/
+		\q[別命あるまで待機,TALKNONE]\n/
+		\n[half]/
+		\q[キャンセル,CANCEL]\n/
+		\q[メインメニューに戻る,OpenMenu]\e"
+	}
+	elseif reference[0] == "COMMUNICATEOPEN"
+	{
+		//---- コミュニケートボックスオープン
+		"\0\s[0]コミュニケートボックスを開きます。\![open,communicatebox]\e"
+	}
+	//用語解説関連
+	elseif reference[0] == "TERMGUIDE"
+	{
+		"\0\s[0]\b[2]ここでは用語の解説を行います。\n\n/
+		『人物』\n/
+		\q[アズリエル,A_AZRIEL]\n/
+		\q[アルギズ,A_ALGIZ]\n/
+		\q[八城騏一郎,A_YASHIRO]\n/
+		\n『イクサイス関連』\n/
+		\q[イクサイスシステム,A_EXICE_SYSTEM]\n/
+		\q[イクサイスユニット,A_EXICE_UNIT]\n/
+		\q[エプシロン,A_EPSILON]\n/
+		\q[オフィーリア,A_OPHELIA]\n/
+		\q[サポートユニット,A_SUPPORT_UNIT]\n/
+		\q[テクニック,A_TECHNIQUE]\n/
+		\q[ロッシュの限界,A_ROCHE_LIMIT]\n/
+		\n『そのほか』\n/
+		\q[ネット、仮想情報空間,A_VIS]\n/
+		\q[サイバースフィア,A_CYBERSPHERE]\n\n/
+		\q[終了,CANCEL]\e"
+	}
+	elseif reference[0] == "WEBCLAP"
+	{
+		"\0\s[0]コメントですね。\w9\n/
+		こちらにご記入下さい。\w9\n/
+		\![open,inputbox,OnInputWebclap,-1,感想・要望・バグなど（最大200字）]\e"
+	}
+	elseif reference[0] == "A_AZRIEL"
+	{
+		アズリエルの解説
+	}
+	elseif reference[0] == "A_ALGIZ"
+	{
+		アルギズの解説
+	}
+	elseif reference[0] == "A_YASHIRO"
+	{
+		八城騏一郎の解説
+	}
+	elseif reference[0] == "A_EXICE_SYSTEM"
+	{
+		イクサイスシステムの解説
+	}
+	elseif reference[0] == "A_EXICE_UNIT"
+	{
+		イクサイスユニットの解説
+	}
+	elseif reference[0] == "A_EPSILON"
+	{
+		エプシロンの解説
+	}
+	elseif reference[0] == "A_OPHELIA"
+	{
+		オフィーリアの解説
+	}
+	elseif reference[0] == "A_TECHNIQUE"
+	{
+		テクニックの解説
+	}
+	elseif reference[0] == "A_VIS"
+	{
+		仮想情報空間の解説
+	}
+	elseif reference[0] == "A_CYBERSPHERE"
+	{
+		サイバースフィアの解説
+	}
+	elseif reference[0] == "A_SUPPORT_UNIT"
+	{
+		サポートユニットの解説
+	}
+	elseif reference[0] == "A_ROCHE_LIMIT"
+	{
+		ロッシュの限界の解説
+	}
+	elseif reference[0] == "CHAT"
+	{
+		StartCommunicate
+	}
+	elseif reference[0] == "CANCEL"
+	{
+		//---- キャンセルされた
+		"\0\s[0]何かありましたら、\w4お気軽にどうぞ。\e"
+	}
+	//---- トーク頻度
+	elseif reference[0] == "TALKMAX"
+	{
+		//---- うるさく話す(15秒間隔)
+		aitalkinterval = 15
+		"\1\s[10]ハイペースだね。\0\s[5]退屈な話ばかりかもしれないけど、\w4頑張ります。\e"
+	}
+	elseif reference[0] == "TALKNORMAL"
+	{
+		//---- ふつうに話す(3分間隔)
+		aitalkinterval = 180
+		"\1\s[10]カップラーメンの待ち時間ぐらいか。\0\s[5]作っているところによってだいぶ差が出てしまいますけど。\e"
+	}
+	elseif reference[0] == "TALKPOOR"
+	{
+		//---- 静かに話す(5分間隔)
+		aitalkinterval = 300
+		"\1\s[10]\0\s[0]それでは、5分おきに独り言を。\n\1\s[10]寂しいことを言うなよ。\e"
+	}
+	elseif reference[0] == "TALKNONE"
+	{
+		//---- 話さない
+		aitalkinterval = 0
+		"\1\s[10]待機か。\0\s[5]何かあったらお気軽に話しかけてきてください。\e"
+	}
+	//---- ヘッドライン
+	elseif reference[0] == "HEADLINECANCEL"
+	{
+		//---- キャンセルされた
+		"\0\s[0]はい。\e"
+	}
+	//---- トークウェイト設定
+	elseif reference[0] == "WCC"
+	{
+		"\0\s[0]\q[早く,WCFAST]\n/
+		\q[普通,WCNORMAL]\n/
+		\q[遅く,WCSLOW]\n/
+		\n[half]/
+		\q[キャンセル,CANCEL]\n/
+		\q[メインメニューに戻る,OpenMenu]\e"
+	}
+	elseif reference[0] == "WCFAST"
+	{
+		WC = "fast"
+	}
+	elseif reference[0] == "WCNORMAL"
+	{
+		WC = "normal"
+	}
+	elseif reference[0] == "WCSLOW"
+	{
+		WC = "slow"
+	}
+	elseif reference[0] == "TALKOLD"
+	{
+		if flgTalkOld == 1 {
+			"\1\s[10]\0\s[0]\q[（古くなったランダムトークをしない）,flgTalkOldOn]"
+		}
+		else {
+			"\1\s[10]\0\s[0]\q[（古くなったランダムトークをする）,flgTalkOldOff]"
+		}
+		--
+		"\n\n[half]/
+		\q[キャンセル,CANCEL]\n/
+		\q[メインメニューに戻る,OpenMenu]\e"
+	}
+	elseif reference[0] == "flgTalkOldOff"
+	{
+		flgTalkOld = 0
+	}
+	elseif reference[0] == "flgTalkOldOn"
+	{
+		flgTalkOld = 1
+	}
+	elseif reference[0] == "CANCEL_AZ"
+	{
+		"\1\s[10]そうか。\e"
+		"\1\s[10]なるほど。\e"
+		"\1\s[10]了解。\e"
+	}
+}
+
+//---- メニュー選択タイムアウト ---------------------------------------------------------
+OnChoiceTimeout
+{
+	"\0\s[0]時間切れです。\nお手数ですがメニューを開いて選びなおしてください。\e"
+}
+
+//---- 報告
+OnInputWebclap
+{
+	"\0\s[0]\![execute,http-post,https://blankrune.sakura.ne.jp/patipati/index.cgi,--param-charset=Shift_JIS"
+	--
+	if reference[0] != '' {
+		",--param=com=" + reference[0] + "（ロッシュの限界）"
+	}
+	--
+	",--async=WebClap]"
+	--
+	"報告しました。\w9\nどうもありがとうございます。\w9\e"
+}
