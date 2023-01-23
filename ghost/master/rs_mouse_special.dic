@@ -1,5 +1,5 @@
-///////// ƒ}ƒEƒX“ü—ÍŠÖ˜A«‘i“Áêj
-//‚Û‚È‚Ï‚é‚Æ‚³‚ñA•‚q‰®‚³‚ñ‚ÉŠ´ÓB
+///////// ãƒã‚¦ã‚¹å…¥åŠ›é–¢é€£è¾æ›¸ï¼ˆç‰¹æ®Šï¼‰
+//ã½ãªã±ã‚‹ã¨ã•ã‚“ã€æµ®å­å±‹ã•ã‚“ã«æ„Ÿè¬ã€‚
 
 //********** The Hand ************************************************************
 
@@ -12,88 +12,88 @@ OnHandActivate
 	}
 }
 
-//‹¤’Ê‚Ì•Ô–
+//å…±é€šã®è¿”äº‹
 TheHandResponseMeesageStart
 {
 	''
-	"\0\s[0]—ˆ‚È‚¢‚ÅA\w4‚­‚¾‚³‚¢B\w9\n"
-	"\0\s[0]c\w4cB\w4\s[3]\w9\n"
-	"\0\s[0]ÀŠQ‚ª–³‚¢‚Æ‚ÍŒ¾‚¦A\w4—‚¿’…‚«‚Ü‚¹‚ñB\w9\n\1\s[10]‚»‚Ìó‹µ‰º‚Å—‚¿’…‚¢‚Ä‚ç‚ê‚é•û‚ª•sv‹c‚¾‚Æv‚¤‚æB\w9\n"
+	"\0\s[0]æ¥ãªã„ã§ã€\w4ãã ã•ã„ã€‚\w9\n"
+	"\0\s[0]â€¦\w4â€¦ã€‚\w4\s[3]\w9\n"
+	"\0\s[0]å®Ÿå®³ãŒç„¡ã„ã¨ã¯è¨€ãˆã€\w4è½ã¡ç€ãã¾ã›ã‚“ã€‚\w9\n\1\s[10]ãã®çŠ¶æ³ä¸‹ã§è½ã¡ç€ã„ã¦ã‚‰ã‚Œã‚‹æ–¹ãŒä¸æ€è­°ã ã¨æ€ã†ã‚ˆã€‚\w9\n"
 }
 
-//Hands“®ŠJn‚Ì‘äŒ
+//Handè¡Œå‹•é–‹å§‹æ™‚ã®å°è©
 HandActivate_NormalStart_Head
 {
-	"\0\s[0]ƒ†ƒjƒbƒg‚É”íŠQ‚ªo‚È‚¯‚ê‚Î‚¢‚¢‚Ì‚Å‚·‚ª\w4c\w4cB\w9\n"
+	"\0\s[0]ãƒ¦ãƒ‹ãƒƒãƒˆã«è¢«å®³ãŒå‡ºãªã‘ã‚Œã°ã„ã„ã®ã§ã™ãŒ\w4â€¦\w4â€¦ã€‚\w9\n"
 	--
 	TheHandResponseMeesageStart
 }
 
 HandActivate_NormalStart_Face
 {
-	"\0\s[0]Šç‘_‚¢‚Å‚·‚©\w4c\w4cB\w9\n\1\s[10]•ª‚Æ—âÃ‚¾‚ËB\w9\n\0\s[3]’ïR‚µ‚Ä‚à–³‘Ê‚Å‚µ‚å‚¤‚µ‚ËB\w9\n"
+	"\0\s[0]é¡”ç‹™ã„ã§ã™ã‹\w4â€¦\w4â€¦ã€‚\w9\n\1\s[10]éšåˆ†ã¨å†·é™ã ã­ã€‚\w9\n\0\s[3]æŠµæŠ—ã—ã¦ã‚‚ç„¡é§„ã§ã—ã‚‡ã†ã—ã­ã€‚\w9\n"
 	--
 	TheHandResponseMeesageStart
 }
 
 HandActivate_NormalStart_Bust
 {
-	"\0\s[0]’N‚à”Ş‚à‘_‚¤•”ˆÊ‚Å‚·‚Ëc\w4cB\w9\n"
+	"\0\s[0]èª°ã‚‚å½¼ã‚‚ç‹™ã†éƒ¨ä½ã§ã™ã­â€¦\w4â€¦ã€‚\w9\n"
 	--
 	TheHandResponseMeesageStart
 }
 
 HandActivate_NormalStart_Skirt
 {
-	"\0\s[3]‚±‚¤‚¢‚¤‚Æ‚«‚ÉƒXƒJ[ƒg‚Å‚ ‚é‚±‚Æ‚ğŒã‰÷‚µ‚Ü‚·B\w9\n"
+	"\0\s[3]ã“ã†ã„ã†ã¨ãã«ã‚¹ã‚«ãƒ¼ãƒˆã§ã‚ã‚‹ã“ã¨ã‚’å¾Œæ‚”ã—ã¾ã™ã€‚\w9\n"
 	--
 	TheHandResponseMeesageStart
 }
 
 HandActivate_NormalStart_Pants
 {
-	"\0\s[3]ƒxƒ‹ƒg‚µ‚Ä‚¨‚¯‚Î—Ç‚©‚Á‚½‚Å‚·c\w4cB\w9\n"
+	"\0\s[3]ãƒ™ãƒ«ãƒˆã—ã¦ãŠã‘ã°è‰¯ã‹ã£ãŸã§ã™â€¦\w4â€¦ã€‚\w9\n"
 	--
 	TheHandResponseMeesageStart
 }
 
 HandActivate_NormalStart_Leg
 {
-	"\0\s[0]c\w4cB\w9\n"
+	"\0\s[0]â€¦\w4â€¦ã€‚\w9\n"
 	--
 	TheHandResponseMeesageStart
 }
 
 HandActivate_NormalStart_Lip
 {
-	"\0\s[3]‚ ‚Ü‚èA\w4G‚Á‚Ä—~‚µ‚­‚È‚¢‚Å‚·B\w9\n"
+	"\0\s[3]ã‚ã¾ã‚Šã€\w4è§¦ã£ã¦æ¬²ã—ããªã„ã§ã™ã€‚\w9\n"
 	--
 	TheHandResponseMeesageStart
 }
 
 HandActivate_NormalStart_Hand
 {
-	"\0\s[0]‚Í‚Ÿc\w4cB\w9\n"
-	"\0\s[0]èA\w4ˆ¬‚Á‚Ä‚İ‚Ü‚·‚©?\w9\nô‚¢‚ğ‚©‚¯‚é‚Æ‚¢‚¤ˆÓ–¡‚ÅA\w4‚Å‚·‚ªB\w9\n"
+	"\0\s[0]ã¯ãâ€¦\w4â€¦ã€‚\w9\n"
+	"\0\s[0]æ‰‹ã€\w4æ¡ã£ã¦ã¿ã¾ã™ã‹?\w9\nå‘ªã„ã‚’ã‹ã‘ã‚‹ã¨ã„ã†æ„å‘³ã§ã€\w4ã§ã™ãŒã€‚\w9\n"
 	--
 	TheHandResponseMeesageStart
 }
 
 HandActivate_NormalStart_thigh
 {
-	"\0\s[0]‚Ü‚½A\w4Û‚Ç‚¢Š‚ğc\w4cB\w9\n"
+	"\0\s[0]ã¾ãŸã€\w4éš›ã©ã„æ‰€ã‚’â€¦\w4â€¦ã€‚\w9\n"
 	--
 	TheHandResponseMeesageStart
 }
 
 HandActivate_NormalStart_navel
 {
-	"\0\s[0]c\w4cB\w9\n"
+	"\0\s[0]â€¦\w4â€¦ã€‚\w9\n"
 	--
 	TheHandResponseMeesageStart
 }
 
-//Hand•KE‹Z1
+//Handå¿…æ®ºæŠ€1
 HandActivate_SuperStart_1
 {
 	"\0\s[6]\c"
@@ -103,20 +103,20 @@ HandActivate_SuperContinue_1 : nonoverlap
 {
 	'\C'
 	--
-	'‚­‚Á '
-	'‚ñ‚Á '
-	'‚ ‚Á '
-	'‚â‚Á '
-	'‚¤‚Á '
+	'ãã£ '
+	'ã‚“ã£ '
+	'ã‚ã£ '
+	'ã‚„ã£ '
+	'ã†ã£ '
 }
 
 HandActivate_SuperEnd_1
 {
-	"\1\s[10]€”õ‚Ío—ˆ‚½‚æA\w4ƒIƒtƒB[ƒŠƒAB\w9\n\0\s[0]—V‚Ñ‚ÍŸˆ‚Ü‚Å‚É‚µ‚Ü‚µ‚å‚¤B\w9\n\s[6]“€Œ‹—Ìˆæw’èA\w4“€Œ‹Àsc\w4cB\w9"
+	"\1\s[10]æº–å‚™ã¯å‡ºæ¥ãŸã‚ˆã€\w4ã‚ªãƒ•ã‚£ãƒ¼ãƒªã‚¢ã€‚\w9\n\0\s[0]éŠã³ã¯æ­¤å‡¦ã¾ã§ã«ã—ã¾ã—ã‚‡ã†ã€‚\w9\n\s[6]å‡çµé ˜åŸŸæŒ‡å®šã€\w4å‡çµå®Ÿè¡Œâ€¦\w4â€¦ã€‚\w9"
 	res_reference[0] = "Hand"
 }
 
-//Hand•KE‹Z2
+//Handå¿…æ®ºæŠ€2
 HandActivate_SuperStart_2
 {
 	"\0\s[4]\c"
@@ -126,37 +126,37 @@ HandActivate_SuperContinue_2 : nonoverlap
 {
 	'\1\s[10]\0\s[4]'
 	--
-	'‚Á'
-	'‚­'
-	'‚ñ'
+	'ã£'
+	'ã'
+	'ã‚“'
 	'!'
 }
 
 HandActivate_SuperEnd_2
 {
-	"\0\s[0]c\w4cB\w9\n\1\s[10]€”õŠ®—¹A\w4‚¢‚¯‚é‚Á\w9\0\s[7]“€‚ê‚Á\w9"
+	"\0\s[0]â€¦\w4â€¦ã€‚\w9\n\1\s[10]æº–å‚™å®Œäº†ã€\w4ã„ã‘ã‚‹ã£\w9\0\s[7]å‡ã‚Œã£\w9"
 	res_reference[0] = "Hand"
 }
 
 HandActivate_SuperStart_4
 {
-	"\0\s[6]ƒV[ƒ‹ƒh“WŠJA\w4ƒAƒuƒ\[ƒoÅ‘åB\w9"
+	"\0\s[6]ã‚·ãƒ¼ãƒ«ãƒ‰å±•é–‹ã€\w4ã‚¢ãƒ–ã‚½ãƒ¼ãƒæœ€å¤§ã€‚\w9"
 }
 
 //HandActivate_SuperContinue_4 : nonoverlap
 //{
 //	'\C'
 //	--
-//	'c'
-//	'c'
-//	'c'
-//	'c'
-//	'c'
+//	'â€¦'
+//	'â€¦'
+//	'â€¦'
+//	'â€¦'
+//	'â€¦'
 //}
 
 HandActivate_SuperEnd_4
 {
-	"\0\s[6]c\w4cB\w9\n\1\s[10]€”õŠ®—¹A\w4‚¢‚¯‚é‚Á\w9\0\s[7]“€‚ê‚Á\w9"
+	"\0\s[6]â€¦\w4â€¦ã€‚\w9\n\1\s[10]æº–å‚™å®Œäº†ã€\w4ã„ã‘ã‚‹ã£\w9\0\s[7]å‡ã‚Œã£\w9"
 	res_reference[0] = "Hand"
 }
 
@@ -164,32 +164,32 @@ HandActivate_SuperEnd_4
 //Response
 TheHandResponseMessage
 {
-	'' //‚Ğ‚Æ‚Â‚Í‚©‚ç‚Á‚Û
-	"\w9\w9\0\s[3]G‚ê‚È‚¢‚Å‚­‚¾‚³‚¢B\w9"
-	"\w9\w9\0\s[0]‚¹‚ß‚ÄA\w4ƒV[ƒ‹ƒh‚ª’Ê—p‚·‚ê‚Î\w4c\w4cB\w9"
-	"\w9\w9\0\s[0]‚±‚¤“®‚«‚ª‘‚¢‚Æ‘_‚¢‚ª‚Â‚¯‚É‚­‚¢‚Å‚·‚ËB\w9\n\1\s[10]‚±‚ê‚Î‚©‚è‚Í~‚ß‚È‚¢B\w9"
+	'' //ã²ã¨ã¤ã¯ã‹ã‚‰ã£ã½
+	"\w9\w9\0\s[3]è§¦ã‚Œãªã„ã§ãã ã•ã„ã€‚\w9"
+	"\w9\w9\0\s[0]ã›ã‚ã¦ã€\w4ã‚·ãƒ¼ãƒ«ãƒ‰ãŒé€šç”¨ã™ã‚Œã°\w4â€¦\w4â€¦ã€‚\w9"
+	"\w9\w9\0\s[0]ã“ã†å‹•ããŒæ—©ã„ã¨ç‹™ã„ãŒã¤ã‘ã«ãã„ã§ã™ã­ã€‚\w9\n\1\s[10]ã“ã‚Œã°ã‹ã‚Šã¯æ­¢ã‚ãªã„ã€‚\w9"
 
 }
 
 //MouseSpecial
-//‚½‚½‚©‚ê‚é
+//ãŸãŸã‹ã‚Œã‚‹
 MouseTH_DoubleClick0Head
 {
-	"\0\s[4]’@‚©‚È‚¢‚Å‚­‚¾‚³‚¢B\w9\n"
+	"\0\s[4]å©ã‹ãªã„ã§ãã ã•ã„ã€‚\w9\n"
 	--
 	TheHandResponseMessage
 }
 
 MouseTH_DoubleClick0Face
 {
-	"\0\s[0]Šç‚È‚ñ‚©’@‚¢‚Ä‚Ç‚¤‚·‚é‚ñ‚Å‚·‚©\w4c\w4cB\w9\n"
+	"\0\s[0]é¡”ãªã‚“ã‹å©ã„ã¦ã©ã†ã™ã‚‹ã‚“ã§ã™ã‹\w4â€¦\w4â€¦ã€‚\w9\n"
 	--
 	TheHandResponseMessage
 }
 
 MouseTH_DoubleClick0Bust
 {
-	"\0\s[0]c\w4cB\w4\n"
+	"\0\s[0]â€¦\w4â€¦ã€‚\w4\n"
 	--
 	TheHandResponseMessage
 }
@@ -211,7 +211,7 @@ MouseTH_DoubleClick0Leg
 
 MouseTH_DoubleClick0Lip
 {
-	"\0\s[6]‚ñc\w4c\w4\n\s[4]‚¯‚ÙA‚¯‚Ù‚Á\n"
+	"\0\s[6]ã‚“â€¦\w4â€¦\w4\n\s[4]ã‘ã»ã€ã‘ã»ã£\n"
 	--
 	TheHandResponseMessage
 }
@@ -223,29 +223,29 @@ MouseTH_DoubleClick0Hand
 
 MouseTH_DoubleClick0thigh
 {
-	"\0\s[0]‚­‚·‚®‚Á‚½‚¢‚Å‚·\w4c\w4cB\w9\n"
+	"\0\s[0]ãã™ãã£ãŸã„ã§ã™\w4â€¦\w4â€¦ã€‚\w9\n"
 	--
 	TheHandResponseMessage
 }
 
-//‚È‚Å‚ç‚ê‚é
+//ãªã§ã‚‰ã‚Œã‚‹
 MouseTH_Nade0Head
 {
-	"\0\s[0]•‚Å‚é‚±‚Æ‚ào—ˆ‚½‚ñ‚Å‚·‚ËB\w9\n‚»‚ê‚Å‚àƒZƒNƒnƒ‰‚ÉŠY“–‚µ‚Ü‚·‚ªB\w9\n"
+	"\0\s[0]æ’«ã§ã‚‹ã“ã¨ã‚‚å‡ºæ¥ãŸã‚“ã§ã™ã­ã€‚\w9\nãã‚Œã§ã‚‚ã‚»ã‚¯ãƒãƒ©ã«è©²å½“ã—ã¾ã™ãŒã€‚\w9\n"
 	--
 	TheHandResponseMessage
 }
 
 MouseTH_Nade0Face
 {
-	"\0\s[0]ŒõŠw‚Ç‚±‚ë‚©‘¼‚ÌƒZƒ“ƒT[‚àg‚¦‚È‚¢‚È‚ñ‚Ä\w4c\w4cB\w9\n"
+	"\0\s[0]å…‰å­¦ã©ã“ã‚ã‹ä»–ã®ã‚»ãƒ³ã‚µãƒ¼ã‚‚ä½¿ãˆãªã„ãªã‚“ã¦\w4â€¦\w4â€¦ã€‚\w9\n"
 	--
 	TheHandResponseMessage
 }
 
 MouseTH_Nade0Bust
 {
-	"\0\s[0]‚±‚ê‚¾‚©‚ç’j‚Ìl‚Í\w4c\w4c\w9\n\1\s[10]‚±‚Ìè‚Í‰Ê‚½‚µ‚Ä’j‚¾‚ë‚¤‚©B\w9\n"
+	"\0\s[0]ã“ã‚Œã ã‹ã‚‰ç”·ã®äººã¯\w4â€¦\w4â€¦\w9\n\1\s[10]ã“ã®æ‰‹ã¯æœãŸã—ã¦ç”·ã ã‚ã†ã‹ã€‚\w9\n"
 	--
 	TheHandResponseMessage
 }
@@ -257,7 +257,7 @@ MouseTH_Nade0Skirt
 
 MouseTH_Nade0Pants
 {
-	"\0\s[2]‚Ğ‚á‚ñ\w9\s[1]\n"
+	"\0\s[2]ã²ã‚ƒã‚“\w9\s[1]\n"
 	--
 	TheHandResponseMessage
 }
@@ -269,7 +269,7 @@ MouseTH_Nade0Leg
 
 MouseTH_Nade0Lip
 {
-	"\0\s[0]H‚¢‚¿‚¬‚è‚Ü‚µ‚å‚¤‚©B\w9\n\1\s[10]‚»‚ê‚ÍƒLƒƒƒ‰‚ªˆá‚¤‚µA\w4“`õ‚µ‚»‚¤‚¾‚©‚ç‚â‚ß‚Ä‚­‚êB\w9\n"
+	"\0\s[0]é£Ÿã„ã¡ãã‚Šã¾ã—ã‚‡ã†ã‹ã€‚\w9\n\1\s[10]ãã‚Œã¯ã‚­ãƒ£ãƒ©ãŒé•ã†ã—ã€\w4ä¼æŸ“ã—ãã†ã ã‹ã‚‰ã‚„ã‚ã¦ãã‚Œã€‚\w9\n"
 	--
 	TheHandResponseMessage
 }
@@ -281,18 +281,18 @@ MouseTH_Nade0Hand
 
 MouseTH_Nade0thigh
 {
-	"\0\s[8]‚­‚·‚®‚Á‚½‚¢‚Å‚·B\w9\n"
+	"\0\s[8]ãã™ãã£ãŸã„ã§ã™ã€‚\w9\n"
 	--
 	TheHandResponseMessage
 }
 
-//‚ß‚­‚ç‚ê‚é
+//ã‚ãã‚‰ã‚Œã‚‹
 MouseTH_Wheel0Skirt
 {
-	"\0\s[0]‚ß‚­‚ê‚Ü‚¹‚ñ‚µA\w4‚»‚ñ‚È‚±‚Æ‚¨’f‚è‚Å‚·B\w9\n"
+	"\0\s[0]ã‚ãã‚Œã¾ã›ã‚“ã—ã€\w4ãã‚“ãªã“ã¨ãŠæ–­ã‚Šã§ã™ã€‚\w9\n"
 }
 
 MouseTH_Wheel0Bust
 {
-	"\0\s[6]c\w4c\w4’E‚ª‚»‚¤‚È‚ñ‚Ä100”N‘‚¢‚Å‚·B\w9\n"
+	"\0\s[6]â€¦\w4â€¦\w4è„±ãŒãã†ãªã‚“ã¦100å¹´æ—©ã„ã§ã™ã€‚\w9\n"
 }

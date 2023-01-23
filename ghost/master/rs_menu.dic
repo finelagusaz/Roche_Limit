@@ -1,210 +1,210 @@
-///////// •¶@ƒS[ƒXƒgƒeƒ“ƒvƒŒ[ƒg
-///////// ƒƒjƒ…[ˆ—Ž«‘
+///////// æ–‡ã€€ã‚´ãƒ¼ã‚¹ãƒˆãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆ
+///////// ãƒ¡ãƒ‹ãƒ¥ãƒ¼å‡¦ç†è¾žæ›¸
 ///////// written by umeici.
 
-//**** ƒƒCƒ“ƒƒjƒ…[‚Ì“WŠJ *************************************************************
+//**** ãƒ¡ã‚¤ãƒ³ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã®å±•é–‹ *************************************************************
 
-//---- ƒƒCƒ“ƒƒjƒ…[“WŠJ ---------------------------------------------------------------
+//---- ãƒ¡ã‚¤ãƒ³ãƒ¡ãƒ‹ãƒ¥ãƒ¼å±•é–‹ ---------------------------------------------------------------
 OpenMenu
 {
 	"\0\s[0]"
 	--
-	"ƒƒjƒ…[‚ðŠJ‚«‚Ü‚·B"
-	"%usernameA\w4‚È‚ñ‚Å‚µ‚å‚¤‚©H"
+	"ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚’é–‹ãã¾ã™ã€‚"
+	"%usernameã€\w4ãªã‚“ã§ã—ã‚‡ã†ã‹ï¼Ÿ"
 	--
 	Menu
 }
 
-// ƒAƒ‹ƒMƒY
+// ã‚¢ãƒ«ã‚®ã‚º
 Menu
 {
 	"\n\n/
-	\q[ŽG’kŠJŽn,AITALK]\n/
-	\q[ŽG’kÝ’è,TALKCONFIG]\n/
-	\q[ƒRƒ~ƒ…ƒjƒP[ƒg,COMMUNICATEOPEN]\n/
-	\q[—pŒê‰ðà,TERMGUIDE]\n"
+	\q[é›‘è«‡é–‹å§‹,AITALK]\n/
+	\q[é›‘è«‡è¨­å®š,TALKCONFIG]\n/
+	\q[ã‚³ãƒŸãƒ¥ãƒ‹ã‚±ãƒ¼ãƒˆ,COMMUNICATEOPEN]\n/
+	\q[ç”¨èªžè§£èª¬,TERMGUIDE]\n"
 	--
-	if "ƒJƒVƒX" _in_ ghostexlist {
-		"\q[˜b‚µ‚©‚¯‚é,CHAT]\n"
+	if "ã‚«ã‚·ã‚¹" _in_ ghostexlist {
+		"\q[è©±ã—ã‹ã‘ã‚‹,CHAT]\n"
 	}
 	--
-	"\q[ŠJ”­ƒ`[ƒ€‚ÉƒRƒƒ“ƒg‚ð‘—‚é,WEBCLAP]\n"
+	"\q[é–‹ç™ºãƒãƒ¼ãƒ ã«ã‚³ãƒ¡ãƒ³ãƒˆã‚’é€ã‚‹,WEBCLAP]\n"
 	--
-	if shellname == "ƒ~ƒNƒ‚ÌŒˆŽ€Œ—" {
-		"\q[“ÁŽêÝ’è,CONFIG]\n"
+	if shellname == "ãƒŸã‚¯ãƒ­ã®æ±ºæ­»åœ" {
+		"\q[ç‰¹æ®Šè¨­å®š,CONFIG]\n"
 	}
 	--
-	"\q[ƒLƒƒƒ“ƒZƒ‹,CANCEL]\e"
+	"\q[ã‚­ãƒ£ãƒ³ã‚»ãƒ«,CANCEL]\e"
 }
 
-// ƒAƒY
+// ã‚¢ã‚º
 MenuAz
 {
 	"\n\n/
-	\q[ŽG’kŠJŽn,AITALK]\n"
+	\q[é›‘è«‡é–‹å§‹,AITALK]\n"
 	--
-	"\q[ƒLƒƒƒ“ƒZƒ‹,CANCEL_AZ]\e"
+	"\q[ã‚­ãƒ£ãƒ³ã‚»ãƒ«,CANCEL_AZ]\e"
 }
 
-//**** ƒƒjƒ…[€–Ú‘I‘ð *****************************************************************
+//**** ãƒ¡ãƒ‹ãƒ¥ãƒ¼é …ç›®é¸æŠž *****************************************************************
 
-//---- OnChoiceSelectƒCƒxƒ“ƒg -----------------------------------------------------------
+//---- OnChoiceSelectã‚¤ãƒ™ãƒ³ãƒˆ -----------------------------------------------------------
 OnChoiceSelect
 {
-	//---- ƒƒCƒ“ƒƒjƒ…[
+	//---- ãƒ¡ã‚¤ãƒ³ãƒ¡ãƒ‹ãƒ¥ãƒ¼
 	if reference[0] == "AITALK"
 	{
-		//---- –¾Ž¦“I‚ÉAIƒg[ƒNŠJŽn‚ðŽwŽ¦
+		//---- æ˜Žç¤ºçš„ã«AIãƒˆãƒ¼ã‚¯é–‹å§‹ã‚’æŒ‡ç¤º
 		OnAiTalk
 	}
 	elseif reference[0] == "TALKCONFIG"
 	{
-		"\0\s[0]\q[ŽG’k•p“x,TALKINTERVAL]\n/
-		\q[ŽG’k‘¬“x,WCC]\n/
-		\q[‹Œƒ‰ƒ“ƒ_ƒ€ƒg[ƒN,TALKOLD]\n/
-		\n\q[ƒLƒƒƒ“ƒZƒ‹,CANCEL]\e"
+		"\0\s[0]\q[é›‘è«‡é »åº¦,TALKINTERVAL]\n/
+		\q[é›‘è«‡é€Ÿåº¦,WCC]\n/
+		\q[æ—§ãƒ©ãƒ³ãƒ€ãƒ ãƒˆãƒ¼ã‚¯,TALKOLD]\n/
+		\n\q[ã‚­ãƒ£ãƒ³ã‚»ãƒ«,CANCEL]\e"
 	}
 	elseif reference[0] == "CONFIG"
 	{
-		if shellname == "ƒ~ƒNƒ‚ÌŒˆŽ€Œ—"
+		if shellname == "ãƒŸã‚¯ãƒ­ã®æ±ºæ­»åœ"
 		{
-			"\q[ƒCƒNƒTƒCƒXƒ†ƒjƒbƒg‚É’…‘Ö‚¦‚é,CHANGEEXICE]\n/
-			\q[‰Ä‚ÌŽ„•ž‚É’…‘Ö‚¦‚é,CHANGEALGIZ]\n/
-			\q[“~‚ÌŽ„•ž‚É’…‘Ö‚¦‚é,CHANGEWINTER]\n/
-			\q[•¡‡‘•b‚É•ÏX,CHANGECA]\n/
+			"\q[ã‚¤ã‚¯ã‚µã‚¤ã‚¹ãƒ¦ãƒ‹ãƒƒãƒˆã«ç€æ›¿ãˆã‚‹,CHANGEEXICE]\n/
+			\q[å¤ã®ç§æœã«ç€æ›¿ãˆã‚‹,CHANGEALGIZ]\n/
+			\q[å†¬ã®ç§æœã«ç€æ›¿ãˆã‚‹,CHANGEWINTER]\n/
+			\q[è¤‡åˆè£…ç”²ã«å¤‰æ›´,CHANGECA]\n/
 			\n[half]/
-			\q[ƒLƒƒƒ“ƒZƒ‹,CANCEL]\n/
-			\q[ƒƒCƒ“ƒƒjƒ…[‚É–ß‚é,OpenMenu]\e"
+			\q[ã‚­ãƒ£ãƒ³ã‚»ãƒ«,CANCEL]\n/
+			\q[ãƒ¡ã‚¤ãƒ³ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã«æˆ»ã‚‹,OpenMenu]\e"
 		}
 		else
 		{
-			"\0\s[0]i“ÁŽêÝ’è‚ÍƒVƒFƒ‹uƒ~ƒNƒ‚ÌŒˆŽ€Œ—v‚Å‚Ì‚Ý—LŒø‚Å‚·B\n/
-			Ø‚è‘Ö‚¦‚Ü‚·‚©?\n/
-			¡\q[‚Í‚¢,MICRO]\n/
-			¡\q[‚¢‚¢‚¦,CANCEL]j\e"
+			"\0\s[0]ï¼ˆç‰¹æ®Šè¨­å®šã¯ã‚·ã‚§ãƒ«ã€ŒãƒŸã‚¯ãƒ­ã®æ±ºæ­»åœã€ã§ã®ã¿æœ‰åŠ¹ã§ã™ã€‚\n/
+			åˆ‡ã‚Šæ›¿ãˆã¾ã™ã‹?\n/
+			â– \q[ã¯ã„,MICRO]\n/
+			â– \q[ã„ã„ãˆ,CANCEL]ï¼‰\e"
 		}
 	}
-	//ƒVƒFƒ‹•ÏX
+	//ã‚·ã‚§ãƒ«å¤‰æ›´
 	elseif reference[0] == "MICRO"
 	{
-		"\0\s[5]’…‘Ö‚¦‚Ä—ˆ‚Ü‚·‚ËB\w9\w9\![change,shell,ƒ~ƒNƒ‚ÌŒˆŽ€Œ—]\e"
+		"\0\s[5]ç€æ›¿ãˆã¦æ¥ã¾ã™ã­ã€‚\w9\w9\![change,shell,ãƒŸã‚¯ãƒ­ã®æ±ºæ­»åœ]\e"
 	}
-	//ƒCƒNƒTƒCƒX‚É–ß‚é
+	//ã‚¤ã‚¯ã‚µã‚¤ã‚¹ã«æˆ»ã‚‹
 	elseif reference[0] == "CHANGEEXICE"
 	{
 		SurfaceMode=0
-		"\0\w9\w9\s[-1]\s[0]–ß‚è‚Ü‚µ‚½B\w9\e"
+		"\0\w9\w9\s[-1]\s[0]æˆ»ã‚Šã¾ã—ãŸã€‚\w9\e"
 	}
-	//Ž„•ž‚É‚È‚é
+	//ç§æœã«ãªã‚‹
 	elseif reference[0] == "CHANGEALGIZ"
 	{
 		SurfaceMode=5
-		"\0\s[-1]\w9\w9\s[5]‚¨‘Ò‚½‚¹‚µ‚Ü‚µ‚½B\w9\e"
+		"\0\s[-1]\w9\w9\s[5]ãŠå¾…ãŸã›ã—ã¾ã—ãŸã€‚\w9\e"
 	}
-	//“~•ž‚É‚È‚é
+	//å†¬æœã«ãªã‚‹
 	elseif reference[0] == "CHANGEWINTER"
 	{
 		SurfaceMode=7
-		"\0\s[-1]\w9\w9\s[5]‚¨‘Ò‚½‚¹‚µ‚Ü‚µ‚½B\w9\e"
+		"\0\s[-1]\w9\w9\s[5]ãŠå¾…ãŸã›ã—ã¾ã—ãŸã€‚\w9\e"
 	}
-	//CA‚É‚È‚é
+	//CAã«ãªã‚‹
 	elseif reference[0] == "CHANGECA"
 	{
 		SurfaceMode=9
-		"\0\s[-1]\w9\w9\s[5]‚¨‘Ò‚½‚¹‚µ‚Ü‚µ‚½B\w9\e"
+		"\0\s[-1]\w9\w9\s[5]ãŠå¾…ãŸã›ã—ã¾ã—ãŸã€‚\w9\e"
 	}
-	//ƒg[ƒN•p“xÝ’è
+	//ãƒˆãƒ¼ã‚¯é »åº¦è¨­å®š
 	elseif reference[0] == "TALKINTERVAL"
 	{
-		//---- ƒg[ƒN•p“x‚Ì’²®
-		"\0\s[0]‚Ç‚Ì‚®‚ç‚¢‚Ì•p“x‚É‚µ‚Ü‚·‚©H\n\n/
-		\q[‚Æ‚É‚©‚­’‚é,TALKMAX]\n/
-		\q[“K“–‚É’‚é,TALKNORMAL]\n/
-		\q[­‚µÃ‚©‚É,TALKPOOR]\n/
-		\q[•Ê–½‚ ‚é‚Ü‚Å‘Ò‹@,TALKNONE]\n/
+		//---- ãƒˆãƒ¼ã‚¯é »åº¦ã®èª¿æ•´
+		"\0\s[0]ã©ã®ãã‚‰ã„ã®é »åº¦ã«ã—ã¾ã™ã‹ï¼Ÿ\n\n/
+		\q[ã¨ã«ã‹ãå–‹ã‚‹,TALKMAX]\n/
+		\q[é©å½“ã«å–‹ã‚‹,TALKNORMAL]\n/
+		\q[å°‘ã—é™ã‹ã«,TALKPOOR]\n/
+		\q[åˆ¥å‘½ã‚ã‚‹ã¾ã§å¾…æ©Ÿ,TALKNONE]\n/
 		\n[half]/
-		\q[ƒLƒƒƒ“ƒZƒ‹,CANCEL]\n/
-		\q[ƒƒCƒ“ƒƒjƒ…[‚É–ß‚é,OpenMenu]\e"
+		\q[ã‚­ãƒ£ãƒ³ã‚»ãƒ«,CANCEL]\n/
+		\q[ãƒ¡ã‚¤ãƒ³ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã«æˆ»ã‚‹,OpenMenu]\e"
 	}
 	elseif reference[0] == "COMMUNICATEOPEN"
 	{
-		//---- ƒRƒ~ƒ…ƒjƒP[ƒgƒ{ƒbƒNƒXƒI[ƒvƒ“
-		"\0\s[0]ƒRƒ~ƒ…ƒjƒP[ƒgƒ{ƒbƒNƒX‚ðŠJ‚«‚Ü‚·B\![open,communicatebox]\e"
+		//---- ã‚³ãƒŸãƒ¥ãƒ‹ã‚±ãƒ¼ãƒˆãƒœãƒƒã‚¯ã‚¹ã‚ªãƒ¼ãƒ—ãƒ³
+		"\0\s[0]ã‚³ãƒŸãƒ¥ãƒ‹ã‚±ãƒ¼ãƒˆãƒœãƒƒã‚¯ã‚¹ã‚’é–‹ãã¾ã™ã€‚\![open,communicatebox]\e"
 	}
-	//—pŒê‰ðàŠÖ˜A
+	//ç”¨èªžè§£èª¬é–¢é€£
 	elseif reference[0] == "TERMGUIDE"
 	{
-		"\0\s[0]\b[2]‚±‚±‚Å‚Í—pŒê‚Ì‰ðà‚ðs‚¢‚Ü‚·B\n\n/
-		wl•¨x\n/
-		\q[ƒAƒYƒŠƒGƒ‹,A_AZRIEL]\n/
-		\q[ƒAƒ‹ƒMƒY,A_ALGIZ]\n/
-		\q[”ªééuˆê˜Y,A_YASHIRO]\n/
-		\nwƒCƒNƒTƒCƒXŠÖ˜Ax\n/
-		\q[ƒCƒNƒTƒCƒXƒVƒXƒeƒ€,A_EXICE_SYSTEM]\n/
-		\q[ƒCƒNƒTƒCƒXƒ†ƒjƒbƒg,A_EXICE_UNIT]\n/
-		\q[ƒGƒvƒVƒƒ“,A_EPSILON]\n/
-		\q[ƒIƒtƒB[ƒŠƒA,A_OPHELIA]\n/
-		\q[ƒTƒ|[ƒgƒ†ƒjƒbƒg,A_SUPPORT_UNIT]\n/
-		\q[ƒeƒNƒjƒbƒN,A_TECHNIQUE]\n/
-		\q[ƒƒbƒVƒ…‚ÌŒÀŠE,A_ROCHE_LIMIT]\n/
-		\nw‚»‚Ì‚Ù‚©x\n/
-		\q[ƒlƒbƒgA‰¼‘zî•ñ‹óŠÔ,A_VIS]\n/
-		\q[ƒTƒCƒo[ƒXƒtƒBƒA,A_CYBERSPHERE]\n\n/
-		\q[I—¹,CANCEL]\e"
+		"\0\s[0]\b[2]ã“ã“ã§ã¯ç”¨èªžã®è§£èª¬ã‚’è¡Œã„ã¾ã™ã€‚\n\n/
+		ã€Žäººç‰©ã€\n/
+		\q[ã‚¢ã‚ºãƒªã‚¨ãƒ«,A_AZRIEL]\n/
+		\q[ã‚¢ãƒ«ã‚®ã‚º,A_ALGIZ]\n/
+		\q[å…«åŸŽé¨ä¸€éƒŽ,A_YASHIRO]\n/
+		\nã€Žã‚¤ã‚¯ã‚µã‚¤ã‚¹é–¢é€£ã€\n/
+		\q[ã‚¤ã‚¯ã‚µã‚¤ã‚¹ã‚·ã‚¹ãƒ†ãƒ ,A_EXICE_SYSTEM]\n/
+		\q[ã‚¤ã‚¯ã‚µã‚¤ã‚¹ãƒ¦ãƒ‹ãƒƒãƒˆ,A_EXICE_UNIT]\n/
+		\q[ã‚¨ãƒ—ã‚·ãƒ­ãƒ³,A_EPSILON]\n/
+		\q[ã‚ªãƒ•ã‚£ãƒ¼ãƒªã‚¢,A_OPHELIA]\n/
+		\q[ã‚µãƒãƒ¼ãƒˆãƒ¦ãƒ‹ãƒƒãƒˆ,A_SUPPORT_UNIT]\n/
+		\q[ãƒ†ã‚¯ãƒ‹ãƒƒã‚¯,A_TECHNIQUE]\n/
+		\q[ãƒ­ãƒƒã‚·ãƒ¥ã®é™ç•Œ,A_ROCHE_LIMIT]\n/
+		\nã€Žãã®ã»ã‹ã€\n/
+		\q[ãƒãƒƒãƒˆã€ä»®æƒ³æƒ…å ±ç©ºé–“,A_VIS]\n/
+		\q[ã‚µã‚¤ãƒãƒ¼ã‚¹ãƒ•ã‚£ã‚¢,A_CYBERSPHERE]\n\n/
+		\q[çµ‚äº†,CANCEL]\e"
 	}
 	elseif reference[0] == "WEBCLAP"
 	{
-		"\0\s[0]ƒRƒƒ“ƒg‚Å‚·‚ËB\w9\n/
-		‚±‚¿‚ç‚É‚²‹L“ü‰º‚³‚¢B\w9\n/
-		\![open,inputbox,OnInputWebclap,-1,Š´‘zE—v–]EƒoƒO‚È‚ÇiÅ‘å200Žšj]\e"
+		"\0\s[0]ã‚³ãƒ¡ãƒ³ãƒˆã§ã™ã­ã€‚\w9\n/
+		ã“ã¡ã‚‰ã«ã”è¨˜å…¥ä¸‹ã•ã„ã€‚\w9\n/
+		\![open,inputbox,OnInputWebclap,-1,æ„Ÿæƒ³ãƒ»è¦æœ›ãƒ»ãƒã‚°ãªã©ï¼ˆæœ€å¤§200å­—ï¼‰]\e"
 	}
 	elseif reference[0] == "A_AZRIEL"
 	{
-		ƒAƒYƒŠƒGƒ‹‚Ì‰ðà
+		ã‚¢ã‚ºãƒªã‚¨ãƒ«ã®è§£èª¬
 	}
 	elseif reference[0] == "A_ALGIZ"
 	{
-		ƒAƒ‹ƒMƒY‚Ì‰ðà
+		ã‚¢ãƒ«ã‚®ã‚ºã®è§£èª¬
 	}
 	elseif reference[0] == "A_YASHIRO"
 	{
-		”ªééuˆê˜Y‚Ì‰ðà
+		å…«åŸŽé¨ä¸€éƒŽã®è§£èª¬
 	}
 	elseif reference[0] == "A_EXICE_SYSTEM"
 	{
-		ƒCƒNƒTƒCƒXƒVƒXƒeƒ€‚Ì‰ðà
+		ã‚¤ã‚¯ã‚µã‚¤ã‚¹ã‚·ã‚¹ãƒ†ãƒ ã®è§£èª¬
 	}
 	elseif reference[0] == "A_EXICE_UNIT"
 	{
-		ƒCƒNƒTƒCƒXƒ†ƒjƒbƒg‚Ì‰ðà
+		ã‚¤ã‚¯ã‚µã‚¤ã‚¹ãƒ¦ãƒ‹ãƒƒãƒˆã®è§£èª¬
 	}
 	elseif reference[0] == "A_EPSILON"
 	{
-		ƒGƒvƒVƒƒ“‚Ì‰ðà
+		ã‚¨ãƒ—ã‚·ãƒ­ãƒ³ã®è§£èª¬
 	}
 	elseif reference[0] == "A_OPHELIA"
 	{
-		ƒIƒtƒB[ƒŠƒA‚Ì‰ðà
+		ã‚ªãƒ•ã‚£ãƒ¼ãƒªã‚¢ã®è§£èª¬
 	}
 	elseif reference[0] == "A_TECHNIQUE"
 	{
-		ƒeƒNƒjƒbƒN‚Ì‰ðà
+		ãƒ†ã‚¯ãƒ‹ãƒƒã‚¯ã®è§£èª¬
 	}
 	elseif reference[0] == "A_VIS"
 	{
-		‰¼‘zî•ñ‹óŠÔ‚Ì‰ðà
+		ä»®æƒ³æƒ…å ±ç©ºé–“ã®è§£èª¬
 	}
 	elseif reference[0] == "A_CYBERSPHERE"
 	{
-		ƒTƒCƒo[ƒXƒtƒBƒA‚Ì‰ðà
+		ã‚µã‚¤ãƒãƒ¼ã‚¹ãƒ•ã‚£ã‚¢ã®è§£èª¬
 	}
 	elseif reference[0] == "A_SUPPORT_UNIT"
 	{
-		ƒTƒ|[ƒgƒ†ƒjƒbƒg‚Ì‰ðà
+		ã‚µãƒãƒ¼ãƒˆãƒ¦ãƒ‹ãƒƒãƒˆã®è§£èª¬
 	}
 	elseif reference[0] == "A_ROCHE_LIMIT"
 	{
-		ƒƒbƒVƒ…‚ÌŒÀŠE‚Ì‰ðà
+		ãƒ­ãƒƒã‚·ãƒ¥ã®é™ç•Œã®è§£èª¬
 	}
 	elseif reference[0] == "CHAT"
 	{
@@ -212,49 +212,49 @@ OnChoiceSelect
 	}
 	elseif reference[0] == "CANCEL"
 	{
-		//---- ƒLƒƒƒ“ƒZƒ‹‚³‚ê‚½
-		"\0\s[0]‰½‚©‚ ‚è‚Ü‚µ‚½‚çA\w4‚¨‹CŒy‚É‚Ç‚¤‚¼B\e"
+		//---- ã‚­ãƒ£ãƒ³ã‚»ãƒ«ã•ã‚ŒãŸ
+		"\0\s[0]ä½•ã‹ã‚ã‚Šã¾ã—ãŸã‚‰ã€\w4ãŠæ°—è»½ã«ã©ã†ãžã€‚\e"
 	}
-	//---- ƒg[ƒN•p“x
+	//---- ãƒˆãƒ¼ã‚¯é »åº¦
 	elseif reference[0] == "TALKMAX"
 	{
-		//---- ‚¤‚é‚³‚­˜b‚·(15•bŠÔŠu)
+		//---- ã†ã‚‹ã•ãè©±ã™(15ç§’é–“éš”)
 		aitalkinterval = 15
-		"\1\s[10]ƒnƒCƒy[ƒX‚¾‚ËB\0\s[5]‘Þ‹ü‚È˜b‚Î‚©‚è‚©‚à‚µ‚ê‚È‚¢‚¯‚ÇA\w4Šæ’£‚è‚Ü‚·B\e"
+		"\1\s[10]ãƒã‚¤ãƒšãƒ¼ã‚¹ã ã­ã€‚\0\s[5]é€€å±ˆãªè©±ã°ã‹ã‚Šã‹ã‚‚ã—ã‚Œãªã„ã‘ã©ã€\w4é ‘å¼µã‚Šã¾ã™ã€‚\e"
 	}
 	elseif reference[0] == "TALKNORMAL"
 	{
-		//---- ‚Ó‚Â‚¤‚É˜b‚·(3•ªŠÔŠu)
+		//---- ãµã¤ã†ã«è©±ã™(3åˆ†é–“éš”)
 		aitalkinterval = 180
-		"\1\s[10]ƒJƒbƒvƒ‰[ƒƒ“‚Ì‘Ò‚¿ŽžŠÔ‚®‚ç‚¢‚©B\0\s[5]ì‚Á‚Ä‚¢‚é‚Æ‚±‚ë‚É‚æ‚Á‚Ä‚¾‚¢‚Ô·‚ªo‚Ä‚µ‚Ü‚¢‚Ü‚·‚¯‚ÇB\e"
+		"\1\s[10]ã‚«ãƒƒãƒ—ãƒ©ãƒ¼ãƒ¡ãƒ³ã®å¾…ã¡æ™‚é–“ãã‚‰ã„ã‹ã€‚\0\s[5]ä½œã£ã¦ã„ã‚‹ã¨ã“ã‚ã«ã‚ˆã£ã¦ã ã„ã¶å·®ãŒå‡ºã¦ã—ã¾ã„ã¾ã™ã‘ã©ã€‚\e"
 	}
 	elseif reference[0] == "TALKPOOR"
 	{
-		//---- Ã‚©‚É˜b‚·(5•ªŠÔŠu)
+		//---- é™ã‹ã«è©±ã™(5åˆ†é–“éš”)
 		aitalkinterval = 300
-		"\1\s[10]\0\s[0]‚»‚ê‚Å‚ÍA5•ª‚¨‚«‚É“Æ‚èŒ¾‚ðB\n\1\s[10]Žâ‚µ‚¢‚±‚Æ‚ðŒ¾‚¤‚È‚æB\e"
+		"\1\s[10]\0\s[0]ãã‚Œã§ã¯ã€5åˆ†ãŠãã«ç‹¬ã‚Šè¨€ã‚’ã€‚\n\1\s[10]å¯‚ã—ã„ã“ã¨ã‚’è¨€ã†ãªã‚ˆã€‚\e"
 	}
 	elseif reference[0] == "TALKNONE"
 	{
-		//---- ˜b‚³‚È‚¢
+		//---- è©±ã•ãªã„
 		aitalkinterval = 0
-		"\1\s[10]‘Ò‹@‚©B\0\s[5]‰½‚©‚ ‚Á‚½‚ç‚¨‹CŒy‚É˜b‚µ‚©‚¯‚Ä‚«‚Ä‚­‚¾‚³‚¢B\e"
+		"\1\s[10]å¾…æ©Ÿã‹ã€‚\0\s[5]ä½•ã‹ã‚ã£ãŸã‚‰ãŠæ°—è»½ã«è©±ã—ã‹ã‘ã¦ãã¦ãã ã•ã„ã€‚\e"
 	}
-	//---- ƒwƒbƒhƒ‰ƒCƒ“
+	//---- ãƒ˜ãƒƒãƒ‰ãƒ©ã‚¤ãƒ³
 	elseif reference[0] == "HEADLINECANCEL"
 	{
-		//---- ƒLƒƒƒ“ƒZƒ‹‚³‚ê‚½
-		"\0\s[0]‚Í‚¢B\e"
+		//---- ã‚­ãƒ£ãƒ³ã‚»ãƒ«ã•ã‚ŒãŸ
+		"\0\s[0]ã¯ã„ã€‚\e"
 	}
-	//---- ƒg[ƒNƒEƒFƒCƒgÝ’è
+	//---- ãƒˆãƒ¼ã‚¯ã‚¦ã‚§ã‚¤ãƒˆè¨­å®š
 	elseif reference[0] == "WCC"
 	{
-		"\0\s[0]\q[‘‚­,WCFAST]\n/
-		\q[•’Ê,WCNORMAL]\n/
-		\q[’x‚­,WCSLOW]\n/
+		"\0\s[0]\q[æ—©ã,WCFAST]\n/
+		\q[æ™®é€š,WCNORMAL]\n/
+		\q[é…ã,WCSLOW]\n/
 		\n[half]/
-		\q[ƒLƒƒƒ“ƒZƒ‹,CANCEL]\n/
-		\q[ƒƒCƒ“ƒƒjƒ…[‚É–ß‚é,OpenMenu]\e"
+		\q[ã‚­ãƒ£ãƒ³ã‚»ãƒ«,CANCEL]\n/
+		\q[ãƒ¡ã‚¤ãƒ³ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã«æˆ»ã‚‹,OpenMenu]\e"
 	}
 	elseif reference[0] == "WCFAST"
 	{
@@ -271,15 +271,15 @@ OnChoiceSelect
 	elseif reference[0] == "TALKOLD"
 	{
 		if flgTalkOld == 1 {
-			"\1\s[10]\0\s[0]\q[iŒÃ‚­‚È‚Á‚½ƒ‰ƒ“ƒ_ƒ€ƒg[ƒN‚ð‚µ‚È‚¢j,flgTalkOldOn]"
+			"\1\s[10]\0\s[0]\q[ï¼ˆå¤ããªã£ãŸãƒ©ãƒ³ãƒ€ãƒ ãƒˆãƒ¼ã‚¯ã‚’ã—ãªã„ï¼‰,flgTalkOldOn]"
 		}
 		else {
-			"\1\s[10]\0\s[0]\q[iŒÃ‚­‚È‚Á‚½ƒ‰ƒ“ƒ_ƒ€ƒg[ƒN‚ð‚·‚éj,flgTalkOldOff]"
+			"\1\s[10]\0\s[0]\q[ï¼ˆå¤ããªã£ãŸãƒ©ãƒ³ãƒ€ãƒ ãƒˆãƒ¼ã‚¯ã‚’ã™ã‚‹ï¼‰,flgTalkOldOff]"
 		}
 		--
 		"\n\n[half]/
-		\q[ƒLƒƒƒ“ƒZƒ‹,CANCEL]\n/
-		\q[ƒƒCƒ“ƒƒjƒ…[‚É–ß‚é,OpenMenu]\e"
+		\q[ã‚­ãƒ£ãƒ³ã‚»ãƒ«,CANCEL]\n/
+		\q[ãƒ¡ã‚¤ãƒ³ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã«æˆ»ã‚‹,OpenMenu]\e"
 	}
 	elseif reference[0] == "flgTalkOldOff"
 	{
@@ -291,28 +291,28 @@ OnChoiceSelect
 	}
 	elseif reference[0] == "CANCEL_AZ"
 	{
-		"\1\s[10]‚»‚¤‚©B\e"
-		"\1\s[10]‚È‚é‚Ù‚ÇB\e"
-		"\1\s[10]—¹‰ðB\e"
+		"\1\s[10]ãã†ã‹ã€‚\e"
+		"\1\s[10]ãªã‚‹ã»ã©ã€‚\e"
+		"\1\s[10]äº†è§£ã€‚\e"
 	}
 }
 
-//---- ƒƒjƒ…[‘I‘ðƒ^ƒCƒ€ƒAƒEƒg ---------------------------------------------------------
+//---- ãƒ¡ãƒ‹ãƒ¥ãƒ¼é¸æŠžã‚¿ã‚¤ãƒ ã‚¢ã‚¦ãƒˆ ---------------------------------------------------------
 OnChoiceTimeout
 {
-	"\0\s[0]ŽžŠÔØ‚ê‚Å‚·B\n‚¨Žè”‚Å‚·‚ªƒƒjƒ…[‚ðŠJ‚¢‚Ä‘I‚Ñ‚È‚¨‚µ‚Ä‚­‚¾‚³‚¢B\e"
+	"\0\s[0]æ™‚é–“åˆ‡ã‚Œã§ã™ã€‚\nãŠæ‰‹æ•°ã§ã™ãŒãƒ¡ãƒ‹ãƒ¥ãƒ¼ã‚’é–‹ã„ã¦é¸ã³ãªãŠã—ã¦ãã ã•ã„ã€‚\e"
 }
 
-//---- •ñ
+//---- å ±å‘Š
 OnInputWebclap
 {
 	"\0\s[0]\![execute,http-post,https://blankrune.sakura.ne.jp/patipati/index.cgi,--param-charset=Shift_JIS"
 	--
 	if reference[0] != '' {
-		",--param=com=" + reference[0] + "iƒƒbƒVƒ…‚ÌŒÀŠEj"
+		",--param=com=" + reference[0] + "ï¼ˆãƒ­ãƒƒã‚·ãƒ¥ã®é™ç•Œï¼‰"
 	}
 	--
 	",--async=WebClap]"
 	--
-	"•ñ‚µ‚Ü‚µ‚½B\w9\n‚Ç‚¤‚à‚ ‚è‚ª‚Æ‚¤‚²‚´‚¢‚Ü‚·B\w9\e"
+	"å ±å‘Šã—ã¾ã—ãŸã€‚\w9\nã©ã†ã‚‚ã‚ã‚ŠãŒã¨ã†ã”ã–ã„ã¾ã™ã€‚\w9\e"
 }

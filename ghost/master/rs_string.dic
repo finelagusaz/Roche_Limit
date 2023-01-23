@@ -1,28 +1,28 @@
-///////// •¶@ƒS[ƒXƒgƒeƒ“ƒvƒŒ[ƒg
-///////// •¶š—ñƒŠƒ\[ƒX«‘
+///////// æ–‡ã€€ã‚´ãƒ¼ã‚¹ãƒˆãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆ
+///////// æ–‡å­—åˆ—ãƒªã‚½ãƒ¼ã‚¹è¾æ›¸
 ///////// written by umeici.
 
-//**** •¶š—ñƒŠƒ\[ƒX *******************************************************************
+//**** æ–‡å­—åˆ—ãƒªã‚½ãƒ¼ã‚¹ *******************************************************************
 
-//---- ƒ†[ƒU[–¼ -----------------------------------------------------------------------
+//---- ãƒ¦ãƒ¼ã‚¶ãƒ¼å -----------------------------------------------------------------------
 On_username
 {
 	username
 }
 
-//---- ƒlƒbƒgƒ[ƒNXV‚ÌŠî€ˆÊ’u‚Æ‚È‚éURL ----------------------------------------------
+//---- ãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯æ›´æ–°ã®åŸºæº–ä½ç½®ã¨ãªã‚‹URL ----------------------------------------------
 On_homeurl
 {
 	"https://blankrune.sakura.ne.jp/named/roche_limit_plus/update/"
 }
 
-//---- ƒ|[ƒ^ƒ‹ƒTƒCƒg‚Ìƒ{ƒ^ƒ“ƒLƒƒƒvƒVƒ‡ƒ“ -----------------------------------------------
+//---- ãƒãƒ¼ã‚¿ãƒ«ã‚µã‚¤ãƒˆã®ãƒœã‚¿ãƒ³ã‚­ãƒ£ãƒ—ã‚·ãƒ§ãƒ³ -----------------------------------------------
 On_portalrootbutton.caption
 {
-	"ƒ|[ƒ^ƒ‹"
+	"ãƒãƒ¼ã‚¿ãƒ«"
 }
 
-//---- ƒ|[ƒ^ƒ‹ƒTƒCƒg‚ÌƒŠƒXƒg -----------------------------------------------------------
+//---- ãƒãƒ¼ã‚¿ãƒ«ã‚µã‚¤ãƒˆã®ãƒªã‚¹ãƒˆ -----------------------------------------------------------
 On_sakura.portalsites
 {
 	LinkMenuConvert(On_sakura.portalsites_EX)
@@ -31,29 +31,29 @@ On_sakura.portalsites
 On_sakura.portalsites_EX : array
 {
 	'SSP BUGTRQ	|	http://ssp.shillest.net/'
-	'‚¤‚³‚¾‚³‚­‚ç	|	http://usada.sakura.vg/'
+	'ã†ã•ã ã•ãã‚‰	|	http://usada.sakura.vg/'
 	'C.R.O.W.	|	http://crow.aqrs.jp/'
 	'-		|	'
 	'Disc-2		|	http://disc2.s56.xrea.com/'
-	'Encyclopedia of f‚©	|	http://dic.sstp.jp/'
+	'Encyclopedia of ä¼ºã‹	|	http://dic.sstp.jp/'
 	'GHOST TOWN	|	http://ghosttown.mikage.jp/'
 	'BALOON TOWN	|	http://ghosttown.mikage.jp/balloontown.html'
 	'-		| '
 	'YAYA	|	http://ms.shillest.net/yaya.xhtml'
-	'—¢X/®”õ”ÇƒJƒXƒ^ƒ€	|	http://ms.shillest.net/satoriya.xhtml'
-	'“”	|	http://le.silk.to/'
-	'”üâ	|	http://lovelove.rabi-en-rose.net/index_misaka.php'
-	'—œ–ì	|	http://www.junkyard.jp/nasino/index.shtml'
-	'‰Ø˜a—œ	|	http://kawari.sourceforge.net/'
+	'é‡Œã€…/æ•´å‚™ç­ã‚«ã‚¹ã‚¿ãƒ 	|	http://ms.shillest.net/satoriya.xhtml'
+	'ç¯	|	http://le.silk.to/'
+	'ç¾å‚	|	http://lovelove.rabi-en-rose.net/index_misaka.php'
+	'æ¢¨é‡	|	http://www.junkyard.jp/nasino/index.shtml'
+	'è¯å’Œæ¢¨	|	http://kawari.sourceforge.net/'
 }
 
-//---- –{‘Ì‘¤‚¨‚·‚·‚ßƒTƒCƒg‚Ìƒ{ƒ^ƒ“ƒLƒƒƒvƒVƒ‡ƒ“ -----------------------------------------
+//---- æœ¬ä½“å´ãŠã™ã™ã‚ã‚µã‚¤ãƒˆã®ãƒœã‚¿ãƒ³ã‚­ãƒ£ãƒ—ã‚·ãƒ§ãƒ³ -----------------------------------------
 On_recommendrootbutton.caption
 {
-	"‚¨‚·‚·‚ß"
+	"ãŠã™ã™ã‚"
 }
 
-//---- –{‘Ì‘¤‚¨‚·‚·‚ßƒTƒCƒg‚ÌƒŠƒXƒg -----------------------------------------------------
+//---- æœ¬ä½“å´ãŠã™ã™ã‚ã‚µã‚¤ãƒˆã®ãƒªã‚¹ãƒˆ -----------------------------------------------------
 On_sakura.recommendsites
 {
 	LinkMenuConvert(On_sakura.recommendsites_EX)
@@ -62,65 +62,65 @@ On_sakura.recommendsites
 On_sakura.recommendsites_EX : array
 {
 	'Taromati	|	 http://unvollendet.web.fc2.com/'
-	'ƒCƒNƒTƒCƒX"ƒ[ƒ"	|	http://altenotiz.sakura.ne.jp/'
-	'—ÊYŒ^ƒCƒNƒTƒCƒXFˆ»	|	'
-	'‰ó‚ê‚½°‚ÌŒ‡•Ğ		|	http://bangdoll.sakura.ne.jp/'
-	'•ŠC			|	http://www.kuromi.jp/'
-	'ƒtƒ‰ƒ“ƒ`ƒFƒXƒJ		|	http://tricross.sitemix.jp/Francesca_Z/index.html'
-	'Œ–é‚Ì‚¨‚Æ‚¬‚Î‚È‚µ	|	'
-	'ƒqƒgƒ‰••º‚¤‚É‚ã‚¤	|	http://wunderkammer.vs.land.to/ghost/index.html'
+	'ã‚¤ã‚¯ã‚µã‚¤ã‚¹"ã‚¼ãƒ­"	|	http://altenotiz.sakura.ne.jp/'
+	'é‡ç”£å‹ã‚¤ã‚¯ã‚µã‚¤ã‚¹ï¼šç¶¾	|	'
+	'å£Šã‚ŒãŸé­‚ã®æ¬ ç‰‡		|	http://bangdoll.sakura.ne.jp/'
+	'é»’æµ·			|	http://www.kuromi.jp/'
+	'ãƒ•ãƒ©ãƒ³ãƒã‚§ã‚¹ã‚«		|	http://tricross.sitemix.jp/Francesca_Z/index.html'
+	'æœˆå¤œã®ãŠã¨ãã°ãªã—	|	'
+	'ãƒ’ãƒˆãƒ©æ°ï¼†å…µã†ã«ã‚…ã†	|	http://wunderkammer.vs.land.to/ghost/index.html'
 	'1st innnerport		|	'
-	'ç‹½•‹› •Œäq_ˆê‰Æ	|	'
+	'åƒéƒ·ï¼†é­šåŒ ï¼†å¾¡å­ç¥ä¸€å®¶	|	'
 	'orbital		|	'
-	'ˆÀq‚³‚ñ		|	'
+	'å®‰å­ã•ã‚“		|	'
 	'Dolly Devil		|	'
 	'NAGISA the Seraphic Wing	|	'
-	'‚q‚n‚`‚l‚h‚m‚f–‚j‚h‚c `“ñ•C‚Ìq‚â‚¬`	|	http://yagimudsuki.no.land.to/'
-	'‘“‹ó‚Ì•—		|	'
-	'‚o‚a‚l|‚O‚Q‚d‚˜|‚h‚b‚dF‚b‚‚„‚…g‚d‚˜‚‰‚™h	|	'
-	'‹@ŠB‚Ì‰¤	|	http://nonamefactory.shillest.net/'
+	'ï¼²ï¼¯ï¼¡ï¼­ï¼©ï¼®ï¼§ï¼Šï¼«ï¼©ï¼¤ ï½äºŒåŒ¹ã®å­ã‚„ãï½	|	http://yagimudsuki.no.land.to/'
+	'è’¼ç©ºã®é¢¨è©©		|	'
+	'ï¼°ï¼¢ï¼­ï¼ï¼ï¼’ï¼¥ï½˜ï¼ï¼©ï¼£ï¼¥ï¼šï¼£ï½ï½„ï½…â€œï¼¥ï½˜ï½‰ï½™â€	|	'
+	'æ©Ÿæ¢°ã®ç‹	|	http://nonamefactory.shillest.net/'
 	'The world wide of words	|	'
-	'l‘Ì‹Šè^ƒ”ƒBƒC	|	http://project.hacca.jp/'
+	'äººä½“è¦–é¡˜ï¼ãƒ´ã‚£ã‚¤	|	http://project.hacca.jp/'
 	'The Hand		|	http://ukiya.sakura.ne.jp/'
-	'ƒeƒBƒ~ƒX•ƒmƒ‹ƒl	|	'
-	'Œq‚ª‚ê‚½•—		|	https://nekotuki.skr.jp/'
-	'‚¿‚Ñ‚·‚¯‚Æ‚Ë‚±‚Æ	|	http://yamagashi.me.land.to/'
-	'MOEKAƒvƒƒWƒFƒNƒg	|	http://highkaru.pa.land.to/'
-	'ƒ}ƒƒ“‚Æƒuƒ‰ƒ“`Early Type`	|	http://descriptus.nobody.jp/'
-	'‚ ‚Á‚½‚©‚¢ƒqƒJƒŠ	|	http://colorbox.saloon.jp'
-	'Šó–]‚ÌŒõ	|	http://colorbox.saloon.jp'
+	'ãƒ†ã‚£ãƒŸã‚¹ï¼†ãƒãƒ«ãƒ	|	'
+	'ç¹‹ãŒã‚ŒãŸé¢¨		|	https://nekotuki.skr.jp/'
+	'ã¡ã³ã™ã‘ã¨ã­ã“ã¨	|	http://yamagashi.me.land.to/'
+	'MOEKAãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆ	|	http://highkaru.pa.land.to/'
+	'ãƒãƒ­ãƒ³ã¨ãƒ–ãƒ©ãƒ³ï½Early Typeï½	|	http://descriptus.nobody.jp/'
+	'ã‚ã£ãŸã‹ã„ãƒ’ã‚«ãƒª	|	http://colorbox.saloon.jp'
+	'å¸Œæœ›ã®å…‰	|	http://colorbox.saloon.jp'
 	'der narr		|	'
-	'ƒJƒŒƒJƒm	|	'
-	'Œ„ŠÔ‚Ì¢ŠE/ƒŠ[ƒ‰ƒCƒi	|	http://risna.sakura.ne.jp/sukima/sukima01.html'
-	'‚É‚±‚ç‚Æ‚Ä‚·‚ç	|	http://home.384.jp/evidence/'
+	'ã‚«ãƒ¬ã‚«ãƒ	|	'
+	'éš™é–“ã®ä¸–ç•Œ/ãƒªãƒ¼ãƒ©ã‚¤ãƒŠ	|	http://risna.sakura.ne.jp/sukima/sukima01.html'
+	'ã«ã“ã‚‰ã¨ã¦ã™ã‚‰	|	http://home.384.jp/evidence/'
 	'7		|	'
 	'Un Known		|	'
-	'‘z‘œ‘‰Ë	|	https://712.shillest.net/'
+	'æƒ³åƒæ›¸æ¶	|	https://712.shillest.net/'
 	'Scar of Doll	|	http://colorbox.oh.land.to/'
-	'Œ„ŠÔ‚Ì¢ŠE/–A‰e	|	http://risna.sakura.ne.jp/sukima/sukima01.html'
-	'}‘ŠÙƒoƒCƒg		|	'
-	'N‚³‚ê‚´‚é•	|	http://nonamefactory.shillest.net/'
+	'éš™é–“ã®ä¸–ç•Œ/æ³¡å½±	|	http://risna.sakura.ne.jp/sukima/sukima01.html'
+	'å›³æ›¸é¤¨ãƒã‚¤ãƒˆ		|	'
+	'ä¾µã•ã‚Œã–ã‚‹é»’	|	http://nonamefactory.shillest.net/'
 	'54	|	'
-	'”’–é‚ÌŒ	|	'
+	'ç™½å¤œã®æœˆ	|	'
 	'obsidian	|	http://rakudaya.sakura.tv/htc.html'
-	'ƒQƒbƒV[ƒY‚Ì‹ó”ï	|	'
-	'À”~‚Æ–í—Á	|	'
-	'Œ„ŠÔ‚Ì¢ŠE/ƒEƒBƒ“ƒfƒBƒA	|	http://risna.sakura.ne.jp/sukima/sukima01.html'
-	'ŒŒ‚Æ“÷	|	http://fonshitu.fc2web.com/mikan/'
-	'”R‚¦‚éˆî•ä	|	http://nonamefactory.shillest.net/'
-	'©‘R‰ÈŠw\–¯‘­Šw‹«ŠE	|	http://nonamefactory.shillest.net/'
+	'ã‚²ãƒƒã‚·ãƒ¼ã‚ºã®ç©ºè²»	|	'
+	'å®Ÿæ¢…ã¨å¼¥æ¶¼	|	'
+	'éš™é–“ã®ä¸–ç•Œ/ã‚¦ã‚£ãƒ³ãƒ‡ã‚£ã‚¢	|	http://risna.sakura.ne.jp/sukima/sukima01.html'
+	'è¡€ã¨è‚‰	|	http://fonshitu.fc2web.com/mikan/'
+	'ç‡ƒãˆã‚‹ç¨²ç©‚	|	http://nonamefactory.shillest.net/'
+	'è‡ªç„¶ç§‘å­¦â€•æ°‘ä¿—å­¦å¢ƒç•Œ	|	http://nonamefactory.shillest.net/'
 	'-	|'
 	'Project Roche Limit	|	https://blankrune.sakura.ne.jp/pukiwiki/'
 }	
 
 
-//---- kero‘¤‚¨‚·‚·‚ßƒTƒCƒg‚Ìƒ{ƒ^ƒ“ƒLƒƒƒvƒVƒ‡ƒ“ -----------------------------------------
+//---- keroå´ãŠã™ã™ã‚ã‚µã‚¤ãƒˆã®ãƒœã‚¿ãƒ³ã‚­ãƒ£ãƒ—ã‚·ãƒ§ãƒ³ -----------------------------------------
 On_kero.recommendbuttoncaption
 {
-	"ƒGƒvƒVƒƒ“‚Ì‚¨‚·‚·‚ß"
+	"ã‚¨ãƒ—ã‚·ãƒ­ãƒ³ã®ãŠã™ã™ã‚"
 }
 
-//---- kero‘¤‚¨‚·‚·‚ßƒTƒCƒg‚ÌƒŠƒXƒg -----------------------------------------------------
+//---- keroå´ãŠã™ã™ã‚ã‚µã‚¤ãƒˆã®ãƒªã‚¹ãƒˆ -----------------------------------------------------
 On_kero.recommendsites
 {
 	LinkMenuConvert(On_kero.recommendsites_EX)
@@ -128,8 +128,8 @@ On_kero.recommendsites
 
 On_kero.recommendsites_EX : array
 {
-	'‘‹‚Ì“m		|	http://www.forest.impress.co.jp/'
-	'ƒ\ƒtƒgƒAƒ“ƒeƒi	|	https://www.softantenna.com/'
+	'çª“ã®æœ		|	http://www.forest.impress.co.jp/'
+	'ã‚½ãƒ•ãƒˆã‚¢ãƒ³ãƒ†ãƒŠ	|	https://www.softantenna.com/'
 	'-		|	'
 	'JPCERT/CC	|		https://www.jpcert.or.jp/'
 	'-		|	'
@@ -139,43 +139,43 @@ On_kero.recommendsites_EX : array
 }
 
 
-//---- ƒlƒbƒgƒ[ƒNXVƒ{ƒ^ƒ“‚ÌƒLƒƒƒvƒVƒ‡ƒ“ ---------------------------------------------
+//---- ãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯æ›´æ–°ãƒœã‚¿ãƒ³ã®ã‚­ãƒ£ãƒ—ã‚·ãƒ§ãƒ³ ---------------------------------------------
 On_updatebutton.caption
 {
-	"ƒlƒbƒgƒ[ƒNXV"
-	"ƒCƒNƒTƒCƒXƒ†ƒjƒbƒgƒhƒ‰ƒCƒoXV"
-	"ƒhƒ‰ƒCƒoXV"
+	"ãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯æ›´æ–°"
+	"ã‚¤ã‚¯ã‚µã‚¤ã‚¹ãƒ¦ãƒ‹ãƒƒãƒˆãƒ‰ãƒ©ã‚¤ãƒæ›´æ–°"
+	"ãƒ‰ãƒ©ã‚¤ãƒæ›´æ–°"
 	"Ex-ICE Update"
 }
 
-//---- readmeƒ{ƒ^ƒ“‚ÌƒLƒƒƒvƒVƒ‡ƒ“ -------------------------------------------------------
+//---- readmeãƒœã‚¿ãƒ³ã®ã‚­ãƒ£ãƒ—ã‚·ãƒ§ãƒ³ -------------------------------------------------------
 On_readmebutton.caption
 {
 	"read me..."
 	"ReadMe"
-	"Ql‚É‚È‚ç‚È‚¢†•Ğ"
+	"å‚è€ƒã«ãªã‚‰ãªã„ç´™ç‰‡"
 }
 
-//---- Á–Åw¦ƒ{ƒ^ƒ“‚ÌƒLƒƒƒvƒVƒ‡ƒ“ -----------------------------------------------------
+//---- æ¶ˆæ»…æŒ‡ç¤ºãƒœã‚¿ãƒ³ã®ã‚­ãƒ£ãƒ—ã‚·ãƒ§ãƒ³ -----------------------------------------------------
 On_vanishbutton.caption
 {
-	"‚³‚æ‚È‚ç"
-	"•Ê‚ê‚Ì“ú"
-	"ƒeƒXƒ^[I—¹"
-	"ƒOƒbƒhƒ‰ƒbƒNEƒIƒtƒB[ƒŠƒA"
+	"ã•ã‚ˆãªã‚‰"
+	"åˆ¥ã‚Œã®æ—¥"
+	"ãƒ†ã‚¹ã‚¿ãƒ¼çµ‚äº†"
+	"ã‚°ãƒƒãƒ‰ãƒ©ãƒƒã‚¯ãƒ»ã‚ªãƒ•ã‚£ãƒ¼ãƒªã‚¢"
 }
 
-//---- Á–Åw¦ƒ{ƒ^ƒ“•\¦Ø‚è‘Ö‚¦ -------------------------------------------------------
+//---- æ¶ˆæ»…æŒ‡ç¤ºãƒœã‚¿ãƒ³è¡¨ç¤ºåˆ‡ã‚Šæ›¿ãˆ -------------------------------------------------------
 On_vanishbutton.visible
 {
-	//---- "0"‚Å”ñ•\¦A‚»‚êˆÈŠO‚Å•\¦
+	//---- "0"ã§éè¡¨ç¤ºã€ãã‚Œä»¥å¤–ã§è¡¨ç¤º
 	"1"
 }
 
-//---- ‹N“®’†‚Ì‘¼‚ÌƒS[ƒXƒg–¼æ“¾ -------------------------------------------------------
+//---- èµ·å‹•ä¸­ã®ä»–ã®ã‚´ãƒ¼ã‚¹ãƒˆåå–å¾— -------------------------------------------------------
 On_otherghostname
 {
-	// Œ»İ‹N“®’†‚ÌƒS[ƒXƒg‚ÌƒŠƒXƒg‚ğì¬‚·‚é
+	// ç¾åœ¨èµ·å‹•ä¸­ã®ã‚´ãƒ¼ã‚¹ãƒˆã®ãƒªã‚¹ãƒˆã‚’ä½œæˆã™ã‚‹
 	ghostexlist = ""
 	_i = 0
 	while _i >= 0 {
@@ -191,7 +191,7 @@ On_otherghostname
 	ghostexcount = ARRAYSIZE(ghostexlist)
 }
 
-//---- SHIORI ŠÖ˜Aî•ñ ------------------------------------------------------------------
+//---- SHIORI é–¢é€£æƒ…å ± ------------------------------------------------------------------
 On_version
 {
 	GETSETTING(AYAINFO_VERSION)
@@ -204,7 +204,7 @@ On_craftman
 
 On_craftmanw
 {
-	"”~s"
+	"æ¢…å¸‚"
 }
 
 On_name
@@ -212,13 +212,13 @@ On_name
 	"AYA"
 }
 
-//---- Owned SSTP —p uniqueid æ“¾ ------------------------------------------------------
+//---- Owned SSTP ç”¨ uniqueid å–å¾— ------------------------------------------------------
 On_uniqueid
 {
 	uniqueid = reference[0]
 }
 
-//---- hwnd æ“¾ ------------------------------------------------------------------------
+//---- hwnd å–å¾— ------------------------------------------------------------------------
 On_hwnd
 {
 	sakurahwnd    = reference[0][0]
@@ -227,19 +227,19 @@ On_hwnd
 	keroblnhwnd   = reference[1][1]
 }
 
-//---- ‚¨‹C‚É“ü‚è‚ğ‘‚«‚â‚·‚­‚·‚é‚½‚ß‚É
+//---- ãŠæ°—ã«å…¥ã‚Šã‚’æ›¸ãã‚„ã™ãã™ã‚‹ãŸã‚ã«
 LinkMenuConvert
 {
     _text = ''
     _data = IARRAY
     for _i = 0 ; _i < _argc ; _i++ {
-        _data = (RE_SPLIT(_argv[_i],'[ \t]*\|[ \t]*'),'','') //ƒ_ƒ~[
+        _data = (RE_SPLIT(_argv[_i],'[ \t]*\|[ \t]*'),'','') //ãƒ€ãƒŸãƒ¼
         _text += "%(_data[0])%(CHR(1))%(_data[1])%(CHR(1))%(_data[2])%(CHR(1))%(CHR(2))"
     }
     _text;
 }
 
-//---- ‰EƒNƒŠƒbƒNƒƒjƒ…[‚ÌƒLƒƒƒvƒVƒ‡ƒ“ -------------------------------------------------------
+//---- å³ã‚¯ãƒªãƒƒã‚¯ãƒ¡ãƒ‹ãƒ¥ãƒ¼ã®ã‚­ãƒ£ãƒ—ã‚·ãƒ§ãƒ³ -------------------------------------------------------
 On_menu.foreground.bitmap.filename
 {
 	if SurfaceMode == "0"

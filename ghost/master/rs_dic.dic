@@ -1,154 +1,154 @@
-�A�Y���G���̉��
+アズリエルの解説
 {
-	"\1\s[10]�A�Y���G������l�̖��O���ˁB\w4\n/
-	�A�Y���G������[�����b�g���t���l�[���B\w4\n/
-	���O�̗R���������i��V�g�Ȃ̂�������ƋC�ɂȂ邯�ǁA\w4�������ǂ������}�V���ȁB\w4\n/
-	�y�����ȏЉ�����˂Ă����ƁA\w4��̓l�b�g�T�[�t�Ǝ��]�ԁA\w4���i�́c�c����΂킩�邾�낤�B\w9\n/
-	\n\q[����ɖ߂�,TERMGUIDE]\n\q[�I��,CANCEL]\e"
+	"\1\s[10]アズリエル･･･僕の名前だね。\w4\n/
+	アズリエル･ムーンリットがフルネーム。\w4\n/
+	名前の由来が死を司る天使なのがちょっと気になるけど、\w4響きが良いだけマシかな。\w4\n/
+	軽く自己紹介も兼ねていうと、\w4趣味はネットサーフと自転車、\w4性格は……見ればわかるだろう。\w9\n/
+	\n\q[解説に戻る,TERMGUIDE]\n\q[終了,CANCEL]\e"
 }
 
-�A���M�Y�̉��
+アルギズの解説
 {
-	"\0\s[0]�A���M�Y\w4���\w4���̖{���̖��O�ł��B\w9\n/
-	���[��������algiz�ɗR�����܂��B\w9\n/
-	�Ӗ��͕ی��E�ϗ͂ł��B\w9\n/
-	�l������l�ɁA\w4�ꂵ�݂ɑς�����悤�ɂƂ����肢�����߂��Ă��邻���ł��B\w9\n/
-	\s[6]���܂ŉ߂������̂͂��̖��O�̂������Ȃ̂�������܂���ˁB\w9\n\n[half]/
-	\1\s[10]��Ƃ�����Ȃ���?\w9\n\n[half]/
-	\0\s[0]�����ƁA\w4��͓Ǐ��ƎU���ł��B\n/
-	���i��\w4�c\w4�c\w4�ǂ��Ȃ�ł��傤�ˁB\w9\n/
-	\s[9]�悭�킩��Ȃ��ł��B\n\n[half]/
-	\1\s[10]�l����͗D�������i�Ɍ������A\w4�Ƃ��������Ă�����B\n\n[half]/
-	\0\s[6]���肪�Ƃ��������܂��B\n/
-	\n\q[����ɖ߂�,TERMGUIDE]\n\q[�I��,CANCEL]\e"
+	"\0\s[0]アルギズ\w4･･･\w4私の本当の名前です。\w9\n/
+	ルーン文字のalgizに由来します。\w9\n/
+	意味は保護や忍耐力です。\w9\n/
+	人を護れる様に、\w4苦しみに耐えられるようにという願いが込められているそうです。\w9\n/
+	\s[6]今まで過ごせたのはこの名前のおかげなのかもしれませんね。\w9\n\n[half]/
+	\1\s[10]趣味とか言わないの?\w9\n\n[half]/
+	\0\s[0]えっと、\w4趣味は読書と散歩です。\n/
+	性格は\w4…\w4…\w4どうなんでしょうね。\w9\n/
+	\s[9]よくわからないです。\n\n[half]/
+	\1\s[10]僕からは優しい性格に見えるよ、\w4とだけ言っておくよ。\n\n[half]/
+	\0\s[6]ありがとうございます。\n/
+	\n\q[解説に戻る,TERMGUIDE]\n\q[終了,CANCEL]\e"
 }
 
-�����u��Y�̉��
+八城騏一郎の解説
 {
-	"\0\s[0]�����u��Y\w4�c\w4���邳��̃t���l�[���ł��B\w9\n/
-	���������Ȃ悤�Ɍ����ĂƂĂ��������肵�����ł��B\w9\n/
-	���b�V���̌��E�J���`�[���̗A����S�����Ă܂��B\w9\n\n[half]/
-	\1\s[10]���Ȃ݂ɍȎq�����������肷��B\w9\n/
-	\n\q[����ɖ߂�,TERMGUIDE]\n\q[�I��,CANCEL]\e"
+	"\0\s[0]八城騏一郎\w4…\w4八城さんのフルネームです。\w9\n/
+	いい加減なように見えてとてもしっかりした方です。\w9\n/
+	ロッシュの限界開発チームの輸送を担当してます。\w9\n\n[half]/
+	\1\s[10]ちなみに妻子持ちだったりする。\w9\n/
+	\n\q[解説に戻る,TERMGUIDE]\n\q[終了,CANCEL]\e"
 }
 
-�C�N�T�C�X�V�X�e���̉��
+イクサイスシステムの解説
 {
-	"\0\s[0]�C�N�T�C�X�V�X�e���c�t�B�[���G���N�g���j�N�X�̒񏥂���ߕ��^�̋󒲃V�X�e���̂��Ƃł��B\w9\n/
-	�󒲂Ƃ��ċ@�\����C�N�T�C�X���j�b�g�A\w4���j�b�g���p�҂�⍲����T�|�[�g���j�b�g�̓�ō\������Ă��܂��B\n/
-	\n�֘A����:\n/
-	\q[�C�N�T�C�X���j�b�g,A_EXICE_UNIT]\n/
-	\q[�T�|�[�g���j�b�g,A_SUPPORT_UNIT]\n/
-	\n\q[����ɖ߂�,TERMGUIDE]\n\q[�I��,CANCEL]\e"
+	"\0\s[0]イクサイスシステム…フィールエレクトロニクスの提唱する衣服型の空調システムのことです。\w9\n/
+	空調として機能するイクサイスユニット、\w4ユニット着用者を補佐するサポートユニットの二つで構成されています。\n/
+	\n関連項目:\n/
+	\q[イクサイスユニット,A_EXICE_UNIT]\n/
+	\q[サポートユニット,A_SUPPORT_UNIT]\n/
+	\n\q[解説に戻る,TERMGUIDE]\n\q[終了,CANCEL]\e"
 }
 
-�C�N�T�C�X���j�b�g�̉��
+イクサイスユニットの解説
 {
-	"\0\s[0]�C�N�T�C�X���j�b�g\w4�c\w4�C�N�T�C�X�V�X�e���̋󒲋@�\���i�郆�j�b�g�ł��B\w9\n/
-	�l�Ԃ̃J�����[�𓮗͌��ŁA\w4�󒲋@�\�Ɛg�̋����@�\��L���܂��B\w9\n/
-	�����ڂ͌��Ă̂Ƃ���ł��B\w9\n/
-	���ł��f�U�C���̓y���M�������`�[�t�ɂ��Ă��邻���ł��B\w9\n/
-	�܂��A\w4�C�N�T�C�X���j�b�g��Z���Ă���l�̎����w�C�N�T�C�X�x�ƌĂт܂��B\w9\n/
-	�C�N�T�C�X�̎��̌Ăѕ��͖{���ƈႤ���Ƃ����̂������ł��B\w9\n/
-	\n�֘A����:\n/
-	\q[�T�|�[�g���j�b�g,A_SUPPORT_UNIT]\n/
-	\q[�C�N�T�C�X�V�X�e��,A_EXICE_SYSTEM]\n/
-	\n\q[����ɖ߂�,TERMGUIDE]\n\q[�I��,CANCEL]\e"
+	"\0\s[0]イクサイスユニット\w4…\w4イクサイスシステムの空調機能を司るユニットです。\w9\n/
+	人間のカロリーを動力源で、\w4空調機能と身体強化機能を有します。\w9\n/
+	見た目は見てのとおりです。\w9\n/
+	何でもデザインはペンギンをモチーフにしているそうです。\w9\n/
+	また、\w4イクサイスユニットを纏っている人の事を『イクサイス』と呼びます。\w9\n/
+	イクサイスの時の呼び方は本名と違うことが何故か多いです。\w9\n/
+	\n関連項目:\n/
+	\q[サポートユニット,A_SUPPORT_UNIT]\n/
+	\q[イクサイスシステム,A_EXICE_SYSTEM]\n/
+	\n\q[解説に戻る,TERMGUIDE]\n\q[終了,CANCEL]\e"
 }
 
-�T�|�[�g���j�b�g�̉��
+サポートユニットの解説
 {
-	"\0\s[0]�T�|�[�g���j�b�g\w4�c\w4�C�N�T�C�X�V�X�e�����\�����郆�j�b�g�̂ЂƂł��B\w9\n/
-	�ً}���̃C�N�T�C�X���j�b�g�����C����S�����܂��B\w9\n/
-	�T�|�[�g���j�b�g�͊�{�I��AI�𓋍ڂ��A\w4�������čs���o���܂����A\w4��������ꕔ�̃C�N�T�C�X�̂悤�ɐl�����u���삵�Ă���ꍇ������܂��B\w9\n\n[half]/
-	\1\s[10]����ł����ׂ����ƂɂقƂ�Ǖς��͖������ǂˁB\n\n[half]/
-	\0\s[0]�֘A����:\n/
-	\q[�C�N�T�C�X�V�X�e��,A_EXICE_SYSTEM]\n/
-	\q[�C�N�T�C�X���j�b�g,A_EXICE_UNIT]\n/
-	\n\q[����ɖ߂�,TERMGUIDE]\n\q[�I��,CANCEL]\e"
+	"\0\s[0]サポートユニット\w4…\w4イクサイスシステムを構成するユニットのひとつです。\w9\n/
+	緊急時のイクサイスユニット制御や修理を担当します。\w9\n/
+	サポートユニットは基本的にAIを搭載し、\w4自立して行動出来ますが、\w4私たちや一部のイクサイスのように人が遠隔操作している場合もあります。\w9\n\n[half]/
+	\1\s[10]それでもやるべきことにほとんど変わりは無いけどね。\n\n[half]/
+	\0\s[0]関連項目:\n/
+	\q[イクサイスシステム,A_EXICE_SYSTEM]\n/
+	\q[イクサイスユニット,A_EXICE_UNIT]\n/
+	\n\q[解説に戻る,TERMGUIDE]\n\q[終了,CANCEL]\e"
 }
 
-�G�v�V�����̉��
+エプシロンの解説
 {
-	"\0\s[0]�G�v�V����\w4���\w4�A���h���C�h�p�C�N�T�C�X�V�X�e���w���b�V���̌��E�x�̃T�|�[�g���j�b�g�̖��O�ł��B\w9\n/
-	��{�I�ȋ@�\�͒ʏ�̃C�N�T�C�X�V�X�e���̃T�|�[�g���j�b�g�w���x�Ɠ����ł����A\w4�ʐM�\�͂̋����ƌ`�ԕω��@�\�w�}�e���A�x�A\w4���u����@�\�Ȃǂ��t������Ă��܂��B\w9\n\n[half]/
-	\1\s[10]�����ɂ���l�͐�䂪�`��ς����p�Ƃ����킯�B\w9\n/
-	������ƁA���ɖ߂���\s[40]����Ȋ������ˁB\w9\n\n[half]/
-	\0\s[0]�����łł͐�䂪�T�|�[�g���j�b�g�ɍ̗p����邻���ł����A\w4�Ȃ񂾂��ܑ̖����C�����܂��c\w4�c�B\w9\n\n[half]/
-	\1\s[10]�}�e���A�̓I�~�b�g���āA\w4�ق��̋@�\�͍̗p���悤�Ƃ����b���o�Ă�����B\0\s[0]\n/
-	\n�֘A����:\n/
-	\q[�C�N�T�C�X�V�X�e��,A_EXICE_SYSTEM]\n/
-	\q[�T�|�[�g���j�b�g,A_SUPPORT_UNIT]\n/
-	\q[���b�V���̌��E,A_ROCHE_LIMIT]\n/
-	\n\q[����ɖ߂�,TERMGUIDE]\n\q[�I��,CANCEL]\e"
+	"\0\s[0]エプシロン\w4･･･\w4アンドロイド用イクサイスシステム『ロッシュの限界』のサポートユニットの名前です。\w9\n/
+	基本的な機能は通常のイクサイスシステムのサポートユニット『千台』と同じですが、\w4通信能力の強化と形態変化機能『マテリア』、\w4遠隔制御機能などが付加されています。\w9\n\n[half]/
+	\1\s[10]此処にいる僕は千台が形を変えた姿というわけ。\w9\n/
+	ちょっと、元に戻すと\s[40]こんな感じだね。\w9\n\n[half]/
+	\0\s[0]正式版では千台がサポートユニットに採用されるそうですが、\w4なんだか勿体無い気がします…\w4…。\w9\n\n[half]/
+	\1\s[10]マテリアはオミットして、\w4ほかの機能は採用しようという話も出てきたよ。\0\s[0]\n/
+	\n関連項目:\n/
+	\q[イクサイスシステム,A_EXICE_SYSTEM]\n/
+	\q[サポートユニット,A_SUPPORT_UNIT]\n/
+	\q[ロッシュの限界,A_ROCHE_LIMIT]\n/
+	\n\q[解説に戻る,TERMGUIDE]\n\q[終了,CANCEL]\e"
 }
 
-�I�t�B�[���A�̉��
+オフィーリアの解説
 {
-	"\0\s[0]�I�t�B�[���A\w4�c\w4�A���h���C�h�p�C�N�T�C�X�V�X�e���w���b�V���̌��E�x�̃C�N�T�C�X���j�b�g�̖��O�ł��B\w9\n/
-	�ގ���݌v�̌��������������ʁA\w4�ʏ�̃C�N�T�C�X���j�b�g�Ɠ����O���Ȃ�����A\w4�����y���ɏ��鉷�x�����\�͂������܂��B\w9\n/
-	����̓A���h���C�h�̃W�F�l���[�^���璼�ڃG�l���M�[����������邽�߂ł��B\w9\n/
-	���j�b�g�̐���͑����҂�AI�����ڍs���̂ŁA�w�ǉ��f�o�C�X�x�̂悤�Ɉ����܂��B\w9\n\n[half]/
-	\1\s[10]���̓h���C�o�̔����������邽�߂ɍ����ɂ���킯���B\w9\n/
-	��낵�����ނ�A%username�B\0\s[0]\n/
-	\n�֘A����:\n/
-	\q[�C�N�T�C�X�V�X�e��,A_EXICE_SYSTEM]\n/
-	\q[�C�N�T�C�X���j�b�g,A_EXICE_UNIT]\n/
-	\q[���b�V���̌��E,A_ROCHE_LIMIT]\n/
-	\n\q[����ɖ߂�,TERMGUIDE]\n\q[�I��,CANCEL]\e"
+	"\0\s[0]オフィーリア\w4…\w4アンドロイド用イクサイスシステム『ロッシュの限界』のイクサイスユニットの名前です。\w9\n/
+	材質や設計の見直しをした結果、\w4通常のイクサイスユニットと同じ外見ながらも、\w4それを遥かに上回る温度調整能力を持ちます。\w9\n/
+	これはアンドロイドのジェネレータから直接エネルギーが供給されるためです。\w9\n/
+	ユニットの制御は装備者のAIが直接行うので、『追加デバイス』のように扱えます。\w9\n\n[half]/
+	\1\s[10]今はドライバの微調整をするために此処にいるわけだ。\w9\n/
+	よろしく頼むよ、%username。\0\s[0]\n/
+	\n関連項目:\n/
+	\q[イクサイスシステム,A_EXICE_SYSTEM]\n/
+	\q[イクサイスユニット,A_EXICE_UNIT]\n/
+	\q[ロッシュの限界,A_ROCHE_LIMIT]\n/
+	\n\q[解説に戻る,TERMGUIDE]\n\q[終了,CANCEL]\e"
 }
 
-�e�N�j�b�N�̉��
+テクニックの解説
 {
-	"\1\s[10]�e�N�j�b�N\w4���\w4�l�̐��_�͂��@�B�ɂ������o�����������[���I�ɖ��p���Č��������́B\w9\n/
-	�����҂̃C���[�W�ɂ����ʂ�̖��p���Č��ł��邪�З͓��Ɏ኱�̐���������B\w9\n\n[half]/
-	\0\s[0]�N�ł����p�̕׋�������Ύg����悤�ɂȂ�͂��ł���ˁB\w9\n\n[half]/
-	\1\s[10]�׋��͂��Ă邯�ǂȂ��Ȃ����͂�����Ȃ��񂾂�B\w9\n/
-	������l�͋@�B����B\w9\n\n[half]/
-	\0\s[0]�m���ɊȒP�ɏK���ł��Ă��܂�����\w4���̊E�G�͖��p�t�ł��ӂ�Ԃ����Ⴂ�܂���ˁB\w9\n\n[half]/
-	\1\s[10]�������Ɉ��Ă���C�������B\w9\n/
-	�l�����p���s�g�ł��Ȃ������͐��_�\���ɂ�����񂾂낤���ǂˁB\w9\n/
-	\n\q[����ɖ߂�,TERMGUIDE]\n\q[�I��,CANCEL]\e"
+	"\1\s[10]テクニック\w4･･･\w4人の精神力を機械により引き出し増幅させ擬似的に魔術を再現したもの。\w9\n/
+	装備者のイメージにした通りの魔術を再現できるが威力等に若干の制限がある。\w9\n\n[half]/
+	\0\s[0]誰でも魔術の勉強をすれば使えるようになるはずですよね。\w9\n\n[half]/
+	\1\s[10]勉強はしてるけどなかなか実力が伴わないんだよ。\w9\n/
+	だから僕は機械頼り。\w9\n\n[half]/
+	\0\s[0]確かに簡単に習得できてしまったら\w4この界隈は魔術師であふれ返っちゃいますよね。\w9\n\n[half]/
+	\1\s[10]もう既に溢れている気もするよ。\w9\n/
+	僕が魔術を行使できない原因は精神構造にもあるんだろうけどね。\w9\n/
+	\n\q[解説に戻る,TERMGUIDE]\n\q[終了,CANCEL]\e"
 }
 
-���z����Ԃ̉��
+仮想情報空間の解説
 {
-	"\0\s[0]�l�b�g�A���z�����\w4���\w4���ʂ̃C���^�[�l�b�g�Ƒ�̓������̂ł��B\w9\n/
-	�Ⴂ�͎����̈ӎ����l�b�g��ɓ��˂��ĉ{�����邱�Ƃ��ł��邱�Ƃł��B\w9\n/
-	���ʂɃu���E�U���g�����{�����ł��܂���B\w9\n\n[half]/
-	\1\s[10]���z�����Ƃ��Ă̗v�f�������B\w9\n/
-	���S�̐l�̓u���E�U���g�����l�b�g�T�[�t�����߂��B\w9\n/
-	������Ɨ����ɓ���ƕ���������ˁB\w9\n\n[half]/
-	\0\s[0]�L���b�V���J�[�h�̏���D���邱�Ƃ�����̂ŁA\w4�����̐g�����͂��K�v�ɂȂ�܂��B\w9\n/
-	�w�Ǘ��ҁx�ɔF�߂�ꂽ�ꍇ���������ł��܂��B\w9\n/
-	�C�N�T�C�X�̈�����������Ɠ���ł�����\w4�����͋C�ɂ��Ȃ��ł��������B\w9\n\n[half]/
-	\1\s[10]���ʂ̗ʎY�^�ł��g�̋����@�\�����邩�琶�g��苭���B\w9\n/
-	���\w4����ɂ��Ă��A\w4�F�߂�ꂽ�ꍇ�������ĎE���̃��C�Z���X�݂������ˁB\w9\n\n[half]/
-	\0\s[9]�����ł��ˁB\w9\n/
-	\n\q[����ɖ߂�,TERMGUIDE]\n\q[�I��,CANCEL]\e"
+	"\0\s[0]ネット、仮想情報空間\w4･･･\w4普通のインターネットと大体同じものです。\w9\n/
+	違いは自分の意識をネット上に投射して閲覧することができることです。\w9\n/
+	普通にブラウザを使った閲覧もできますよ。\w9\n\n[half]/
+	\1\s[10]仮想現実としての要素が強い。\w9\n/
+	初心の人はブラウザを使ったネットサーフを勧めるよ。\w9\n/
+	ちょっと裏道に入ると物騒だからね。\w9\n\n[half]/
+	\0\s[0]キャッシュカードの情報を奪われることもあるので、\w4自分の身を守る力が必要になります。\w9\n/
+	『管理者』に認められた場合だけ武装できます。\w9\n/
+	イクサイスの扱いがちょっと特殊ですけど\w4そこは気にしないでください。\w9\n\n[half]/
+	\1\s[10]普通の量産型でも身体強化機能があるから生身より強い。\w9\n/
+	･･･\w4それにしても、\w4認められた場合だけって殺しのライセンスみたいだね。\w9\n\n[half]/
+	\0\s[9]そうですね。\w9\n/
+	\n\q[解説に戻る,TERMGUIDE]\n\q[終了,CANCEL]\e"
 }
 
-���b�V���̌��E�̉��
+ロッシュの限界の解説
 {
-	"\0\s[0]���b�V���̌��E\w4�c\w4�A���h���C�h�p�C�N�T�C�X�V�X�e���̖��̂ł��B\w9\n/
-	�C�N�T�C�X���j�b�g�w�I�t�B�[���A�x�ƃT�|�[�g���j�b�g�w�G�v�V�����x���琬�藧���܂��B\w9\n/
-	�l�ԗp�C�N�T�C�X�V�X�e�����x�[�X�ɉ��ǂ��s�������̂ŁA\w4�]���̃C�N�T�C�X�V�X�e����艷�x�����\�͂ɗD���̂������ł��B\w9\n\n[half]/
-	\1\s[10]�]���̐l�ԗp�C�N�T�C�X�V�X�e�����Ɖғ����Ԃ�͈͂����肳��Ă���B\w9\n/
-	�����ŃA���h���C�h�p�C�N�T�C�X�V�X�e�����o�Ă����Ƃ����킯�B\w9\n\n[half]/
-	\0\s[0]\n\n�֘A����:\n/
-	\q[�C�N�T�C�X�V�X�e��,A_EXICE_SYSTEM]\n/
-	\q[�C�N�T�C�X���j�b�g,A_EXICE_UNIT]\n/
-	\q[�G�v�V����,A_EPSILON]\n/
-	\q[�I�t�B�[���A,A_OPHELIA]\n/
-	\q[�T�|�[�g���j�b�g,A_SUPPORT_UNIT]\n/
-	\n\q[����ɖ߂�,TERMGUIDE]\n\q[�I��,CANCEL]\e"
+	"\0\s[0]ロッシュの限界\w4…\w4アンドロイド用イクサイスシステムの名称です。\w9\n/
+	イクサイスユニット『オフィーリア』とサポートユニット『エプシロン』から成り立ちます。\w9\n/
+	人間用イクサイスシステムをベースに改良を行ったもので、\w4従来のイクサイスシステムより温度調整能力に優れるのが特徴です。\w9\n\n[half]/
+	\1\s[10]従来の人間用イクサイスシステムだと稼動時間や範囲が限定されてくる。\w9\n/
+	そこでアンドロイド用イクサイスシステムが出てきたというわけ。\w9\n\n[half]/
+	\0\s[0]\n\n関連項目:\n/
+	\q[イクサイスシステム,A_EXICE_SYSTEM]\n/
+	\q[イクサイスユニット,A_EXICE_UNIT]\n/
+	\q[エプシロン,A_EPSILON]\n/
+	\q[オフィーリア,A_OPHELIA]\n/
+	\q[サポートユニット,A_SUPPORT_UNIT]\n/
+	\n\q[解説に戻る,TERMGUIDE]\n\q[終了,CANCEL]\e"
 }
 
-�T�C�o�[�X�t�B�A�̉��
+サイバースフィアの解説
 {
-	"\0\s[0]�T�C�o�[�X�t�B�A\w4�c\w4���E�A���@�\�̂��Ƃł��B\w9\n/
-	���E�Ɛ��E���q���˂������T�C�o�[�X�t�B�A�ł��B\w9\n/
-	����ɂ�莩�R�ɈقȂ鐢�E�ƍs�������邱�Ƃ��\�ƂȂ�܂����B\w9\n\n[half]/
-	\1\s[10]�����͒����Ȃ邩��ȗ������Ă��炤��B\w9\n/
-	\n\q[����ɖ߂�,TERMGUIDE]\n\q[�I��,CANCEL]\e"
+	"\0\s[0]サイバースフィア\w4…\w4世界連結機構のことです。\w9\n/
+	世界と世界を繋ぐ架け橋がサイバースフィアです。\w9\n/
+	これにより自由に異なる世界と行き来することが可能となりました。\w9\n\n[half]/
+	\1\s[10]原理は長くなるから省略させてもらうよ。\w9\n/
+	\n\q[解説に戻る,TERMGUIDE]\n\q[終了,CANCEL]\e"
 }
