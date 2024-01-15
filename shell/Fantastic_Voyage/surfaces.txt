@@ -226,7 +226,7 @@ surface10
 surface11
 {
 	collision0,2,3,54,31,Head
-	collision1,15,32,50,41,aFace
+	collision1,15,32,50,41,Face
 	collision2,54,15,77,116,Hair
 	collision3,26,44,44,58,Hand
 	collision4,15,133,52,212,Leg
@@ -238,7 +238,7 @@ surface11
 surface12
 {
 	collision0,1,0,56,25,Head
-	collision1,18,23,49,38,aFace
+	collision1,18,23,49,38,Face
 	collision2,29,37,38,42,Lip
 	collision3,55,8,80,118,Hair
 	collision4,24,60,46,74,Hand
@@ -718,7 +718,7 @@ surface5011
 {
 	element0,overlay,surface11.png,0,0
 	collision0,2,3,54,31,Head
-	collision1,15,32,50,41,aFace
+	collision1,15,32,50,41,Face
 	collision2,54,15,77,116,Hair
 	collision3,26,44,44,58,Hand
 	collision4,15,133,52,212,Leg
@@ -731,7 +731,7 @@ surface5012
 {
 	element0,overlay,surface12.png,0,0
 	collision0,1,0,56,25,Head
-	collision1,18,23,49,38,aFace
+	collision1,18,23,49,38,Face
 	collision2,29,37,38,42,Lip
 	collision3,55,8,80,118,Hair
 	collision4,24,60,46,74,Hand
@@ -1216,7 +1216,7 @@ surface7011
 {
 	element0,overlay,surface11.png,0,0
 	collision0,2,3,54,31,Head
-	collision1,15,32,50,41,aFace
+	collision1,15,32,50,41,Face
 	collision2,54,15,77,116,Hair
 	collision3,26,44,44,58,Hand
 	collision4,15,133,52,212,Leg
@@ -1229,7 +1229,7 @@ surface7012
 {
 	element0,overlay,surface12.png,0,0
 	collision0,1,0,56,25,Head
-	collision1,18,23,49,38,aFace
+	collision1,18,23,49,38,Face
 	collision2,29,37,38,42,Lip
 	collision3,55,8,80,118,Hair
 	collision4,24,60,46,74,Hand
@@ -1693,7 +1693,7 @@ surface9011
 {
 	element0,overlay,surface11.png,0,0
 	collision0,2,3,54,31,Head
-	collision1,15,32,50,41,aFace
+	collision1,15,32,50,41,Face
 	collision2,54,15,77,116,Hair
 	collision3,26,44,44,58,Hand
 	collision4,15,133,52,212,Leg
@@ -1706,7 +1706,7 @@ surface9012
 {
 	element0,overlay,surface12.png,0,0
 	collision0,1,0,56,25,Head
-	collision1,18,23,49,38,aFace
+	collision1,18,23,49,38,Face
 	collision2,29,37,38,42,Lip
 	collision3,55,8,80,118,Hair
 	collision4,24,60,46,74,Hand
