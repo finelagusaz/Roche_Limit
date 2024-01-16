@@ -23,7 +23,6 @@ MouseDF_Nade0Lip
 
 MouseDF_Nade0Bust
 {
-
 }
 
 MouseDF_Nade0Hand
@@ -33,7 +32,15 @@ MouseDF_Nade0Hand
 
 MouseDF_Nade0Mysitc
 {
-
+    "\0\s[1]…\w4…\w4その手、\w4なくなっても知りませんよ。\w9\n\n[half]/
+    \1\s[10]命の使いどころは考えたほうがいいよ。\e"
+    "\0\s[2]\w9\w9\s[1]ダメです。\w9\n/
+    抑えが効かくなってしまいそうで\w4…\w4…。\w9\n\n[half]/
+    \1\s[10]殺意的な意味でね。\w9\n\n[half]/
+    \0\s[8]よくわかりましたね。\e"
+    "\0\s[1]ん\w4…\w4…\w4はぁ、\w4ダメですよ。\w9\n/
+    \s[5]いろいろ覚悟はできていますよね。\w9\n\n[half]/
+    \1\s[10]…\w4…。\e"
 }
 
 MouseDF_Nade0Leg
