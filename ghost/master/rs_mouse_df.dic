@@ -8,26 +8,46 @@
 // アルギズ
 //=========================
 
+// メニューオープン
+MouseDF_DoubleClick0
+{
+	OpenMenu
+}
+
 //-------------------------
 // さわり反応
 //-------------------------
 MouseDF_Nade0Face
 {
-
+    "\0\s[6]…\w4…\w4こういうのなら歓迎です。\e"
+    "\0\s[6]…\w4…\w4\s[0]あの、\w4ありがとうございます。\e"
+    "\0\s[6]%usernameの手も温かいですね。\e"
 }
 
 MouseDF_Nade0Lip
 {
-
+    Mouse_Nade0Lip
 }
 
 MouseDF_Nade0Bust
 {
+    "\0\s[0]柔らかい、ですよね。\e"
+    "\0\s[0]あると触るって本当なんですね。\w9\n\n[half]/
+    \1\s[10]ドライだね。\e"
+    "\0\s[1]え、\w4えっちなのはいけないと思います。\e"
+    "\0\s[8]あれば触るとは聞きましたが、\w4本当なんですね。\w9\n/
+    \1\s[25]誰から聞くんだい、\w4そういう話\w4…\w4…。\e"
+    "\0\s[1]もう、\w9\w9\s[8]おさわり禁止ですよ。\e"
+    "\0\s[0]触りたいように触ればいいと思いますよ。\w9\n\n[half]/
+    \1\s[10]いくらなんでも無頓着ではないかな。\w9\n/
+    \0\s[5]あとで耳揃えて支払ってもらいますから。\e"
 }
 
 MouseDF_Nade0Hand
 {
-
+    "\0\s[6]…\w4…\w4温かいです。\e"
+    "\0\s[0]…\w4…。\e"
+    "\0\s[9]ありがとうございます\w4…\w4…?\e"
 }
 
 MouseDF_Nade0Mysitc
@@ -45,12 +65,14 @@ MouseDF_Nade0Mysitc
 
 MouseDF_Nade0Leg
 {
-
+    "\0\s[8]手つきが嫌らしいですよ。\e"
+    "\0\s[0]手慣れてますよね、\w4%username。\e"
+    "\0\s[0]…\w4…\w4\s[5]斬撃と射撃が選べますけど、\w4どちらにしますか?\e"
 }
 
 MouseDF_Nade0Boots
 {
-
+    Mouse_Nade0Boots
 }
 
 //-------------------------
@@ -58,37 +80,52 @@ MouseDF_Nade0Boots
 //-------------------------
 MouseDF_DoubleClick0Face
 {
-
+    Mouse_DoubleClick0Face
 }
 
 MouseDF_DoubleClick0Lip
 {
-
+    Mouse_DoubleClick0Lip
 }
 
 MouseDF_DoubleClick0Bust
 {
-
+    "\0\s[0]ほかの身体よりは柔らかいですよね。\w9\n\n[half]/
+    \1\s[10]冷静に確認をとるのはどうかな。\e"
+    "\0\s[3]やめてください。\e"
+    "\0\s[0]…\w4…\w4はぁ、\w4残念です、\w4%username。\w9\n\n[half]/
+    \1\s[10]何か金属音が聞こえたのは気のせい?\w9\n/
+    \0\s[5]気のせいではないですよ。\e"
 }
 
 MouseDF_DoubleClick0Hand
 {
-
+    Mouse_DoubleClick0Hand
 }
 
 MouseDF_DoubleClick0Mysitc
 {
-
+    "\0\s[1]ん、\w4はぁ\w4…\w4…\w4\s[8]対価はその腕一本でいかがでしょうか。\e"
+    "\0\s[1]相手は考えましょうね、\w4%username\w4…\w4…。\e"
+    "\0\s[0]――射撃の許可を。\w9\n\n[half]/
+    \1\s[10]射撃は許可できない。\w9\n/
+    繰り返す、\w4射撃は許可できない。\e"
 }
 
 MouseDF_DoubleClick0Leg
 {
-
+    Mouse_DoubleClick0Leg
 }
 
 MouseDF_DoubleClick0Boots
 {
-
+    "\0\s[0]空力特性も考慮したブーツです。\w9\n/
+    耐熱性が高いんですよ。\e"
+    "\0\s[0]この羽、\w4補助翼として機能するんですよ。\e"
+    "\0\s[0]この靴、\w4ヒールが高いんですよね。\w9\n\n[half]/
+    \1\s[10]歩きにくいかい?\w9\n\n[half]/
+    \0\s[0]そこまでは気になりません。\w9\n/
+    視点がいつもより高いので新鮮です。\e"
 }
 
 //=========================
