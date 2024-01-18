@@ -137,66 +137,86 @@ MouseDF_DoubleClick0Boots
 //-------------------------
 MouseDF_Nade1Head
 {
-
+    Mouse_Nade1Head
 }
 
 MouseDF_Nade1Face
 {
-    
+    Mouse_Nade1Face
 }
 
 MouseDF_Nade1Lip
 {
-    
+    Mouse_Nade1Lip
 }
 
 MouseDF_Nade1Hair
 {
-    
+    Mouse_Nade1Hair
 }
 
 MouseDF_Nade1Chest
 {
-    
+    Mouse_Nade1Chest
 }
 
 MouseDF_Nade1Hand
 {
-    
+    Mouse_Nade1Hand
 }
 
 MouseDF_Nade1Abdomen
 {
-    
+    "\1\s[15]くすぐったいんだけど。\e"
+    "\1\s[17]やめてよ。\e"
+    "\1\s[13]くすぐったい。\e"
 }
 MouseDF_Nade1Flank
 {
-    
+    "\1\s[17]待って、\w4すごいくすぐったい。\w9\n\n[half]/
+    \0\s[9]そうやって身を捩るのは逆効果ですよ。\w9\n\n[half]/
+    \1\s[13]え?\e"
+    "\1\s[18]こ、\w4ここも生地欲しい。\w9\n/
+    弱点過ぎる。\w9\n\n[half]/
+    \0\s[0]アズが弱いだけですよ。\w9\n\n[half]/
+    \1\s[14]ここに味方はいないのかい!?\e"
+    "\1\s[18]くすぐったいのもあるけど、\w4なんか恥ずかしい\w4…\w4…。\e"
 }
 
 MouseDF_Nade1Mysitc
 {
-    
+    "\1\s[11]ここの判定ぐらい消してもいいよね?\e"
+    "\1\s[22]消えろ、\w4判定。\e"
+    "\1\s[26]なんでそういう触り方するかな。\e"
 }
 
 MouseDF_Nade1Leg
 {
-    
+    Mouse_Nade1Leg
 }
 
 MouseDF_Nade1Boots
 {
-    
+    "\1\s[10]…\w4…\w4変わった見た目だよね。\w9\w9\n[half]/
+    \0\s[0]似合ってますよ。\w9\n/
+    \1\s[10]うるさいよ。\e"
+    "\1\s[10]ヒールが会っても意外となれるものだね。\w9\n\n[half]/
+    \0\s[0]アズのお姉さんも様になっていると言ってましたよ。\w9\n\n[half]/
+    \1\s[10]…\w4…\w4え?\e"
 }
 
 MouseDF_Nade1eHead
 {
-    
+    "\1\s[40]小さいと撫でやすいのかな?\e"
+    "\1\s[40]本体は男だよ、\w4と言うだけ野暮かな。\e"
+    "\1\s[40]…\w4…。\e"
 }
 
 MouseDF_Nade1eFace
 {
-    
+    "\1\s[40]顔を撫でられても反応に困る。\e"
+    "\1\s[40]…\w4…\w4どう返したらいいかな?\w9\n/
+    \0\s[9]私に聞かれても\w4…\w4…。\e"
 }
 
 //-------------------------
@@ -204,65 +224,88 @@ MouseDF_Nade1eFace
 //-------------------------
 MouseDF_DoubleClick1Head
 {
-
+    "\1\s[10]視界が揺れる揺れる。\w9\n/
+    でも、\w4ブレ補正で視界は揺れなくなるのか。\w9\n/
+    \0\s[0]小突かれて面白がるのやめてくださいよ。\e"
+    "\1\s[10]ショックアブソーバーもあるのにこれだと作動しないのか。\w9\n/
+    敵意や悪意も条件に入っている?\w9\n/
+    \0\s[0]細かい仕様に謎がありますね、\w4この装備は。\e"
+    "\1\s[10]小突かれるとサイドテールが揺れる。\w9\n\n[half]/
+    \0\s[0]目の付け所がずれてますよ。\e"
 }
 
 MouseDF_DoubleClick1Face
 {
-
+    Mouse_DoubleClick1Face
 }
 
 MouseDF_DoubleClick1Lip
 {
-
+    Mouse_DoubleClick1Lip
 }
 
 MouseDF_DoubleClick1Hair
 {
-
+    Mouse_DoubleClick1Hair
 }
 
 MouseDF_DoubleClick1Chest
 {
-
+    Mouse_DoubleClick1Chest
 }
 
 MouseDF_DoubleClick1Hand
 {
-
+    Mouse_DoubleClick1Hand
 }
 
 MouseDF_DoubleClick1Abdomen
 {
-
+    Mouse_DoubleClick1abdomen
 }
 
 MouseDF_DoubleClick1Flank
 {
-
+    "\1\s[17]突かないでくれ。\e"
+    "\1\s[13]…\w4…\w4こそばゆい触り方するね。\e"
+    "\1\s[18]%username、\w4君は一体何を考えて\w4…\w4…。\e"
 }
 
 MouseDF_DoubleClick1Mysitc
 {
-
+    "\1\s[12]つつくなーっ!\e"
+    "\1\s[10]…\w4…\w4マニュアル通り、\w4防御もできるんだね。\e"
+    "\1\s[11]なぜ、\w4と問うだけ無駄か。\e"
 }
 
 MouseDF_DoubleClick1Leg
 {
-
+    Mouse_DoubleClick1Leg
 }
 
 MouseDF_DoubleClick1Boots
 {
-
+    "\1\s[13]靴だよ。\e"
+    "\1\s[17]変わった趣味だね。\e"
+    "\1\s[26]蹴られたいのかな?\e"
 }
 
 MouseDF_DoubleClick1eHead
 {
-
+    "\1\s[40]ゆらゆら。\w9\n\n[half]/
+    \0\s[0]そういうお土産ありましたね。\e"
+    "\1\s[40]かたかた。\w9\n\n\[half]/
+    \0\s[0]…\w4…\w4その音はおかしいです。\e"
+    "\1\s[41]\w9\w9\s[40]一瞬、\w4映像が途切れた。\w9\n/
+    びっくりした\w4…\w4…。\e"
 }
 
 MouseDF_DoubleClick1eFace
 {
-
+    "\1\s[40]顔だよ。\e"
+    "\1\s[40]顔に何かついてる?\w9\n/
+    \0\s[5]持ち帰りたい可愛さがにじみ出てます。\e"
+    "\1\s[40]小さくても顔は顔だと思うんだ。\w9\n\n[half]/
+    \0\s[0]そのこころは?\w9\n/
+    \1\s[10]つつくものではない。\e"
 }
