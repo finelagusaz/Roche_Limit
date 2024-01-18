@@ -290,7 +290,7 @@ MouseDF_DoubleClick1Boots
     "\1\s[26]蹴られたいのかな?\e"
 }
 
-MouseDF_DoubleClick1eHead
+MouseDF_DoubleClick1nHead
 {
     "\1\s[40]ゆらゆら。\w9\n\n[half]/
     \0\s[0]そういうお土産ありましたね。\e"
@@ -300,7 +300,7 @@ MouseDF_DoubleClick1eHead
     びっくりした\w4…\w4…。\e"
 }
 
-MouseDF_DoubleClick1eFace
+MouseDF_DoubleClick1nFace
 {
     "\1\s[40]顔だよ。\e"
     "\1\s[40]顔に何かついてる?\w9\n/
