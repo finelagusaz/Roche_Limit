@@ -34,14 +34,13 @@ On_sakura.portalsites_EX : array
 	'うさださくら	|	http://usada.sakura.vg/'
 	'C.R.O.W.	|	http://crow.aqrs.jp/'
 	'-		|	'
-	'Disc-2		|	http://disc2.s56.xrea.com/'
+	'うかフィード		|	https://feed.ukagaka.net/'
 	'Encyclopedia of 伺か	|	http://dic.sstp.jp/'
 	'GHOST TOWN	|	http://ghosttown.mikage.jp/'
 	'BALOON TOWN	|	http://ghosttown.mikage.jp/balloontown.html'
 	'-		| '
 	'YAYA	|	http://ms.shillest.net/yaya.xhtml'
 	'里々/整備班カスタム	|	http://ms.shillest.net/satoriya.xhtml'
-	'灯	|	http://le.silk.to/'
 	'美坂	|	http://lovelove.rabi-en-rose.net/index_misaka.php'
 	'梨野	|	http://www.junkyard.jp/nasino/index.shtml'
 	'華和梨	|	http://kawari.sourceforge.net/'
@@ -110,7 +109,8 @@ On_sakura.recommendsites_EX : array
 	'燃える稲穂	|	http://nonamefactory.shillest.net/'
 	'自然科学―民俗学境界	|	http://nonamefactory.shillest.net/'
 	'-	|'
-	'Project Roche Limit	|	https://blankrune.sakura.ne.jp/pukiwiki/'
+	'Project Roche Limit Wiki	|	https://blankrune.sakura.ne.jp/pukiwiki/'
+	'お題箱	| https://odaibako.net/u/sesuna'
 }	
 
 
