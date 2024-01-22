@@ -1,0 +1,311 @@
+//--------------------------------------------------------------------------
+// 竜姫 / Drachen Fürstin 用マウス反応辞書
+// NOTE: 固有のマウス反応を仕込みたいので分離
+//       MouseDF～
+//--------------------------------------------------------------------------
+
+//=========================
+// アルギズ
+//=========================
+
+// メニューオープン
+MouseDF_DoubleClick0
+{
+	OpenMenu
+}
+
+//-------------------------
+// さわり反応
+//-------------------------
+MouseDF_Nade0Face
+{
+    "\0\s[6]…\w4…\w4こういうのなら歓迎です。\e"
+    "\0\s[6]…\w4…\w4\s[0]あの、\w4ありがとうございます。\e"
+    "\0\s[6]%usernameの手も温かいですね。\e"
+}
+
+MouseDF_Nade0Lip
+{
+    Mouse_Nade0Lip
+}
+
+MouseDF_Nade0Bust
+{
+    "\0\s[0]柔らかい、ですよね。\e"
+    "\0\s[0]あると触るって本当なんですね。\w9\n\n[half]/
+    \1\s[10]ドライだね。\e"
+    "\0\s[1]え、\w4えっちなのはいけないと思います。\e"
+    "\0\s[8]あれば触るとは聞きましたが、\w4本当なんですね。\w9\n/
+    \1\s[25]誰から聞くんだい、\w4そういう話\w4…\w4…。\e"
+    "\0\s[1]もう、\w9\w9\s[8]おさわり禁止ですよ。\e"
+    "\0\s[0]触りたいように触ればいいと思いますよ。\w9\n\n[half]/
+    \1\s[10]いくらなんでも無頓着ではないかな。\w9\n/
+    \0\s[5]あとで耳揃えて支払ってもらいますから。\e"
+}
+
+MouseDF_Nade0Hand
+{
+    "\0\s[6]…\w4…\w4温かいです。\e"
+    "\0\s[0]…\w4…。\e"
+    "\0\s[9]ありがとうございます\w4…\w4…?\e"
+}
+
+MouseDF_Nade0Mysitc
+{
+    "\0\s[1]…\w4…\w4その手、\w4なくなっても知りませんよ。\w9\n\n[half]/
+    \1\s[10]命の使いどころは考えたほうがいいよ。\e"
+    "\0\s[2]\w9\w9\s[1]ダメです。\w9\n/
+    抑えが効かくなってしまいそうで\w4…\w4…。\w9\n\n[half]/
+    \1\s[10]殺意的な意味でね。\w9\n\n[half]/
+    \0\s[8]よくわかりましたね。\e"
+    "\0\s[1]ん\w4…\w4…\w4はぁ、\w4ダメですよ。\w9\n/
+    \s[5]いろいろ覚悟はできていますよね。\w9\n\n[half]/
+    \1\s[10]…\w4…。\e"
+}
+
+MouseDF_Nade0Leg
+{
+    "\0\s[8]手つきが嫌らしいですよ。\e"
+    "\0\s[0]手慣れてますよね、\w4%username。\e"
+    "\0\s[0]…\w4…\w4\s[5]斬撃と射撃が選べますけど、\w4どちらにしますか?\e"
+}
+
+MouseDF_Nade0Boots
+{
+    Mouse_Nade0Boots
+}
+
+//-------------------------
+// つつき反応
+//-------------------------
+MouseDF_DoubleClick0Face
+{
+    Mouse_DoubleClick0Face
+}
+
+MouseDF_DoubleClick0Lip
+{
+    Mouse_DoubleClick0Lip
+}
+
+MouseDF_DoubleClick0Bust
+{
+    "\0\s[0]ほかの身体よりは柔らかいですよね。\w9\n\n[half]/
+    \1\s[10]冷静に確認をとるのはどうかな。\e"
+    "\0\s[3]やめてください。\e"
+    "\0\s[0]…\w4…\w4はぁ、\w4残念です、\w4%username。\w9\n\n[half]/
+    \1\s[10]何か金属音が聞こえたのは気のせい?\w9\n/
+    \0\s[5]気のせいではないですよ。\e"
+}
+
+MouseDF_DoubleClick0Hand
+{
+    Mouse_DoubleClick0Hand
+}
+
+MouseDF_DoubleClick0Mysitc
+{
+    "\0\s[1]ん、\w4はぁ\w4…\w4…\w4\s[8]対価はその腕一本でいかがでしょうか。\e"
+    "\0\s[1]相手は考えましょうね、\w4%username\w4…\w4…。\e"
+    "\0\s[0]――射撃の許可を。\w9\n\n[half]/
+    \1\s[10]射撃は許可できない。\w9\n/
+    繰り返す、\w4射撃は許可できない。\e"
+}
+
+MouseDF_DoubleClick0Leg
+{
+    Mouse_DoubleClick0Leg
+}
+
+MouseDF_DoubleClick0Boots
+{
+    "\0\s[0]空力特性も考慮したブーツです。\w9\n/
+    耐熱性が高いんですよ。\e"
+    "\0\s[0]この羽、\w4補助翼として機能するんですよ。\e"
+    "\0\s[0]この靴、\w4ヒールが高いんですよね。\w9\n\n[half]/
+    \1\s[10]歩きにくいかい?\w9\n\n[half]/
+    \0\s[0]そこまでは気になりません。\w9\n/
+    視点がいつもより高いので新鮮です。\e"
+}
+
+//=========================
+// アズリエル
+//=========================
+
+//-------------------------
+// さわり反応
+//-------------------------
+MouseDF_Nade1Head
+{
+    Mouse_Nade1Head
+}
+
+MouseDF_Nade1Face
+{
+    Mouse_Nade1Face
+}
+
+MouseDF_Nade1Lip
+{
+    Mouse_Nade1Lip
+}
+
+MouseDF_Nade1Hair
+{
+    Mouse_Nade1Hair
+}
+
+MouseDF_Nade1Chest
+{
+    Mouse_Nade1Chest
+}
+
+MouseDF_Nade1Hand
+{
+    Mouse_Nade1Hand
+}
+
+MouseDF_Nade1Abdomen
+{
+    "\1\s[15]くすぐったいんだけど。\e"
+    "\1\s[17]やめてよ。\e"
+    "\1\s[13]くすぐったい。\e"
+}
+MouseDF_Nade1Flank
+{
+    "\1\s[17]待って、\w4すごいくすぐったい。\w9\n\n[half]/
+    \0\s[9]そうやって身を捩るのは逆効果ですよ。\w9\n\n[half]/
+    \1\s[13]え?\e"
+    "\1\s[18]こ、\w4ここも生地欲しい。\w9\n/
+    弱点過ぎる。\w9\n\n[half]/
+    \0\s[0]アズが弱いだけですよ。\w9\n\n[half]/
+    \1\s[14]ここに味方はいないのかい!?\e"
+    "\1\s[18]くすぐったいのもあるけど、\w4なんか恥ずかしい\w4…\w4…。\e"
+}
+
+MouseDF_Nade1Mysitc
+{
+    "\1\s[11]ここの判定ぐらい消してもいいよね?\e"
+    "\1\s[22]消えろ、\w4判定。\e"
+    "\1\s[26]なんでそういう触り方するかな。\e"
+}
+
+MouseDF_Nade1Leg
+{
+    Mouse_Nade1Leg
+}
+
+MouseDF_Nade1Boots
+{
+    "\1\s[10]…\w4…\w4変わった見た目だよね。\w9\w9\n[half]/
+    \0\s[0]似合ってますよ。\w9\n/
+    \1\s[10]うるさいよ。\e"
+    "\1\s[10]ヒールが会っても意外となれるものだね。\w9\n\n[half]/
+    \0\s[0]アズのお姉さんも様になっていると言ってましたよ。\w9\n\n[half]/
+    \1\s[10]…\w4…\w4え?\e"
+}
+
+MouseDF_Nade1eHead
+{
+    "\1\s[40]小さいと撫でやすいのかな?\e"
+    "\1\s[40]本体は男だよ、\w4と言うだけ野暮かな。\e"
+    "\1\s[40]…\w4…。\e"
+}
+
+MouseDF_Nade1eFace
+{
+    "\1\s[40]顔を撫でられても反応に困る。\e"
+    "\1\s[40]…\w4…\w4どう返したらいいかな?\w9\n/
+    \0\s[9]私に聞かれても\w4…\w4…。\e"
+}
+
+//-------------------------
+// つつき反応
+//-------------------------
+MouseDF_DoubleClick1Head
+{
+    "\1\s[10]視界が揺れる揺れる。\w9\n/
+    でも、\w4ブレ補正で視界は揺れなくなるのか。\w9\n/
+    \0\s[0]小突かれて面白がるのやめてくださいよ。\e"
+    "\1\s[10]ショックアブソーバーもあるのにこれだと作動しないのか。\w9\n/
+    敵意や悪意も条件に入っている?\w9\n/
+    \0\s[0]細かい仕様に謎がありますね、\w4この装備は。\e"
+    "\1\s[10]小突かれるとサイドテールが揺れる。\w9\n\n[half]/
+    \0\s[0]目の付け所がずれてますよ。\e"
+}
+
+MouseDF_DoubleClick1Face
+{
+    Mouse_DoubleClick1Face
+}
+
+MouseDF_DoubleClick1Lip
+{
+    Mouse_DoubleClick1Lip
+}
+
+MouseDF_DoubleClick1Hair
+{
+    Mouse_DoubleClick1Hair
+}
+
+MouseDF_DoubleClick1Chest
+{
+    Mouse_DoubleClick1Chest
+}
+
+MouseDF_DoubleClick1Hand
+{
+    Mouse_DoubleClick1Hand
+}
+
+MouseDF_DoubleClick1Abdomen
+{
+    Mouse_DoubleClick1abdomen
+}
+
+MouseDF_DoubleClick1Flank
+{
+    "\1\s[17]突かないでくれ。\e"
+    "\1\s[13]…\w4…\w4こそばゆい触り方するね。\e"
+    "\1\s[18]%username、\w4君は一体何を考えて\w4…\w4…。\e"
+}
+
+MouseDF_DoubleClick1Mysitc
+{
+    "\1\s[12]つつくなーっ!\e"
+    "\1\s[10]…\w4…\w4マニュアル通り、\w4防御もできるんだね。\e"
+    "\1\s[11]なぜ、\w4と問うだけ無駄か。\e"
+}
+
+MouseDF_DoubleClick1Leg
+{
+    Mouse_DoubleClick1Leg
+}
+
+MouseDF_DoubleClick1Boots
+{
+    "\1\s[13]靴だよ。\e"
+    "\1\s[17]変わった趣味だね。\e"
+    "\1\s[26]蹴られたいのかな?\e"
+}
+
+MouseDF_DoubleClick1nHead
+{
+    "\1\s[40]ゆらゆら。\w9\n\n[half]/
+    \0\s[0]そういうお土産ありましたね。\e"
+    "\1\s[40]かたかた。\w9\n\n\[half]/
+    \0\s[0]…\w4…\w4その音はおかしいです。\e"
+    "\1\s[41]\w9\w9\s[40]一瞬、\w4映像が途切れた。\w9\n/
+    びっくりした\w4…\w4…。\e"
+}
+
+MouseDF_DoubleClick1nFace
+{
+    "\1\s[40]顔だよ。\e"
+    "\1\s[40]顔に何かついてる?\w9\n/
+    \0\s[5]持ち帰りたい可愛さがにじみ出てます。\e"
+    "\1\s[40]小さくても顔は顔だと思うんだ。\w9\n\n[half]/
+    \0\s[0]そのこころは?\w9\n/
+    \1\s[10]つつくものではない。\e"
+}

@@ -29,6 +29,9 @@ EMGetPrefix
 	if sender == 'The Hand' {
 		'MouseTH'
 	}
+	elseif shellname = '竜姫 / Drachen Fürstin' {
+		'MouseDF'
+	}
 	else {
 		'Mouse'
 	}

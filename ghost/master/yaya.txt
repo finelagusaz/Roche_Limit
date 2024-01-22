@@ -29,6 +29,7 @@ dic, rs_menu.dic		// メニュー処理辞書
 dic, rs_aprication.dic		// 汎用アプリケーション/どりふ/きのこ辞書
 dic, rs_etc.dic			// 種々のイベント辞書
 dic, rs_mouse_special.dic	// The Hand対応辞書
+dic, rs_mouse_df.dic        // 追加シェル「竜姫」用マウス反応辞書
 dic, rs_mouse_core.dic		//マウスイベントの中核辞書
 dic, rs_sck.dic			//ショートカットキーの辞書
 dic, rs_dic.dic			//用語解説
