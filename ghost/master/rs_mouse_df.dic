@@ -17,11 +17,18 @@ MouseDF_DoubleClick0
 //-------------------------
 // さわり反応
 //-------------------------
-MouseDF_Nade0Face
+MouseDF_Nade0Head
 {
-    "\0\s[6]…\w4…\w4こういうのなら歓迎です。\e"
     "\0\s[6]…\w4…\w4\s[0]あの、\w4ありがとうございます。\e"
     "\0\s[6]%usernameの手も温かいですね。\e"
+    "\0\s[1]もっと、\w4撫でてもらえませんか?\w9\n\n[half]/
+    \1\s[10]その顔。\w9\n/
+    \0\s[0]どの顔ですか?\e"
+}
+
+MouseDF_Nade0Face
+{
+    Mouse_Nade0Face
 }
 
 MouseDF_Nade0Lip
@@ -78,6 +85,11 @@ MouseDF_Nade0Boots
 //-------------------------
 // つつき反応
 //-------------------------
+MouseDF_DoubleClick0Head
+{
+    Mouse_DoubleClick0Head
+}
+
 MouseDF_DoubleClick0Face
 {
     Mouse_DoubleClick0Face
