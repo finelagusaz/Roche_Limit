@@ -489,10 +489,15 @@ OnWindowStateRestore
 //---- 他のゴーストへ切り替え -----------------------------------------------------------
 OnGhostChanging
 {
-	if reference[0] == "オフィーリア"
+	// 自分への切り替え
+	if reference[0] == "オフィーリア" || reference[0] == "アルギズ"
 	{
-		//再起動
-		if SurfaceMode != "5"
+		if shellname == "竜姫 / Drachen Fürstin" {
+			"\0\s[0]少し席を外します。\w9\n\n[half]/
+			\1\s[10]どこまでいくのかな。\w9\n\n[half]/
+			\0\s[5]少しは少しです。\w9\w9\e"
+		}
+		elseif SurfaceMode != "5"
 		{
 			"\1\s[10]再起動だってさ。\w9\n\n[half]/
 			\0\s[5]ユニットの再起動をはじめます。\w9\w5\e"
@@ -1109,12 +1114,17 @@ OnGhostChanging
 //---- 他のゴーストから切り替り ---------------------------------------------------------
 OnGhostChanged
 {
-	if reference[0] == "オフィーリア"
+	if reference[0] == "オフィーリア" || reference[0] == "アルギズ"
 	{
-		//再起動
-		if SurfaceMode != "5"
+		if shellname == "竜姫 / Drachen Fürstin"
 		{
-    		"\1\s[10]ユニットチェック、\w4問題なし。\w9\n\n[half]/
+			"\1\s[10]\0\s[0]ただいま戻りました。\w9\n\n[half]/
+			\1\s[10]少しほどあてにならない言葉はないね。\w9\n\n[half]/
+			\0\s[0]時間的には30秒もかかってませんよ。\e"
+		}
+		elseif SurfaceMode != "5"
+		{
+			"\1\s[10]ユニットチェック、\w4問題なし。\w9\n\n[half]/
 			\0\s[5]再起動完了しました。\w9\e"
 		}
 		elseif SurfaceMode == "5"
