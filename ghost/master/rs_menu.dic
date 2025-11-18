@@ -93,25 +93,25 @@ OnChoiceSelect
 	elseif reference[0] == "CHANGEEXICE"
 	{
 		SurfaceMode=0
-		"\0\w9\w9\s[-1]\s[0]戻りました。\w9\e"
+		"\0\w9\w9\s[0]\s[0]戻りました。\w9\e"
 	}
 	//私服になる
 	elseif reference[0] == "CHANGEALGIZ"
 	{
 		SurfaceMode=5
-		"\0\s[-1]\w9\w9\s[5]お待たせしました。\w9\e"
+		"\0\s[0]\w9\w9\s[5]お待たせしました。\w9\e"
 	}
 	//冬服になる
 	elseif reference[0] == "CHANGEWINTER"
 	{
 		SurfaceMode=7
-		"\0\s[-1]\w9\w9\s[5]お待たせしました。\w9\e"
+		"\0\s[0]\w9\w9\s[5]お待たせしました。\w9\e"
 	}
 	//CAになる
 	elseif reference[0] == "CHANGECA"
 	{
 		SurfaceMode=9
-		"\0\s[-1]\w9\w9\s[5]お待たせしました。\w9\e"
+		"\0\s[0]\w9\w9\s[5]お待たせしました。\w9\e"
 	}
 	//トーク頻度設定
 	elseif reference[0] == "TALKINTERVAL"
