@@ -27,18 +27,20 @@
 | └ 空調絡みの話 | `//空調絡みの話` | 12545–12557 |
 | └ 日々は誰かとともに | `//日々は誰かとともに` | 12558–12612 |
 | └ カリウ関連 | `//カリウ関連` | 12613–12756 |
-| └ アリウム/Extreme World | `//アリウム、Extreme Worldに関連するトーク` | 12757–12935 |
-| └ ミクロの決死圏用 | `// ミクロの決死圏用` | 12936–13031 |
+| └ アリウム/Extreme World | `//アリウム、Extreme Worldに関連するトーク`（純粋な配列要素）| 12757–12935 |
+| └ ミクロの決死圏用 ★条件付き | `if SurfaceMode != '5' && shellname == "ミクロの決死圏"`（12937）/ `elseif SurfaceMode == '5' …`（13017）の **if/elseif ブロック** | 12936–13030 |
+| データ（本体配列の閉じ）| `aryNormalTalk` の `}` | 13031 |
 | ロジック＋データ | `ExiceOnlyTalk`（13036）/ `aryExiceOnlyTalk`（イクサイス専用）| 13033–13122 |
 | ロジック＋データ | `DrachenFurstinTalk`（13127）/ `aryDrachenFurstinTalk`（竜姫専用）| 13124–13157 |
-| ロジック＋データ | 季節 春/夏/秋/冬 各ラッパー＋配列 | 13159–13494 |
+| ロジック＋データ | 季節 春/夏/秋 各ラッパー＋配列（純粋な配列要素）| 13159–13400 |
+| ロジック＋データ ★条件付き | 冬 `WinterTalk`/`aryWinterTalk`。配列内部に `if SurfaceMode == '7'`（13475）/ `elseif == '9'`（13485）| 13397–13494 |
 | ロジック＋データ | `MidnightTalk`（13496）/ `aryMidnightTalk`（深夜）| 13495–13522 |
 | データ（構造）| トークチェイン12種 | 13524–13694 |
 | ロジック | OnMinuteChange（時報/重なり）| 13695–13732 |
 | ロジック | OnSecondChange / Mikire系 / `mikirego` チェイン | 13733–13765 |
 | ロジック | OnSurfaceRestore | 13767–末尾 |
 
-注: 行範囲は調査時点の目安。`aryNormalTalk` の終端付近（13030–13031 の二重 `}`）はミクロ節内に入れ子ブロックがある可能性があり、実装時に正確な括弧対応を確認する。
+注: 行範囲は調査時点の目安。**配列の内部に制御構文（`if`/`elseif`）が混在する**ことを確認済み（ミクロ＝12937/13017、冬＝13475/13485）。13030 は ミクロの `elseif` ブロックの閉じ、13031 は `aryNormalTalk` 配列の閉じ。`aryNormalTalk` 内で内部条件を持つのはミクロ節のみ、世界観〜アリウムは純粋な配列要素。**条件付きブロックはブロックごと逐語抽出して条件を保存する。**
 
 ### 外部参照（重要）
 
@@ -78,7 +80,6 @@ aitalks/
   ├ world.dic        … aryWorldTalk    〔A:世界観＋FS用イクサイスの注記〕
   ├ kariu.dic        … aryKariuTalk    〔A:舞台・固有名詞／カリウ関連〕
   ├ arium.dic        … aryAriumTalk    〔A:アリウム/Extreme World〕
-  ├ micro.dic        … aryMicroTalk    〔A:ミクロの決死圏〕
   ├ topic.dic        … aryTopicTalk    〔A:小テーマ＝質問箱・死生観・空調・日々は誰かとともに〕
   ├ chain.dic        … チェイン12種     〔C:構造／:chain=名前 で呼ばれるため合成不要〕
   │                      (ogre / school_a_swimming_suit / star / アンドロイド / フィルタリング /
@@ -86,23 +87,24 @@ aitalks/
   │                       ことの顛末 / フォローにまわってみた)
   │                      ※ mikirego は見切れロジックに密結合のため rs_aitalk.dic 側に残す。
   ├ shell/           〔B:シェル限定〕
-  │   ├ exice.dic    … aryExiceOnlyTalk      （非・竜姫シェル時のみ）
-  │   └ drachen.dic  … aryDrachenFurstinTalk （竜姫シェル時のみ・本設計で新規接続）
+  │   ├ exice.dic    … aryExiceOnlyTalk      （非・竜姫シェル時のみ・RandomTalkEx で外部判定）
+  │   ├ drachen.dic  … aryDrachenFurstinTalk （竜姫シェル時のみ・本設計で新規接続）
+  │   └ micro.dic    … aryMicroTalk          （ミクロの決死圏シェル時のみ・配列内部で自己判定）
   ├ season/          〔B:季節限定〕
   │   ├ spring.dic   … arySpringTalk
   │   ├ summer.dic   … arySummerTalk
   │   ├ autumn.dic   … aryAutumnTalk
-  │   └ winter.dic   … aryWinterTalk
+  │   └ winter.dic   … aryWinterTalk（配列内部に SurfaceMode 7/9 の条件分岐あり）
   └ time/            〔B:時間帯限定〕
       └ midnight.dic … aryMidnightTalk（深夜）
 ```
 
-大分類A（常時）= `RandomTalkEx` へ無条件 `,=` 合成。大分類B（条件付き）= 既存の条件分岐を維持（シェルは本設計で竜姫分岐を追加）。大分類C（構造）= 合成不要。
+大分類A（常時）= `RandomTalkEx` へ無条件 `,=` 合成。大分類B（条件付き）= 既存の条件分岐を維持（シェルは本設計で竜姫分岐を追加。ミクロは配列内部の `if shellname == "ミクロの決死圏"` で自己ゲートするため合成行は無条件のままでよい）。大分類C（構造）= 合成不要。
 
 ### 配列名の方針
 
 - **据え置き（外部参照あり）**: `aryNormalTalk`, `aryExiceOnlyTalk`, `aryDrachenFurstinTalk`, `arySpringTalk`, `arySummerTalk`, `aryAutumnTalk`, `aryWinterTalk`, `aryMidnightTalk`。
-- **新設（5つ）**: `aryWorldTalk`, `aryKariuTalk`, `aryAriumTalk`, `aryMicroTalk`, `aryTopicTalk`。
+- **新設（5つ）**: `aryWorldTalk`, `aryKariuTalk`, `aryAriumTalk`, `aryTopicTalk`（以上は常時A）, `aryMicroTalk`（条件付きB・自己ゲート）。
 
 ## 5. 実装方針
 
@@ -117,15 +119,15 @@ YAYA では同名 `: array` 関数を複数定義しても**連結されず**、
 （検証: 分割後に `about:talk` の各カウント・合計が分割前の値と一致することで確認する。）
 
 ### 5.3 `RandomTalkEx`（rs_aitalk.dic）の編集
-大分類A の新設配列を**無条件**で合成する行を追加する（本体ブロックと同じ常時ローテーション挙動を保つため）。
+新設配列を `,=` で合成する行を追加する。`aryMicroTalk` は配列内部でシェル判定して自己ゲートするため、他のA配列と同じく**無条件**で合成してよい（非ミクロシェルでは空配列を返す＝従来どおり）。
 
 ```
 _talk_array ,= aryNormalTalk      // 既存
-_talk_array ,= aryWorldTalk       // 追加
-_talk_array ,= aryKariuTalk       // 追加
-_talk_array ,= aryAriumTalk       // 追加
-_talk_array ,= aryMicroTalk       // 追加
-_talk_array ,= aryTopicTalk       // 追加
+_talk_array ,= aryWorldTalk       // 追加（A:常時）
+_talk_array ,= aryKariuTalk       // 追加（A:常時）
+_talk_array ,= aryAriumTalk       // 追加（A:常時）
+_talk_array ,= aryTopicTalk       // 追加（A:常時）
+_talk_array ,= aryMicroTalk       // 追加（B:ミクロ限定・配列が自己ゲート）
 ```
 条件付き（旧/季節/深夜）の既存合成行は変更しない。
 
@@ -149,11 +151,11 @@ dic, aitalks/normal.dic         // 通常トーク本体
 dic, aitalks/world.dic          // 世界観
 dic, aitalks/kariu.dic          // カリウ関連
 dic, aitalks/arium.dic          // アリウム/Extreme World
-dic, aitalks/micro.dic          // ミクロの決死圏
 dic, aitalks/topic.dic          // 小テーマ集約
 dic, aitalks/chain.dic          // トークチェイン
 dic, aitalks/shell/exice.dic    // イクサイス専用
 dic, aitalks/shell/drachen.dic  // 竜姫専用
+dic, aitalks/shell/micro.dic    // ミクロの決死圏専用
 dic, aitalks/season/spring.dic  // 季節：春
 dic, aitalks/season/summer.dic  // 季節：夏
 dic, aitalks/season/autumn.dic  // 季節：秋
@@ -165,22 +167,25 @@ dic, aitalks/time/midnight.dic  // 深夜
 ### 5.5 `rs_communicate.dic`（about:talk 統計）の更新
 `aryNormalTalk` から題材を抜き出すため `ARRAYSIZE(aryNormalTalk)` が縮む。統計を正しく保つよう、新設配列を表示行と合計式に加える。あわせて**既存バグ**（合計式での `arySpringTalk` の二重加算、および `aryMidnightTalk` の合計漏れ）を修正する。
 
-- 表示に追加: 世界観 / カリウ / アリウム / ミクロ / 小テーマ の各 `ARRAYSIZE`。
-- 合計式: `aryNormalTalk + aryWorldTalk + aryKariuTalk + aryAriumTalk + aryMicroTalk + aryTopicTalk + arySpringTalk + arySummerTalk + aryAutumnTalk + aryWinterTalk + aryMidnightTalk + aryNormalTalkOld`（重複・漏れを解消）。
+- 表示に追加: 世界観 / カリウ / アリウム / 小テーマ の各 `ARRAYSIZE`（いずれも常時A）。`aryMicroTalk` はシェル依存（非ミクロシェルでは 0）なので表示・合計に含めるかは任意。含める場合も非ミクロシェルでは 0 加算で無害。
+- 合計式: `aryNormalTalk + aryWorldTalk + aryKariuTalk + aryAriumTalk + aryTopicTalk + arySpringTalk + arySummerTalk + aryAutumnTalk + aryWinterTalk + aryMidnightTalk + aryNormalTalkOld`（重複・漏れを解消）。
+- 注: 現在の `ARRAYSIZE(aryNormalTalk)` は非ミクロシェルではミクロ条件節を含まない（条件偽で評価されない）。ミクロを別配列へ出しても master 等の通常カウントは変わらない。
 
 ## 6. 挙動の保存と検証
 
-- **頻度保存**: 大分類A は全て無条件合成のため、本体に内包されていた頃と出現確率は不変。条件付き（B）は既存条件をそのまま移送。
-- **件数検証（機械的）**: 分割前の `aryNormalTalk` の要素数 = 分割後の `aryNormalTalk + aryWorldTalk + aryKariuTalk + aryAriumTalk + aryMicroTalk + aryTopicTalk` の合計、を突合する。
+- **頻度保存**: 大分類A は全て無条件合成のため出現確率は不変。条件付き（B）は条件節をブロックごと移送するため不変。
+- **無損失検証（主検証・機械的）**: 配列内に `if`/`elseif` が混在するため要素数カウントは不正確。代わりに **行範囲で逐語抽出し、抽出した全断片を元の順序で連結すると元ファイルの該当範囲とバイト一致する**ことを検証する（トーク・条件節・コメントの欠落／重複／改変が無いことを保証）。
+- **ブレース均衡検証**: 各データファイルで `{` と `}` の数が一致し、`array`/`if`/`elseif` の対応が取れていることを確認。
+- **参照解決検証（静的）**: `RandomTalkEx` の各 `,=` 先、`rs_communicate.dic` の各 `ARRAYSIZE` 先、`:chain=` の各参照先が、いずれかの読込ファイルに定義として存在することを確認（孤立参照ゼロ）。
 - **ロード検証（実行時）**: SSP/YAYA でゴーストを起動し、エラーログ無し・`about:talk` の合計が分割前と一致することを確認（ユーザ環境での起動確認）。
 - **チェイン検証**: `:chain=` で参照される12チェインが `aitalks/chain.dic` から解決されることを、代表トークのチェイン発火で確認。
 - **竜姫接続検証**: 竜姫シェル（`竜姫 / Drachen Fürstin`）に切替時、`aryDrachenFurstinTalk` のトークが出現すること、かつ `aryExiceOnlyTalk` が出ないことを確認。master 等の非竜姫シェルでは従来どおりイクサイス専用が出て竜姫専用が出ないことを確認。
 
 ## 7. リスク・既知の論点
 
-- **配列終端の二重括弧**（13030–13031）: ミクロ節に入れ子ブロックがある可能性。切り出し時に括弧対応を正確に確認する。
-- **文字コード/改行/BOM**: UTF-8（BOM無し）・既存改行コードを維持。崩れると文字化け・ロード失敗の恐れ。
-- **同名配列の非連結**（5.2）: 設計の根幹前提。既存イディオムに従い、検証で担保する。
+- **配列内の制御構文（解決済み）**: 13030 はミクロ `elseif` ブロックの閉じ、13031 は `aryNormalTalk` の閉じと確認済み。ミクロ（12937/13017）と冬（13475/13485）の配列に内部 `if`/`elseif` あり。**条件節はブロック単位で逐語抽出**し、行範囲がブロック境界（`if`〜対応する `}`）と揃っていることを切り出し前に必ず確認する。中途半端な行で切ると構文崩壊する。
+- **文字コード/改行/BOM**: UTF-8（BOM無し）・既存改行コードを維持。崩れると文字化け・ロード失敗の恐れ。逐語抽出（バイト保存）で担保する。
+- **同名配列の非連結**（5.2）: 設計の根幹前提。既存ゴースト自身が固有名配列＋`,=` 合成で構成されている事実が裏付け（連結されるなら固有名は不要）。加えて分割後のロード検証で担保する。
 - **竜姫専用の接続**: 本設計で `RandomTalkEx` に `else` 分岐を追加して有効化する。判定文字列はシェル名（`竜姫 / Drachen Fürstin`、ü 含む）と完全一致を確認済み。タイプミスや全角/半角・濁点違いがあると無効化されるため、既存文字列を流用する。
 - **大容量ファイルの分割操作**: 1.1MB を扱うため、手作業ではなくスクリプト等で機械的に切り出し、差分の取り違えを防ぐ。
 - **サブフォルダ指定の動作**: `dic, aitalks/season/spring.dic` のようなサブパス指定が YAYA で正しく解決されることを、実装初期にダミー1ファイルで確認してから本格展開する（解決不可なら平置きへフォールバック）。
@@ -189,8 +194,8 @@ dic, aitalks/time/midnight.dic  // 深夜
 
 - 新規フォルダ: `ghost/master/aitalks/`（＋ `shell/` `season/` `time/` サブフォルダ）。
 - 新規データファイル（14ファイル、すべて `aitalks/` 配下）:
-  - 直下: `normal.dic` / `world.dic` / `kariu.dic` / `arium.dic` / `micro.dic` / `topic.dic` / `chain.dic`
-  - `shell/`: `exice.dic` / `drachen.dic`
+  - 直下: `normal.dic` / `world.dic` / `kariu.dic` / `arium.dic` / `topic.dic` / `chain.dic`
+  - `shell/`: `exice.dic` / `drachen.dic` / `micro.dic`
   - `season/`: `spring.dic` / `summer.dic` / `autumn.dic` / `winter.dic`
   - `time/`: `midnight.dic`
 - 変更ファイル: `rs_aitalk.dic`（ロジックのみに縮小＋RandomTalkEx の大分類A合成行追加＋竜姫シェル分岐の接続）, `yaya.txt`（dic行追加）, `rs_communicate.dic`（統計更新＋バグ修正）。
