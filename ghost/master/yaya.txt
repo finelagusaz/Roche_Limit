@@ -20,7 +20,21 @@ charset.extension, UTF-8	// SAORI入出力
 //---- 読み込む辞書 ---------------------------------------------------------------------
 dic, rs_word.dic			// 単語辞書
 dic, rs_string.dic			// 文字列リソース辞書
-dic, rs_aitalk.dic			// ランダムトーク辞書
+dic, rs_aitalk.dic			// ランダムトーク辞書（ロジック）
+dic, aitalks/normal.dic			// 通常トーク本体
+dic, aitalks/world.dic			// 世界観
+dic, aitalks/kariu.dic			// カリウ関連
+dic, aitalks/arium.dic			// アリウム/Extreme World
+dic, aitalks/topic.dic			// 小テーマ集約
+dic, aitalks/chain.dic			// トークチェイン
+dic, aitalks/shell/exice.dic		// イクサイス専用
+dic, aitalks/shell/drachen.dic		// 竜姫専用
+dic, aitalks/shell/micro.dic		// ミクロの決死圏専用
+dic, aitalks/season/spring.dic		// 季節：春
+dic, aitalks/season/summer.dic		// 季節：夏
+dic, aitalks/season/autumn.dic		// 季節：秋
+dic, aitalks/season/winter.dic		// 季節：冬
+dic, aitalks/time/midnight.dic		// 深夜
 dic, rs_aitalk_old.dic		// 旧ランダムトーク辞書
 dic, rs_bootend.dic			// 起動/終了/切り替えトーク辞書
 dic, rs_communicate.dic		// コミュニケート辞書
