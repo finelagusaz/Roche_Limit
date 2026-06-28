@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "ukagaka-doc": {
+      "command": "cmd",
+      "args": ["/c", "npx", "-y", "ukagaka-doc-mcp"]
+    }
+  }
+}
