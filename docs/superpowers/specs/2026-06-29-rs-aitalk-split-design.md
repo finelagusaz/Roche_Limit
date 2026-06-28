@@ -44,19 +44,21 @@
 
 - `rs_communicate.dic`（165–174行, `about:talk`）が `ARRAYSIZE(aryNormalTalk)`, `arySpringTalk`, `arySummerTalk`, `aryAutumnTalk`, `aryWinterTalk`, `aryMidnightTalk`, `aryNormalTalkOld` を参照（統計表示）。
 - `RandomTalkEx`（66–110行）が `aryNormalTalk` / `aryExiceOnlyTalk`（非・竜姫時）/ `aryNomarlTalkOld`（旧, ※綴り `Nomarl`）/ 季節4種 / `aryMidnightTalk` を `,=` 合成。
-- `aryDrachenFurstinTalk` と各ラッパー（`NormalTalk` / `DrachenFurstinTalk` / `SpringTalk` 等 / `MidnightTalk`）は **どこからも呼ばれていない**（竜姫専用トークは現状ローテーション未接続）。本設計では現状維持とし、接続修正はスコープ外。
+- `aryDrachenFurstinTalk` と各ラッパー（`NormalTalk` / `DrachenFurstinTalk` / `SpringTalk` 等 / `MidnightTalk`）は **どこからも呼ばれていない**（竜姫専用トークは現状ローテーション未接続）。本設計では `RandomTalkEx` に接続し、竜姫シェル時に出現させる（5.3 参照）。
+- シェル名の確認: `shell/Drachen_Furstin/descript.txt` の `name,竜姫 / Drachen Fürstin` と、`RandomTalkEx` 内の判定文字列 `'竜姫 / Drachen Fürstin'`（ü 含む）は完全一致。`shellname` による分岐はこの文字列で正しく働く。
 
 ## 3. 目標 / 非目標
 
 **目標**
 - ロジックとカテゴリ別データを別ファイルに分離する。
 - 分類体系（大/中/小）を整理し直す。
-- トークの出現挙動を完全に保つ。
+- トークの出現挙動を完全に保つ（分割対象の常時/条件付きトーク）。
+- **竜姫専用トーク（`aryDrachenFurstinTalk`）を `RandomTalkEx` に接続し、竜姫シェル時に出現させる。**
 - 外部参照（統計・条件分岐）を壊さない。
 
 **非目標（スコープ外）**
 - 約11,500行の本体ブロックの意味的再分類。
-- 竜姫専用トーク未接続の修正、ラッパー関数の整理（別途検討）。
+- 未使用ラッパー関数（`NormalTalk` / `DrachenFurstinTalk` 等）の整理（別途検討）。
 - トーク内容そのものの追加・修正・校正。
 - 旧トーク辞書 `rs_aitalk_old.dic` の変更。
 
@@ -82,8 +84,8 @@
 
 【大分類B：条件付きトーク】→ 既存の条件分岐をそのまま維持
   ├ 中:シェル限定
-  │   ├ rs_aitalk_exice.dic    … aryExiceOnlyTalk（非・竜姫時のみ）
-  │   └ rs_aitalk_drachen.dic  … aryDrachenFurstinTalk（※現状未接続のまま）
+  │   ├ rs_aitalk_exice.dic    … aryExiceOnlyTalk（非・竜姫シェル時のみ）
+  │   └ rs_aitalk_drachen.dic  … aryDrachenFurstinTalk（竜姫シェル時のみ・本設計で新規接続）
   ├ 中:季節限定（4分割）
   │   ├ rs_aitalk_spring.dic   … arySpringTalk
   │   ├ rs_aitalk_summer.dic   … arySummerTalk
@@ -127,7 +129,18 @@ _talk_array ,= aryAriumTalk       // 追加
 _talk_array ,= aryMicroTalk       // 追加
 _talk_array ,= aryTopicTalk       // 追加
 ```
-条件付き（イクサイス/旧/季節/深夜）の既存合成行は変更しない。
+条件付き（旧/季節/深夜）の既存合成行は変更しない。
+
+**シェル限定の接続（竜姫専用の有効化）**: 既存のイクサイス分岐に `else` を足し、竜姫シェル時に `aryDrachenFurstinTalk` を合成する。これによりイクサイス／竜姫が対称になる（共通の常時トーク=大分類A は両シェルとも受け取る）。
+
+```
+if shellname != '竜姫 / Drachen Fürstin' {
+    _talk_array ,= aryExiceOnlyTalk      // 既存（非・竜姫）
+}
+else {
+    _talk_array ,= aryDrachenFurstinTalk // 追加（竜姫シェル時）
+}
+```
 
 ### 5.4 `yaya.txt` の編集
 `dic, rs_aitalk.dic` の行はロジックとして残し、その直後に新データファイル群の `dic,` 行を追加する。
@@ -163,16 +176,17 @@ dic, rs_aitalk_chain.dic      // トークチェイン
 - **件数検証（機械的）**: 分割前の `aryNormalTalk` の要素数 = 分割後の `aryNormalTalk + aryWorldTalk + aryKariuTalk + aryAriumTalk + aryMicroTalk + aryTopicTalk` の合計、を突合する。
 - **ロード検証（実行時）**: SSP/YAYA でゴーストを起動し、エラーログ無し・`about:talk` の合計が分割前と一致することを確認（ユーザ環境での起動確認）。
 - **チェイン検証**: `:chain=` で参照される12チェインが `rs_aitalk_chain.dic` から解決されることを、代表トークのチェイン発火で確認。
+- **竜姫接続検証**: 竜姫シェル（`竜姫 / Drachen Fürstin`）に切替時、`aryDrachenFurstinTalk` のトークが出現すること、かつ `aryExiceOnlyTalk` が出ないことを確認。master 等の非竜姫シェルでは従来どおりイクサイス専用が出て竜姫専用が出ないことを確認。
 
 ## 7. リスク・既知の論点
 
 - **配列終端の二重括弧**（13030–13031）: ミクロ節に入れ子ブロックがある可能性。切り出し時に括弧対応を正確に確認する。
 - **文字コード/改行/BOM**: UTF-8（BOM無し）・既存改行コードを維持。崩れると文字化け・ロード失敗の恐れ。
 - **同名配列の非連結**（5.2）: 設計の根幹前提。既存イディオムに従い、検証で担保する。
-- **竜姫専用の未接続**: 現状維持。修正はスコープ外（別タスク）。
+- **竜姫専用の接続**: 本設計で `RandomTalkEx` に `else` 分岐を追加して有効化する。判定文字列はシェル名（`竜姫 / Drachen Fürstin`、ü 含む）と完全一致を確認済み。タイプミスや全角/半角・濁点違いがあると無効化されるため、既存文字列を流用する。
 - **大容量ファイルの分割操作**: 1.1MB を扱うため、手作業ではなくスクリプト等で機械的に切り出し、差分の取り違えを防ぐ。
 
 ## 8. 成果物
 
 - 新規データファイル: `rs_aitalk_{normal,world,kariu,arium,micro,topic,exice,drachen,spring,summer,autumn,winter,midnight,chain}.dic`（14ファイル）。
-- 変更ファイル: `rs_aitalk.dic`（ロジックのみに縮小＋RandomTalkEx合成行追加）, `yaya.txt`（dic行追加）, `rs_communicate.dic`（統計更新＋バグ修正）。
+- 変更ファイル: `rs_aitalk.dic`（ロジックのみに縮小＋RandomTalkEx の大分類A合成行追加＋竜姫シェル分岐の接続）, `yaya.txt`（dic行追加）, `rs_communicate.dic`（統計更新＋バグ修正）。
