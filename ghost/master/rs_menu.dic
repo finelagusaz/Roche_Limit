@@ -271,10 +271,10 @@ OnChoiceSelect
 	elseif reference[0] == "TALKOLD"
 	{
 		if flgTalkOld == 1 {
-			"\1\s[10]\0\s[0]\q[（古くなったランダムトークをしない）,flgTalkOldOn]"
+			"\1\s[10]\0\s[0]\q[（古くなったランダムトークをしない）,flgTalkOldOff]"
 		}
 		else {
-			"\1\s[10]\0\s[0]\q[（古くなったランダムトークをする）,flgTalkOldOff]"
+			"\1\s[10]\0\s[0]\q[（古くなったランダムトークをする）,flgTalkOldOn]"
 		}
 		--
 		"\n\n[half]/

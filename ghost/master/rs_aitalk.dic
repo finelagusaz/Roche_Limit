@@ -82,7 +82,7 @@ RandomTalkEx : nonoverlap
 
 	// 旧ランダムトーク
 	if flgTalkOld == 1 {
-		_talk_array ,= aryNomarlTalkOld
+		_talk_array ,= aryNormalTalkOld
 	}
 
 	//----------------------------------------
