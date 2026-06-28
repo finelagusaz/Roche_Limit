@@ -2,7 +2,7 @@
   "mcpServers": {
     "ukagaka-doc": {
       "command": "cmd",
-      "args": ["/c", "npx", "-y", "ukagaka-doc-mcp"]
+      "args": ["/c", "npx", "-y", "ukagaka-doc-mcp@0.1.25"]
     }
   }
 }
