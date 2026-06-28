@@ -8,7 +8,7 @@
 
 `rs_aitalk.dic` は OnAiTalk まわりのロジックと、約11,500行の巨大なトーク配列 `aryNormalTalk` を含む単一ファイルである。本設計では次の方針で複数ファイルへ分割する。
 
-- **ロジックとデータを完全分離**する。`rs_aitalk.dic` はイベントハンドラ・選択関数・見切れ等の「ロジック専用」にし、トーク本体（配列・チェイン）は `rs_aitalk_<category>.dic` 群へ移す。
+- **ロジックとデータを完全分離**する。`rs_aitalk.dic` はイベントハンドラ・選択関数・見切れ等の「ロジック専用」にし、トーク本体（配列・チェイン）は `ghost/master/aitalks/` フォルダ下のカテゴリ別ファイルへ移す。
 - 分割の大分類は **「出現条件」**（常時／条件付き／構造）を軸とし、中・小分類を「内容ジャンル」とする。これは `RandomTalkEx` の `,=` 合成ロジックと一対一で対応するため、分類と実装が破綻しにくい。
 - **既存マーカー（`//`・`//----`）の範囲のみ**を分割単位とする。約11,500行の未分類な本体ブロックは中身を再分類せず、1ファイル（`aryNormalTalk`）にまとめて残す。
 - **挙動（トークの出現頻度・条件）は完全保存**する。配列名は外部参照のあるものを厳密に維持し、新設配列は無条件合成して頻度を変えない。
@@ -64,43 +64,40 @@
 
 ## 4. 分類体系とファイル構成
 
+大分類（出現条件）を**フォルダ階層**で表現する。常時トーク（A）と構造トーク（C）は `aitalks/` 直下、条件付きトーク（B）は `aitalks/{shell,season,time}/` のサブフォルダへ。ファイル名は `aitalks/` 配下では `rs_aitalk_` プレフィックスを外す（フォルダで文脈が付くため）。
+
 ```
-【ロジック】データを持たない
+【ロジック】データを持たない（master 直下に据え置き）
   rs_aitalk.dic … OnTranslate / OnAiTalk / RandomTalk / RandomTalkEx /
                   各ラッパー関数 / OnMinuteChange / 見切れ(OnSecondChange/Mikire系/mikirego) /
                   OnSurfaceRestore
 
-【大分類A：常時トーク（無条件でローテーション）】→ RandomTalkExへ無条件 ,= 合成
-  ├ 中:一般
-  │   └ rs_aitalk_normal.dic   … aryNormalTalk（本体・約11,500行／中身は分類しない）
-  ├ 中:世界観・設定
-  │   ├ rs_aitalk_world.dic    … aryWorldTalk（世界観＋FS用イクサイスの注記）
-  │   └ 小:舞台・固有名詞（関連作／クロスオーバー）
-  │       ├ rs_aitalk_kariu.dic … aryKariuTalk（カリウ関連）
-  │       ├ rs_aitalk_arium.dic … aryAriumTalk（アリウム/Extreme World）
-  │       └ rs_aitalk_micro.dic … aryMicroTalk（ミクロの決死圏）
-  └ 中:小テーマ（短い小ネタを集約）
-      └ rs_aitalk_topic.dic    … aryTopicTalk（質問箱・死生観・空調・日々は誰かとともに）
-
-【大分類B：条件付きトーク】→ 既存の条件分岐をそのまま維持
-  ├ 中:シェル限定
-  │   ├ rs_aitalk_exice.dic    … aryExiceOnlyTalk（非・竜姫シェル時のみ）
-  │   └ rs_aitalk_drachen.dic  … aryDrachenFurstinTalk（竜姫シェル時のみ・本設計で新規接続）
-  ├ 中:季節限定（4分割）
-  │   ├ rs_aitalk_spring.dic   … arySpringTalk
-  │   ├ rs_aitalk_summer.dic   … arySummerTalk
-  │   ├ rs_aitalk_autumn.dic   … aryAutumnTalk
-  │   └ rs_aitalk_winter.dic   … aryWinterTalk
-  └ 中:時間帯限定
-      └ rs_aitalk_midnight.dic … aryMidnightTalk（深夜）
-
-【大分類C：構造トーク】→ :chain=名前 で呼ばれるため合成不要
-  └ rs_aitalk_chain.dic        … チェイン12種
-       (ogre / school_a_swimming_suit / star / アンドロイド / フィルタリング /
-        辞書攻撃 / 八城その1 / 法と人 / お酒の変化 / 勝算はあるのか /
-        ことの顛末 / フォローにまわってみた)
-       ※ mikirego は見切れロジックに密結合のため rs_aitalk.dic 側に残す。
+【データ】ghost/master/aitalks/ 配下に配置
+aitalks/
+  ├ normal.dic       … aryNormalTalk   〔A:一般・本体 約11,500行／中身は分類しない〕
+  ├ world.dic        … aryWorldTalk    〔A:世界観＋FS用イクサイスの注記〕
+  ├ kariu.dic        … aryKariuTalk    〔A:舞台・固有名詞／カリウ関連〕
+  ├ arium.dic        … aryAriumTalk    〔A:アリウム/Extreme World〕
+  ├ micro.dic        … aryMicroTalk    〔A:ミクロの決死圏〕
+  ├ topic.dic        … aryTopicTalk    〔A:小テーマ＝質問箱・死生観・空調・日々は誰かとともに〕
+  ├ chain.dic        … チェイン12種     〔C:構造／:chain=名前 で呼ばれるため合成不要〕
+  │                      (ogre / school_a_swimming_suit / star / アンドロイド / フィルタリング /
+  │                       辞書攻撃 / 八城その1 / 法と人 / お酒の変化 / 勝算はあるのか /
+  │                       ことの顛末 / フォローにまわってみた)
+  │                      ※ mikirego は見切れロジックに密結合のため rs_aitalk.dic 側に残す。
+  ├ shell/           〔B:シェル限定〕
+  │   ├ exice.dic    … aryExiceOnlyTalk      （非・竜姫シェル時のみ）
+  │   └ drachen.dic  … aryDrachenFurstinTalk （竜姫シェル時のみ・本設計で新規接続）
+  ├ season/          〔B:季節限定〕
+  │   ├ spring.dic   … arySpringTalk
+  │   ├ summer.dic   … arySummerTalk
+  │   ├ autumn.dic   … aryAutumnTalk
+  │   └ winter.dic   … aryWinterTalk
+  └ time/            〔B:時間帯限定〕
+      └ midnight.dic … aryMidnightTalk（深夜）
 ```
+
+大分類A（常時）= `RandomTalkEx` へ無条件 `,=` 合成。大分類B（条件付き）= 既存の条件分岐を維持（シェルは本設計で竜姫分岐を追加）。大分類C（構造）= 合成不要。
 
 ### 配列名の方針
 
@@ -110,7 +107,8 @@
 ## 5. 実装方針
 
 ### 5.1 ファイルの作成と移動
-- 各カテゴリのトーク文字列を、対応する `rs_aitalk_*.dic` に「配列定義」として切り出す。
+- `ghost/master/aitalks/` と、その下に `shell/` `season/` `time/` サブフォルダを作成する。
+- 各カテゴリのトーク文字列を、対応する `aitalks/...dic` に「配列定義」として切り出す。
 - 据え置き名の配列（イクサイス/竜姫/季節/深夜）は配列定義のみをデータファイルへ移し、対応ラッパー関数（`ExiceOnlyTalk` 等）は `rs_aitalk.dic`（ロジック）に残す。
 - 文字コードは既存に合わせ **UTF-8**（`yaya.txt` の `charset.dic, UTF-8`）。BOM無しを維持する。
 
@@ -146,23 +144,23 @@ else {
 `dic, rs_aitalk.dic` の行はロジックとして残し、その直後に新データファイル群の `dic,` 行を追加する。
 
 ```
-dic, rs_aitalk.dic            // ランダムトーク（ロジック）
-dic, rs_aitalk_normal.dic     // 通常トーク本体
-dic, rs_aitalk_world.dic      // 世界観
-dic, rs_aitalk_kariu.dic      // カリウ関連
-dic, rs_aitalk_arium.dic      // アリウム/Extreme World
-dic, rs_aitalk_micro.dic      // ミクロの決死圏
-dic, rs_aitalk_topic.dic      // 小テーマ集約
-dic, rs_aitalk_exice.dic      // イクサイス専用
-dic, rs_aitalk_drachen.dic    // 竜姫専用
-dic, rs_aitalk_spring.dic     // 季節：春
-dic, rs_aitalk_summer.dic     // 季節：夏
-dic, rs_aitalk_autumn.dic     // 季節：秋
-dic, rs_aitalk_winter.dic     // 季節：冬
-dic, rs_aitalk_midnight.dic   // 深夜
-dic, rs_aitalk_chain.dic      // トークチェイン
+dic, rs_aitalk.dic              // ランダムトーク（ロジック）
+dic, aitalks/normal.dic         // 通常トーク本体
+dic, aitalks/world.dic          // 世界観
+dic, aitalks/kariu.dic          // カリウ関連
+dic, aitalks/arium.dic          // アリウム/Extreme World
+dic, aitalks/micro.dic          // ミクロの決死圏
+dic, aitalks/topic.dic          // 小テーマ集約
+dic, aitalks/chain.dic          // トークチェイン
+dic, aitalks/shell/exice.dic    // イクサイス専用
+dic, aitalks/shell/drachen.dic  // 竜姫専用
+dic, aitalks/season/spring.dic  // 季節：春
+dic, aitalks/season/summer.dic  // 季節：夏
+dic, aitalks/season/autumn.dic  // 季節：秋
+dic, aitalks/season/winter.dic  // 季節：冬
+dic, aitalks/time/midnight.dic  // 深夜
 ```
-（YAYA は配列/関数をグローバルに解決するため読み込み順は問わないが、可読性のため上記順とする。）
+パス区切りは `/`（Windows でも可・移植性が高い）。YAYA は配列/関数をグローバルに解決するため読み込み順は問わないが、可読性のため上記順とする。
 
 ### 5.5 `rs_communicate.dic`（about:talk 統計）の更新
 `aryNormalTalk` から題材を抜き出すため `ARRAYSIZE(aryNormalTalk)` が縮む。統計を正しく保つよう、新設配列を表示行と合計式に加える。あわせて**既存バグ**（合計式での `arySpringTalk` の二重加算、および `aryMidnightTalk` の合計漏れ）を修正する。
@@ -175,7 +173,7 @@ dic, rs_aitalk_chain.dic      // トークチェイン
 - **頻度保存**: 大分類A は全て無条件合成のため、本体に内包されていた頃と出現確率は不変。条件付き（B）は既存条件をそのまま移送。
 - **件数検証（機械的）**: 分割前の `aryNormalTalk` の要素数 = 分割後の `aryNormalTalk + aryWorldTalk + aryKariuTalk + aryAriumTalk + aryMicroTalk + aryTopicTalk` の合計、を突合する。
 - **ロード検証（実行時）**: SSP/YAYA でゴーストを起動し、エラーログ無し・`about:talk` の合計が分割前と一致することを確認（ユーザ環境での起動確認）。
-- **チェイン検証**: `:chain=` で参照される12チェインが `rs_aitalk_chain.dic` から解決されることを、代表トークのチェイン発火で確認。
+- **チェイン検証**: `:chain=` で参照される12チェインが `aitalks/chain.dic` から解決されることを、代表トークのチェイン発火で確認。
 - **竜姫接続検証**: 竜姫シェル（`竜姫 / Drachen Fürstin`）に切替時、`aryDrachenFurstinTalk` のトークが出現すること、かつ `aryExiceOnlyTalk` が出ないことを確認。master 等の非竜姫シェルでは従来どおりイクサイス専用が出て竜姫専用が出ないことを確認。
 
 ## 7. リスク・既知の論点
@@ -185,8 +183,14 @@ dic, rs_aitalk_chain.dic      // トークチェイン
 - **同名配列の非連結**（5.2）: 設計の根幹前提。既存イディオムに従い、検証で担保する。
 - **竜姫専用の接続**: 本設計で `RandomTalkEx` に `else` 分岐を追加して有効化する。判定文字列はシェル名（`竜姫 / Drachen Fürstin`、ü 含む）と完全一致を確認済み。タイプミスや全角/半角・濁点違いがあると無効化されるため、既存文字列を流用する。
 - **大容量ファイルの分割操作**: 1.1MB を扱うため、手作業ではなくスクリプト等で機械的に切り出し、差分の取り違えを防ぐ。
+- **サブフォルダ指定の動作**: `dic, aitalks/season/spring.dic` のようなサブパス指定が YAYA で正しく解決されることを、実装初期にダミー1ファイルで確認してから本格展開する（解決不可なら平置きへフォールバック）。
 
 ## 8. 成果物
 
-- 新規データファイル: `rs_aitalk_{normal,world,kariu,arium,micro,topic,exice,drachen,spring,summer,autumn,winter,midnight,chain}.dic`（14ファイル）。
+- 新規フォルダ: `ghost/master/aitalks/`（＋ `shell/` `season/` `time/` サブフォルダ）。
+- 新規データファイル（14ファイル、すべて `aitalks/` 配下）:
+  - 直下: `normal.dic` / `world.dic` / `kariu.dic` / `arium.dic` / `micro.dic` / `topic.dic` / `chain.dic`
+  - `shell/`: `exice.dic` / `drachen.dic`
+  - `season/`: `spring.dic` / `summer.dic` / `autumn.dic` / `winter.dic`
+  - `time/`: `midnight.dic`
 - 変更ファイル: `rs_aitalk.dic`（ロジックのみに縮小＋RandomTalkEx の大分類A合成行追加＋竜姫シェル分岐の接続）, `yaya.txt`（dic行追加）, `rs_communicate.dic`（統計更新＋バグ修正）。
