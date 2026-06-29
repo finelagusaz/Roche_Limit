@@ -69,7 +69,7 @@ RandomTalkEx : nonoverlap
 	_talk_array ,= aryNormalTalk
 	_talk_array ,= aryWorldTalk
 	_talk_array ,= aryKariuTalk
-	_talk_array ,= aryAriumTalk
+	_talk_array ,= aryExtremeWorldTalk
 	_talk_array ,= aryTopicTalk
 	_talk_array ,= aryMicroTalk
 

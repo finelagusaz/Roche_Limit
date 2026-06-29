@@ -165,7 +165,7 @@ TalkToUser
 		"\0\s[0]通常ランダムトーク: %(ARRAYSIZE(aryNormalTalk))\n/
 		世界観トーク: %(ARRAYSIZE(aryWorldTalk))\n/
 		カリウトーク: %(ARRAYSIZE(aryKariuTalk))\n/
-		アリウムトーク: %(ARRAYSIZE(aryAriumTalk))\n/
+		Extreme Worldトーク: %(ARRAYSIZE(aryExtremeWorldTalk))\n/
 		小テーマトーク: %(ARRAYSIZE(aryTopicTalk))\n/
 		春限定トーク: %(ARRAYSIZE(arySpringTalk))\n/
 		夏限定トーク: %(ARRAYSIZE(arySummerTalk))\n/
@@ -175,7 +175,7 @@ TalkToUser
 		\n[half]/
 		旧ランダムトーク：%(ARRAYSIZE(aryNormalTalkOld))\n/
 		\n[half]/
-		\n合計: %(ARRAYSIZE(aryNormalTalk) + ARRAYSIZE(aryWorldTalk) + ARRAYSIZE(aryKariuTalk) + ARRAYSIZE(aryAriumTalk) + ARRAYSIZE(aryTopicTalk) + ARRAYSIZE(arySpringTalk) + ARRAYSIZE(arySummerTalk) + ARRAYSIZE(aryAutumnTalk) + ARRAYSIZE(aryWinterTalk) + ARRAYSIZE(aryMidnightTalk) + ARRAYSIZE(aryNormalTalkOld))\e"
+		\n合計: %(ARRAYSIZE(aryNormalTalk) + ARRAYSIZE(aryWorldTalk) + ARRAYSIZE(aryKariuTalk) + ARRAYSIZE(aryExtremeWorldTalk) + ARRAYSIZE(aryTopicTalk) + ARRAYSIZE(arySpringTalk) + ARRAYSIZE(arySummerTalk) + ARRAYSIZE(aryAutumnTalk) + ARRAYSIZE(aryWinterTalk) + ARRAYSIZE(aryMidnightTalk) + ARRAYSIZE(aryNormalTalkOld))\e"
 	}
 	else
 	{

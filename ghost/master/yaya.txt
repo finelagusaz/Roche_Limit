@@ -24,7 +24,7 @@ dic, rs_aitalk.dic			// ランダムトーク辞書（ロジック）
 dic, aitalks/normal.dic			// 通常トーク本体
 dic, aitalks/world.dic			// 世界観
 dic, aitalks/kariu.dic			// カリウ関連
-dic, aitalks/arium.dic			// アリウム/Extreme World
+dic, aitalks/extreme_world.dic			// アリウム/Extreme World
 dic, aitalks/topic.dic			// 小テーマ集約
 dic, aitalks/chain.dic			// トークチェイン
 dic, aitalks/shell/exice.dic		// イクサイス専用
