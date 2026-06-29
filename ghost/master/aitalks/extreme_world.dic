@@ -1,4 +1,4 @@
-aryAriumTalk : array
+aryExtremeWorldTalk : array
 {
 	//アリウム、Extreme Worldに関連するトーク
 	'\0\s[0]アリウムさん、\w4メインアームは剣でしたね。\w9\n\n[half]/
