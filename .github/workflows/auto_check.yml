@@ -1,0 +1,25 @@
+name: auto check
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  check:
+    name: auto check
+    runs-on: windows-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+      - name: dictionary check
+        # Builds tamacs.exe from tools/lib/tamacs.cs with csc.exe of the .NET Framework on the runner
+        shell: pwsh
+        run: ./tools/check-dic.ps1 -Ci
+      - name: development kit lock check
+        # Runs only in the repository that distributes the kit (source in tools/devkit.json)
+        shell: pwsh
+        run: ./tools/update-devkit.ps1 -VerifyLock
