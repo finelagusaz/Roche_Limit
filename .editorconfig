@@ -1,0 +1,22 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+
+[*.{dic,txt}]
+indent_style = tab
+# Roche_Limit: .dic / .txt の改行は CRLF と LF が混在しているため、エディタには既存の改行を保たせる
+end_of_line = unset
+
+# Roche_Limit: SSP 向けの .txt（descript.txt / readme.txt / surfacetable.txt など）は Shift_JIS (cp932)
+[*.txt]
+charset = unset
+
+[*.{ps1,cs}]
+indent_style = space
+indent_size = 4
+
+[*.{json,yml,yaml,lua,md}]
+indent_style = space
+indent_size = 2

@@ -1,0 +1,11 @@
+# Roche_Limit: キットの seed にあった `* text=auto eol=lf` は外している。
+# .dic / .txt の改行は core.autocrlf=input の運用に任せ、checkout で LF に書き換えないため。
+
+*.dll binary
+*.exe binary
+*.png binary
+*.ico binary
+*.pnr binary
+*.nar binary
+*.dau binary
+*.zip binary
