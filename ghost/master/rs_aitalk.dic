@@ -63,7 +63,108 @@ RandomTalk
     TOSTR(EVAL(CHR(0x22)+RandomTalkEx()+CHR(0x22)))
 }
 
-RandomTalkEx : nonoverlap
+// nonoverlap は候補の数が変わると一巡の履歴を捨てる。
+// そのため、条件で増減するトーク（季節・深夜・シェル・旧トーク）は
+// 候補に混ぜず、SelectTalkPool の確率で束ごと選んでから引く。
+// それぞれの束は自分の nonoverlap の履歴を持つ。
+RandomTalkEx
+{
+	_talk = ''
+	case SelectTalkPool {
+		when 'season' {
+			_talk = SeasonTalk
+		}
+		when 'midnight' {
+			_talk = MidnightTalk
+		}
+		when 'shell' {
+			_talk = ShellTalk
+		}
+		when 'old' {
+			_talk = NormalTalkOld
+		}
+	}
+	if _talk == '' {
+		_talk = BaseTalk
+	}
+	_talk
+}
+
+//----------------------------------------
+// どの束からトークを引くかを決める
+// 戻り値: 'base' / 'season' / 'midnight' / 'shell' / 'old'
+// 出やすさは各束の本数に比例させる（全トークを 1 つの候補に混ぜていたころと同じ割合）
+//----------------------------------------
+SelectTalkPool
+{
+	_pools = ('season', 'midnight', 'shell', 'old')
+	_sizes = (SeasonTalkCount, 0, ShellTalkCount, 0)
+	if GetTimeSlot == '深夜' {
+		_sizes[1] = ARRAYSIZE(aryMidnightTalk)
+	}
+	if flgTalkOld == 1 {
+		_sizes[3] = ARRAYSIZE(aryNormalTalkOld)
+	}
+
+	_total = BaseTalkCount
+	foreach _sizes; _size {
+		_total += _size
+	}
+
+	_r = RAND(_total)
+	_i = 0
+	while _i < ARRAYSIZE(_pools) {
+		if _r < _sizes[_i] {
+			_pools[_i]
+			return
+		}
+		_r -= _sizes[_i]
+		_i++
+	}
+	'base'
+}
+
+BaseTalkCount
+{
+	ARRAYSIZE(aryNormalTalk) + ARRAYSIZE(aryWorldTalk) + ARRAYSIZE(aryKariuTalk) /
+	+ ARRAYSIZE(aryExtremeWorldTalk) + ARRAYSIZE(aryTopicTalk)
+}
+
+SeasonTalkCount
+{
+	case GetSeasonSlot {
+		when '春' {
+			ARRAYSIZE(arySpringTalk)
+		}
+		when '夏' {
+			ARRAYSIZE(arySummerTalk)
+		}
+		when '秋' {
+			ARRAYSIZE(aryAutumnTalk)
+		}
+		when '冬' {
+			ARRAYSIZE(aryWinterTalk)
+		}
+		others {
+			0
+		}
+	}
+}
+
+ShellTalkCount
+{
+	if shellname == '竜姫 / Drachen Fürstin' {
+		ARRAYSIZE(aryDrachenFurstinTalk)
+	}
+	else {
+		ARRAYSIZE(aryExiceOnlyTalk) + ARRAYSIZE(aryMicroTalk)
+	}
+}
+
+//----------------------------------------
+// いつものランダムトーク（候補の数が変わらない束）
+//----------------------------------------
+BaseTalk : nonoverlap
 {
 	_talk_array = IARRAY
 	_talk_array ,= aryNormalTalk
@@ -71,50 +172,49 @@ RandomTalkEx : nonoverlap
 	_talk_array ,= aryKariuTalk
 	_talk_array ,= aryExtremeWorldTalk
 	_talk_array ,= aryTopicTalk
-	_talk_array ,= aryMicroTalk
+	parallel _talk_array
+}
 
-	if shellname != '竜姫 / Drachen Fürstin' {
-		_talk_array ,= aryExiceOnlyTalk
+//----------------------------------------
+// 季節のトーク
+//----------------------------------------
+SeasonTalk
+{
+	case GetSeasonSlot {
+		when '春' {
+			SpringTalk
+		}
+		when '夏' {
+			SummerTalk
+		}
+		when '秋' {
+			AutumnTalk
+		}
+		when '冬' {
+			WinterTalk
+		}
+	}
+}
+
+//----------------------------------------
+// シェルごとのトーク
+//----------------------------------------
+ShellTalk
+{
+	if shellname == '竜姫 / Drachen Fürstin' {
+		DrachenFurstinTalk
+	}
+	elseif RAND(ARRAYSIZE(aryExiceOnlyTalk) + ARRAYSIZE(aryMicroTalk)) < ARRAYSIZE(aryMicroTalk) {
+		// ミクロ専用（ミクロの決死圏のときだけ中身がある）とイクサイス専用を、本数の比で選ぶ
+		_talk = MicroTalk
+		if _talk == '' {
+			_talk = ExiceOnlyTalk
+		}
+		_talk
 	}
 	else {
-		_talk_array ,= aryDrachenFurstinTalk
+		ExiceOnlyTalk
 	}
-
-	// 旧ランダムトーク
-	if flgTalkOld == 1 {
-		_talk_array ,= aryNormalTalkOld
-	}
-
-	//----------------------------------------
-	// 季節ごとのトーク
-	//----------------------------------------
-	_seasonslot = GetSeasonSlot
-	case _seasonslot{
-		when "春" {
-			_talk_array ,= arySpringTalk
-		}
-		when "夏" {
-			_talk_array ,= arySummerTalk
-		}
-		when "秋" {
-			_talk_array ,= aryAutumnTalk
-		}
-		when "冬" {
-			_talk_array ,= aryWinterTalk
-		}
-	}
-
-	//---------------------------------------
-	// 時間帯ごとのトーク
-	//---------------------------------------
-	_timeslot = GetTimeSlot
-	case _timeslot {
-		when "深夜" {
-			_talk_array ,= aryMidnightTalk
-		}
-	}
-
-	parallel _talk_array
 }
 
 //----------------------------------------
@@ -123,6 +223,13 @@ RandomTalkEx : nonoverlap
 NormalTalk : nonoverlap
 {
 	parallel aryNormalTalk
+}
+
+// ----------------------
+// ミクロの決死圏専用トーク
+//-----------------------
+MicroTalk : nonoverlap {
+	parallel aryMicroTalk
 }
 
 
