@@ -6,6 +6,9 @@ on:
       - main
       - master
 
+permissions:
+  contents: read
+
 jobs:
   check:
     name: auto check
@@ -16,11 +19,15 @@ jobs:
         with:
           submodules: recursive
       - name: get ukagaka-developer
-        # The scripts of the skill. To pin a version, add "--branch <tag or branch>" (see references/workflows/ci.md).
-        shell: pwsh
-        run: git clone --depth 1 https://github.com/ukatech/ukagaka-developer.git "$env:RUNNER_TEMP/ukagaka-developer"
+        # The scripts of the skill, pinned to a reviewed commit. To update, change ref to a newer commit of ukatech/ukagaka-developer.
+        uses: actions/checkout@v4
+        with:
+          repository: ukatech/ukagaka-developer
+          ref: 55ba839e8881b80437a6b65a44f87c72e99443dc
+          path: .ukagaka-developer
+          persist-credentials: false
       - name: dictionary check
         # Builds tamacs.exe with csc.exe of the .NET Framework on the runner, loads the SHIORI dll with it and reads
         # its log (YAYA or SATORI, found from ghost/master)
         shell: pwsh
-        run: '& "$env:RUNNER_TEMP/ukagaka-developer/skills/ukagaka-developer/scripts/check-dic.ps1" -Ci -GhostRoot $env:GITHUB_WORKSPACE'
+        run: '& "$env:GITHUB_WORKSPACE/.ukagaka-developer/skills/ukagaka-developer/scripts/check-dic.ps1" -Ci -GhostRoot $env:GITHUB_WORKSPACE'
